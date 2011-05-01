@@ -1,0 +1,1581 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="VeritasBlogDBV3Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="VeritasBlogDBV3ModelStoreContainer">
+          <EntitySet Name="Blacklist" EntityType="VeritasBlogDBV3Model.Store.Blacklist" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BlogCategory" EntityType="VeritasBlogDBV3Model.Store.BlogCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BlogConfig" EntityType="VeritasBlogDBV3Model.Store.BlogConfig" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BlogEntry" EntityType="VeritasBlogDBV3Model.Store.BlogEntry" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BlogEntryCategory" EntityType="VeritasBlogDBV3Model.Store.BlogEntryCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BlogEntryViewCount" EntityType="VeritasBlogDBV3Model.Store.BlogEntryViewCount" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BlogFeedback" EntityType="VeritasBlogDBV3Model.Store.BlogFeedback" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BlogFeedbackAuthor" EntityType="VeritasBlogDBV3Model.Store.BlogFeedbackAuthor" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BlogLog" EntityType="VeritasBlogDBV3Model.Store.BlogLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BlogMedia" EntityType="VeritasBlogDBV3Model.Store.BlogMedia" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BlogMenuItem" EntityType="VeritasBlogDBV3Model.Store.BlogMenuItem" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BlogPage" EntityType="VeritasBlogDBV3Model.Store.BlogPage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BlogRole" EntityType="VeritasBlogDBV3Model.Store.BlogRole" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BlogUser" EntityType="VeritasBlogDBV3Model.Store.BlogUser" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BlogUserRole" EntityType="VeritasBlogDBV3Model.Store.BlogUserRole" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Blacklist_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.Store.FK_Blacklist_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfig" />
+            <End Role="Blacklist" EntitySet="Blacklist" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogCategory_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.Store.FK_BlogCategory_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfig" />
+            <End Role="BlogCategory" EntitySet="BlogCategory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogCategory_BlogUser_CreatedById" Association="VeritasBlogDBV3Model.Store.FK_BlogCategory_BlogUser_CreatedById">
+            <End Role="BlogUser" EntitySet="BlogUser" />
+            <End Role="BlogCategory" EntitySet="BlogCategory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogEntry_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.Store.FK_BlogEntry_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfig" />
+            <End Role="BlogEntry" EntitySet="BlogEntry" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogEntry_BlogUser_BlogAuthorId" Association="VeritasBlogDBV3Model.Store.FK_BlogEntry_BlogUser_BlogAuthorId">
+            <End Role="BlogUser" EntitySet="BlogUser" />
+            <End Role="BlogEntry" EntitySet="BlogEntry" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogEntryCategory_BlogCategory_BlogCategoryId" Association="VeritasBlogDBV3Model.Store.FK_BlogEntryCategory_BlogCategory_BlogCategoryId">
+            <End Role="BlogCategory" EntitySet="BlogCategory" />
+            <End Role="BlogEntryCategory" EntitySet="BlogEntryCategory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogEntryCategory_BlogEntry_BlogEntryId" Association="VeritasBlogDBV3Model.Store.FK_BlogEntryCategory_BlogEntry_BlogEntryId">
+            <End Role="BlogEntry" EntitySet="BlogEntry" />
+            <End Role="BlogEntryCategory" EntitySet="BlogEntryCategory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogEntryViewCount_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.Store.FK_BlogEntryViewCount_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfig" />
+            <End Role="BlogEntryViewCount" EntitySet="BlogEntryViewCount" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogEntryViewCount_BlogEntry_BlogEntryId" Association="VeritasBlogDBV3Model.Store.FK_BlogEntryViewCount_BlogEntry_BlogEntryId">
+            <End Role="BlogEntry" EntitySet="BlogEntry" />
+            <End Role="BlogEntryViewCount" EntitySet="BlogEntryViewCount" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogFeedback_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.Store.FK_BlogFeedback_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfig" />
+            <End Role="BlogFeedback" EntitySet="BlogFeedback" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogFeedback_BlogEntry_BlogEntryId" Association="VeritasBlogDBV3Model.Store.FK_BlogFeedback_BlogEntry_BlogEntryId">
+            <End Role="BlogEntry" EntitySet="BlogEntry" />
+            <End Role="BlogFeedback" EntitySet="BlogFeedback" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogFeedback_BlogFeedbackAuthor_BlogFeedbackAuthorId" Association="VeritasBlogDBV3Model.Store.FK_BlogFeedback_BlogFeedbackAuthor_BlogFeedbackAuthorId">
+            <End Role="BlogFeedbackAuthor" EntitySet="BlogFeedbackAuthor" />
+            <End Role="BlogFeedback" EntitySet="BlogFeedback" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogFeedbackAuthor_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.Store.FK_BlogFeedbackAuthor_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfig" />
+            <End Role="BlogFeedbackAuthor" EntitySet="BlogFeedbackAuthor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogLog_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.Store.FK_BlogLog_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfig" />
+            <End Role="BlogLog" EntitySet="BlogLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogMedia_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.Store.FK_BlogMedia_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfig" />
+            <End Role="BlogMedia" EntitySet="BlogMedia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogMenuItem_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.Store.FK_BlogMenuItem_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfig" />
+            <End Role="BlogMenuItem" EntitySet="BlogMenuItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogPage_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.Store.FK_BlogPage_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfig" />
+            <End Role="BlogPage" EntitySet="BlogPage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogPage_BlogUser_CreatedById" Association="VeritasBlogDBV3Model.Store.FK_BlogPage_BlogUser_CreatedById">
+            <End Role="BlogUser" EntitySet="BlogUser" />
+            <End Role="BlogPage" EntitySet="BlogPage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogPage_BlogUser_LastUpdatedById" Association="VeritasBlogDBV3Model.Store.FK_BlogPage_BlogUser_LastUpdatedById">
+            <End Role="BlogUser" EntitySet="BlogUser" />
+            <End Role="BlogPage" EntitySet="BlogPage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogRole_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.Store.FK_BlogRole_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfig" />
+            <End Role="BlogRole" EntitySet="BlogRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogUser_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.Store.FK_BlogUser_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfig" />
+            <End Role="BlogUser" EntitySet="BlogUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogUserRole_BlogRole_BlogRoleId" Association="VeritasBlogDBV3Model.Store.FK_BlogUserRole_BlogRole_BlogRoleId">
+            <End Role="BlogRole" EntitySet="BlogRole" />
+            <End Role="BlogUserRole" EntitySet="BlogUserRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogUserRole_BlogUser_BlogUserId" Association="VeritasBlogDBV3Model.Store.FK_BlogUserRole_BlogUser_BlogUserId">
+            <End Role="BlogUser" EntitySet="BlogUser" />
+            <End Role="BlogUserRole" EntitySet="BlogUserRole" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Blacklist">
+          <Key>
+            <PropertyRef Name="BlacklistId" />
+          </Key>
+          <Property Name="BlacklistId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="int" Nullable="false" />
+          <Property Name="EmailAddress" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BlogCategory">
+          <Key>
+            <PropertyRef Name="BlogCategoryId" />
+          </Key>
+          <Property Name="BlogCategoryId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatedById" Type="int" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdatedById" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BlogConfig">
+          <Key>
+            <PropertyRef Name="BlogConfigId" />
+          </Key>
+          <Property Name="BlogConfigId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ConfigXml" Type="xml" Nullable="false" />
+          <Property Name="Host" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdatedById" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BlogEntry">
+          <Key>
+            <PropertyRef Name="BlogEntryId" />
+          </Key>
+          <Property Name="BlogEntryId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BlogAuthorId" Type="int" Nullable="false" />
+          <Property Name="BlogConfigId" Type="int" Nullable="false" />
+          <Property Name="EntryName" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="FeedbackCount" Type="int" Nullable="false" />
+          <Property Name="Keywords" Type="varchar" MaxLength="300" />
+          <Property Name="PostType" Type="int" Nullable="false" />
+          <Property Name="PublishDate" Type="datetime" Nullable="false" />
+          <Property Name="Short" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BlogEntryCategory">
+          <Key>
+            <PropertyRef Name="BlogEntryCategoryId" />
+          </Key>
+          <Property Name="BlogEntryCategoryId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BlogEntryId" Type="bigint" Nullable="false" />
+          <Property Name="BlogCategoryId" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BlogEntryViewCount">
+          <Key>
+            <PropertyRef Name="BlogEntryViewCountId" />
+          </Key>
+          <Property Name="BlogEntryViewCountId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="int" Nullable="false" />
+          <Property Name="BlogEntryId" Type="bigint" Nullable="false" />
+          <Property Name="WebCount" Type="int" Nullable="false" />
+          <Property Name="WebLastUpdated" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BlogFeedback">
+          <Key>
+            <PropertyRef Name="BlogFeedbackId" />
+          </Key>
+          <Property Name="BlogFeedbackId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="int" Nullable="false" />
+          <Property Name="BlogEntryId" Type="bigint" />
+          <Property Name="BlogFeedbackAuthorId" Type="bigint" Nullable="false" />
+          <Property Name="Body" Type="ntext" Nullable="false" />
+          <Property Name="FeedbackType" Type="int" Nullable="false" />
+          <Property Name="InReplyToFeedbackId" Type="bigint" />
+          <Property Name="IpAddress" Type="varchar" MaxLength="16" />
+          <Property Name="IsBlogAuthor" Type="bit" Nullable="false" />
+          <Property Name="NotifyAuthorOnFeedback" Type="bit" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="UserAgent" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BlogFeedbackAuthor">
+          <Key>
+            <PropertyRef Name="BlogFeedbackAuthorId" />
+          </Key>
+          <Property Name="BlogFeedbackAuthorId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Url" Type="varchar" MaxLength="256" />
+          <Property Name="FeedbackTotal" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BlogLog">
+          <Key>
+            <PropertyRef Name="BlogLogId" />
+          </Key>
+          <Property Name="BlogLogId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="EventLevel" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Exception" Type="ntext" />
+          <Property Name="Logger" Type="varchar" Nullable="false" MaxLength="256" />
+          <Property Name="Message" Type="varchar" MaxLength="1024" />
+          <Property Name="Url" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="BlogMedia">
+          <Key>
+            <PropertyRef Name="BlogMediaId" />
+          </Key>
+          <Property Name="BlogMediaId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="int" Nullable="false" />
+          <Property Name="FileName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="FilePath" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="ServerPath" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatedById" Type="int" />
+        </EntityType>
+        <EntityType Name="BlogMenuItem">
+          <Key>
+            <PropertyRef Name="BlogMenuItemId" />
+          </Key>
+          <Property Name="BlogMenuItemId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="int" Nullable="false" />
+          <Property Name="IsView" Type="bit" Nullable="false" />
+          <Property Name="LinkText" Type="varchar" MaxLength="100" />
+          <Property Name="LinkUrl" Type="varchar" MaxLength="255" />
+          <Property Name="MenuItemOrder" Type="int" Nullable="false" />
+          <Property Name="PageContent" Type="nvarchar(max)" />
+          <Property Name="ViewName" Type="varchar" MaxLength="100" />
+          <Property Name="CreatorId" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdatedById" Type="int" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BlogPage">
+          <Key>
+            <PropertyRef Name="BlogPageId" />
+          </Key>
+          <Property Name="BlogPageId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="int" Nullable="false" />
+          <Property Name="EncodedTitle" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="PageTitle" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Keywords" Type="nvarchar" MaxLength="500" />
+          <Property Name="PageContent" Type="nvarchar(max)" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatedById" Type="int" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdatedById" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BlogRole">
+          <Key>
+            <PropertyRef Name="BlogRoleId" />
+          </Key>
+          <Property Name="BlogRoleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="int" Nullable="false" />
+          <Property Name="RoleName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BlogUser">
+          <Key>
+            <PropertyRef Name="BlogUserId" />
+          </Key>
+          <Property Name="BlogUserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="int" Nullable="false" />
+          <Property Name="About" Type="ntext" />
+          <Property Name="NotifyForFeedback" Type="bit" Nullable="false" />
+          <Property Name="Username" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="EmailAddress" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BlogUserRole">
+          <Key>
+            <PropertyRef Name="BlogUserRoleId" />
+          </Key>
+          <Property Name="BlogUserRoleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BlogUserId" Type="int" Nullable="false" />
+          <Property Name="BlogRoleId" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Blacklist_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.Store.BlogConfig" Multiplicity="1" />
+          <End Role="Blacklist" Type="VeritasBlogDBV3Model.Store.Blacklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="Blacklist">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogCategory_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.Store.BlogConfig" Multiplicity="1" />
+          <End Role="BlogCategory" Type="VeritasBlogDBV3Model.Store.BlogCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogCategory">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogCategory_BlogUser_CreatedById">
+          <End Role="BlogUser" Type="VeritasBlogDBV3Model.Store.BlogUser" Multiplicity="1" />
+          <End Role="BlogCategory" Type="VeritasBlogDBV3Model.Store.BlogCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogUser">
+              <PropertyRef Name="BlogUserId" />
+            </Principal>
+            <Dependent Role="BlogCategory">
+              <PropertyRef Name="CreatedById" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogEntry_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.Store.BlogConfig" Multiplicity="1" />
+          <End Role="BlogEntry" Type="VeritasBlogDBV3Model.Store.BlogEntry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogEntry">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogEntry_BlogUser_BlogAuthorId">
+          <End Role="BlogUser" Type="VeritasBlogDBV3Model.Store.BlogUser" Multiplicity="1" />
+          <End Role="BlogEntry" Type="VeritasBlogDBV3Model.Store.BlogEntry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogUser">
+              <PropertyRef Name="BlogUserId" />
+            </Principal>
+            <Dependent Role="BlogEntry">
+              <PropertyRef Name="BlogAuthorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogEntryCategory_BlogCategory_BlogCategoryId">
+          <End Role="BlogCategory" Type="VeritasBlogDBV3Model.Store.BlogCategory" Multiplicity="1" />
+          <End Role="BlogEntryCategory" Type="VeritasBlogDBV3Model.Store.BlogEntryCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogCategory">
+              <PropertyRef Name="BlogCategoryId" />
+            </Principal>
+            <Dependent Role="BlogEntryCategory">
+              <PropertyRef Name="BlogCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogEntryCategory_BlogEntry_BlogEntryId">
+          <End Role="BlogEntry" Type="VeritasBlogDBV3Model.Store.BlogEntry" Multiplicity="1" />
+          <End Role="BlogEntryCategory" Type="VeritasBlogDBV3Model.Store.BlogEntryCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogEntry">
+              <PropertyRef Name="BlogEntryId" />
+            </Principal>
+            <Dependent Role="BlogEntryCategory">
+              <PropertyRef Name="BlogEntryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogEntryViewCount_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.Store.BlogConfig" Multiplicity="1" />
+          <End Role="BlogEntryViewCount" Type="VeritasBlogDBV3Model.Store.BlogEntryViewCount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogEntryViewCount">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogEntryViewCount_BlogEntry_BlogEntryId">
+          <End Role="BlogEntry" Type="VeritasBlogDBV3Model.Store.BlogEntry" Multiplicity="1" />
+          <End Role="BlogEntryViewCount" Type="VeritasBlogDBV3Model.Store.BlogEntryViewCount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogEntry">
+              <PropertyRef Name="BlogEntryId" />
+            </Principal>
+            <Dependent Role="BlogEntryViewCount">
+              <PropertyRef Name="BlogEntryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogFeedback_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.Store.BlogConfig" Multiplicity="1" />
+          <End Role="BlogFeedback" Type="VeritasBlogDBV3Model.Store.BlogFeedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogFeedback">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogFeedback_BlogEntry_BlogEntryId">
+          <End Role="BlogEntry" Type="VeritasBlogDBV3Model.Store.BlogEntry" Multiplicity="0..1" />
+          <End Role="BlogFeedback" Type="VeritasBlogDBV3Model.Store.BlogFeedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogEntry">
+              <PropertyRef Name="BlogEntryId" />
+            </Principal>
+            <Dependent Role="BlogFeedback">
+              <PropertyRef Name="BlogEntryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogFeedback_BlogFeedbackAuthor_BlogFeedbackAuthorId">
+          <End Role="BlogFeedbackAuthor" Type="VeritasBlogDBV3Model.Store.BlogFeedbackAuthor" Multiplicity="1" />
+          <End Role="BlogFeedback" Type="VeritasBlogDBV3Model.Store.BlogFeedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogFeedbackAuthor">
+              <PropertyRef Name="BlogFeedbackAuthorId" />
+            </Principal>
+            <Dependent Role="BlogFeedback">
+              <PropertyRef Name="BlogFeedbackAuthorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogFeedbackAuthor_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.Store.BlogConfig" Multiplicity="1" />
+          <End Role="BlogFeedbackAuthor" Type="VeritasBlogDBV3Model.Store.BlogFeedbackAuthor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogFeedbackAuthor">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogLog_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.Store.BlogConfig" Multiplicity="1" />
+          <End Role="BlogLog" Type="VeritasBlogDBV3Model.Store.BlogLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogLog">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogMedia_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.Store.BlogConfig" Multiplicity="1" />
+          <End Role="BlogMedia" Type="VeritasBlogDBV3Model.Store.BlogMedia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogMedia">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogMenuItem_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.Store.BlogConfig" Multiplicity="1" />
+          <End Role="BlogMenuItem" Type="VeritasBlogDBV3Model.Store.BlogMenuItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogMenuItem">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogPage_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.Store.BlogConfig" Multiplicity="1" />
+          <End Role="BlogPage" Type="VeritasBlogDBV3Model.Store.BlogPage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogPage">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogPage_BlogUser_CreatedById">
+          <End Role="BlogUser" Type="VeritasBlogDBV3Model.Store.BlogUser" Multiplicity="1" />
+          <End Role="BlogPage" Type="VeritasBlogDBV3Model.Store.BlogPage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogUser">
+              <PropertyRef Name="BlogUserId" />
+            </Principal>
+            <Dependent Role="BlogPage">
+              <PropertyRef Name="CreatedById" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogPage_BlogUser_LastUpdatedById">
+          <End Role="BlogUser" Type="VeritasBlogDBV3Model.Store.BlogUser" Multiplicity="1" />
+          <End Role="BlogPage" Type="VeritasBlogDBV3Model.Store.BlogPage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogUser">
+              <PropertyRef Name="BlogUserId" />
+            </Principal>
+            <Dependent Role="BlogPage">
+              <PropertyRef Name="LastUpdatedById" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogRole_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.Store.BlogConfig" Multiplicity="1" />
+          <End Role="BlogRole" Type="VeritasBlogDBV3Model.Store.BlogRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogRole">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogUser_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.Store.BlogConfig" Multiplicity="1" />
+          <End Role="BlogUser" Type="VeritasBlogDBV3Model.Store.BlogUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogUser">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogUserRole_BlogRole_BlogRoleId">
+          <End Role="BlogRole" Type="VeritasBlogDBV3Model.Store.BlogRole" Multiplicity="1" />
+          <End Role="BlogUserRole" Type="VeritasBlogDBV3Model.Store.BlogUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogRole">
+              <PropertyRef Name="BlogRoleId" />
+            </Principal>
+            <Dependent Role="BlogUserRole">
+              <PropertyRef Name="BlogRoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogUserRole_BlogUser_BlogUserId">
+          <End Role="BlogUser" Type="VeritasBlogDBV3Model.Store.BlogUser" Multiplicity="1" />
+          <End Role="BlogUserRole" Type="VeritasBlogDBV3Model.Store.BlogUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogUser">
+              <PropertyRef Name="BlogUserId" />
+            </Principal>
+            <Dependent Role="BlogUserRole">
+              <PropertyRef Name="BlogUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VeritasBlogDBV3Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="VeritasBlogDBV3Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Blacklists" EntityType="VeritasBlogDBV3Model.Blacklist" />
+          <EntitySet Name="BlogConfigs" EntityType="VeritasBlogDBV3Model.BlogConfig" />
+          <EntitySet Name="BlogEntries" EntityType="VeritasBlogDBV3Model.BlogEntry" />
+          <EntitySet Name="BlogEntryCategories" EntityType="VeritasBlogDBV3Model.BlogEntryCategory" />
+          <EntitySet Name="BlogEntryViewCounts" EntityType="VeritasBlogDBV3Model.BlogEntryViewCount" />
+          <EntitySet Name="BlogFeedbacks" EntityType="VeritasBlogDBV3Model.BlogFeedback" />
+          <EntitySet Name="BlogFeedbackAuthors" EntityType="VeritasBlogDBV3Model.BlogFeedbackAuthor" />
+          <EntitySet Name="BlogLogs" EntityType="VeritasBlogDBV3Model.BlogLog" />
+          <EntitySet Name="BlogMedias" EntityType="VeritasBlogDBV3Model.BlogMedia" />
+          <EntitySet Name="BlogMenuItems" EntityType="VeritasBlogDBV3Model.BlogMenuItem" />
+          <EntitySet Name="BlogPages" EntityType="VeritasBlogDBV3Model.BlogPage" />
+          <EntitySet Name="BlogRoles" EntityType="VeritasBlogDBV3Model.BlogRole" />
+          <EntitySet Name="BlogUsers" EntityType="VeritasBlogDBV3Model.BlogUser" />
+          <EntitySet Name="BlogUserRoles" EntityType="VeritasBlogDBV3Model.BlogUserRole" />
+          <AssociationSet Name="FK_Blacklist_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.FK_Blacklist_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfigs" />
+            <End Role="Blacklist" EntitySet="Blacklists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogEntry_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.FK_BlogEntry_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfigs" />
+            <End Role="BlogEntry" EntitySet="BlogEntries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogEntryViewCount_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.FK_BlogEntryViewCount_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfigs" />
+            <End Role="BlogEntryViewCount" EntitySet="BlogEntryViewCounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogFeedback_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.FK_BlogFeedback_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfigs" />
+            <End Role="BlogFeedback" EntitySet="BlogFeedbacks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogFeedbackAuthor_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.FK_BlogFeedbackAuthor_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfigs" />
+            <End Role="BlogFeedbackAuthor" EntitySet="BlogFeedbackAuthors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogLog_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.FK_BlogLog_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfigs" />
+            <End Role="BlogLog" EntitySet="BlogLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogMedia_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.FK_BlogMedia_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfigs" />
+            <End Role="BlogMedia" EntitySet="BlogMedias" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogMenuItem_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.FK_BlogMenuItem_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfigs" />
+            <End Role="BlogMenuItem" EntitySet="BlogMenuItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogPage_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.FK_BlogPage_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfigs" />
+            <End Role="BlogPage" EntitySet="BlogPages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogRole_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.FK_BlogRole_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfigs" />
+            <End Role="BlogRole" EntitySet="BlogRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogUser_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.FK_BlogUser_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfigs" />
+            <End Role="BlogUser" EntitySet="BlogUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogEntry_BlogUser_BlogAuthorId" Association="VeritasBlogDBV3Model.FK_BlogEntry_BlogUser_BlogAuthorId">
+            <End Role="BlogUser" EntitySet="BlogUsers" />
+            <End Role="BlogEntry" EntitySet="BlogEntries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogEntryCategory_BlogEntry_BlogEntryId" Association="VeritasBlogDBV3Model.FK_BlogEntryCategory_BlogEntry_BlogEntryId">
+            <End Role="BlogEntry" EntitySet="BlogEntries" />
+            <End Role="BlogEntryCategory" EntitySet="BlogEntryCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogEntryViewCount_BlogEntry_BlogEntryId" Association="VeritasBlogDBV3Model.FK_BlogEntryViewCount_BlogEntry_BlogEntryId">
+            <End Role="BlogEntry" EntitySet="BlogEntries" />
+            <End Role="BlogEntryViewCount" EntitySet="BlogEntryViewCounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogFeedback_BlogEntry_BlogEntryId" Association="VeritasBlogDBV3Model.FK_BlogFeedback_BlogEntry_BlogEntryId">
+            <End Role="BlogEntry" EntitySet="BlogEntries" />
+            <End Role="BlogFeedback" EntitySet="BlogFeedbacks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogFeedback_BlogFeedbackAuthor_BlogFeedbackAuthorId" Association="VeritasBlogDBV3Model.FK_BlogFeedback_BlogFeedbackAuthor_BlogFeedbackAuthorId">
+            <End Role="BlogFeedbackAuthor" EntitySet="BlogFeedbackAuthors" />
+            <End Role="BlogFeedback" EntitySet="BlogFeedbacks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogPage_BlogUser_CreatedById" Association="VeritasBlogDBV3Model.FK_BlogPage_BlogUser_CreatedById">
+            <End Role="BlogUser" EntitySet="BlogUsers" />
+            <End Role="BlogPage" EntitySet="BlogPages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogPage_BlogUser_LastUpdatedById" Association="VeritasBlogDBV3Model.FK_BlogPage_BlogUser_LastUpdatedById">
+            <End Role="BlogUser" EntitySet="BlogUsers" />
+            <End Role="BlogPage" EntitySet="BlogPages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogUserRole_BlogRole_BlogRoleId" Association="VeritasBlogDBV3Model.FK_BlogUserRole_BlogRole_BlogRoleId">
+            <End Role="BlogRole" EntitySet="BlogRoles" />
+            <End Role="BlogUserRole" EntitySet="BlogUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogUserRole_BlogUser_BlogUserId" Association="VeritasBlogDBV3Model.FK_BlogUserRole_BlogUser_BlogUserId">
+            <End Role="BlogUser" EntitySet="BlogUsers" />
+            <End Role="BlogUserRole" EntitySet="BlogUserRoles" />
+          </AssociationSet>
+          <EntitySet Name="BlogCategories" EntityType="VeritasBlogDBV3Model.BlogCategory" />
+          <AssociationSet Name="FK_BlogCategory_BlogConfig_BlogConfigId" Association="VeritasBlogDBV3Model.FK_BlogCategory_BlogConfig_BlogConfigId">
+            <End Role="BlogConfig" EntitySet="BlogConfigs" />
+            <End Role="BlogCategory" EntitySet="BlogCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogCategory_BlogUser_CreatedById" Association="VeritasBlogDBV3Model.FK_BlogCategory_BlogUser_CreatedById">
+            <End Role="BlogUser" EntitySet="BlogUsers" />
+            <End Role="BlogCategory" EntitySet="BlogCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlogEntryCategory_BlogCategory_BlogCategoryId" Association="VeritasBlogDBV3Model.FK_BlogEntryCategory_BlogCategory_BlogCategoryId">
+            <End Role="BlogCategory" EntitySet="BlogCategories" />
+            <End Role="BlogEntryCategory" EntitySet="BlogEntryCategories" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Blacklist">
+          <Key>
+            <PropertyRef Name="BlacklistId" />
+          </Key>
+          <Property Name="BlacklistId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="Int32" Nullable="false" />
+          <Property Name="EmailAddress" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_Blacklist_BlogConfig_BlogConfigId" FromRole="Blacklist" ToRole="BlogConfig" />
+        </EntityType>
+        <EntityType Name="BlogConfig">
+          <Key>
+            <PropertyRef Name="BlogConfigId" />
+          </Key>
+          <Property Name="BlogConfigId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConfigXml" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Host" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastUpdatedById" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Blacklists" Relationship="VeritasBlogDBV3Model.FK_Blacklist_BlogConfig_BlogConfigId" FromRole="BlogConfig" ToRole="Blacklist" />
+          <NavigationProperty Name="BlogEntries" Relationship="VeritasBlogDBV3Model.FK_BlogEntry_BlogConfig_BlogConfigId" FromRole="BlogConfig" ToRole="BlogEntry" />
+          <NavigationProperty Name="BlogEntryViewCounts" Relationship="VeritasBlogDBV3Model.FK_BlogEntryViewCount_BlogConfig_BlogConfigId" FromRole="BlogConfig" ToRole="BlogEntryViewCount" />
+          <NavigationProperty Name="BlogFeedbacks" Relationship="VeritasBlogDBV3Model.FK_BlogFeedback_BlogConfig_BlogConfigId" FromRole="BlogConfig" ToRole="BlogFeedback" />
+          <NavigationProperty Name="BlogFeedbackAuthors" Relationship="VeritasBlogDBV3Model.FK_BlogFeedbackAuthor_BlogConfig_BlogConfigId" FromRole="BlogConfig" ToRole="BlogFeedbackAuthor" />
+          <NavigationProperty Name="BlogLogs" Relationship="VeritasBlogDBV3Model.FK_BlogLog_BlogConfig_BlogConfigId" FromRole="BlogConfig" ToRole="BlogLog" />
+          <NavigationProperty Name="BlogMedias" Relationship="VeritasBlogDBV3Model.FK_BlogMedia_BlogConfig_BlogConfigId" FromRole="BlogConfig" ToRole="BlogMedia" />
+          <NavigationProperty Name="BlogMenuItems" Relationship="VeritasBlogDBV3Model.FK_BlogMenuItem_BlogConfig_BlogConfigId" FromRole="BlogConfig" ToRole="BlogMenuItem" />
+          <NavigationProperty Name="BlogPages" Relationship="VeritasBlogDBV3Model.FK_BlogPage_BlogConfig_BlogConfigId" FromRole="BlogConfig" ToRole="BlogPage" />
+          <NavigationProperty Name="BlogRoles" Relationship="VeritasBlogDBV3Model.FK_BlogRole_BlogConfig_BlogConfigId" FromRole="BlogConfig" ToRole="BlogRole" />
+          <NavigationProperty Name="BlogUsers" Relationship="VeritasBlogDBV3Model.FK_BlogUser_BlogConfig_BlogConfigId" FromRole="BlogConfig" ToRole="BlogUser" />
+          <NavigationProperty Name="BlogCategories" Relationship="VeritasBlogDBV3Model.FK_BlogCategory_BlogConfig_BlogConfigId" FromRole="BlogConfig" ToRole="BlogCategory" />
+        </EntityType>
+        <EntityType Name="BlogEntry">
+          <Key>
+            <PropertyRef Name="BlogEntryId" />
+          </Key>
+          <Property Name="BlogEntryId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BlogAuthorId" Type="Int32" Nullable="false" />
+          <Property Name="BlogConfigId" Type="Int32" Nullable="false" />
+          <Property Name="EntryName" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="FeedbackCount" Type="Int32" Nullable="false" />
+          <Property Name="Keywords" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="PostType" Type="Int32" Nullable="false" />
+          <Property Name="PublishDate" Type="DateTime" Nullable="false" />
+          <Property Name="Short" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="Text" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogEntry_BlogConfig_BlogConfigId" FromRole="BlogEntry" ToRole="BlogConfig" />
+          <NavigationProperty Name="BlogUser" Relationship="VeritasBlogDBV3Model.FK_BlogEntry_BlogUser_BlogAuthorId" FromRole="BlogEntry" ToRole="BlogUser" />
+          <NavigationProperty Name="BlogEntryCategories" Relationship="VeritasBlogDBV3Model.FK_BlogEntryCategory_BlogEntry_BlogEntryId" FromRole="BlogEntry" ToRole="BlogEntryCategory" />
+          <NavigationProperty Name="BlogEntryViewCounts" Relationship="VeritasBlogDBV3Model.FK_BlogEntryViewCount_BlogEntry_BlogEntryId" FromRole="BlogEntry" ToRole="BlogEntryViewCount" />
+          <NavigationProperty Name="BlogFeedbacks" Relationship="VeritasBlogDBV3Model.FK_BlogFeedback_BlogEntry_BlogEntryId" FromRole="BlogEntry" ToRole="BlogFeedback" />
+        </EntityType>
+        <EntityType Name="BlogEntryCategory">
+          <Key>
+            <PropertyRef Name="BlogEntryCategoryId" />
+          </Key>
+          <Property Name="BlogEntryCategoryId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BlogEntryId" Type="Int64" Nullable="false" />
+          <Property Name="BlogCategoryId" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="BlogEntry" Relationship="VeritasBlogDBV3Model.FK_BlogEntryCategory_BlogEntry_BlogEntryId" FromRole="BlogEntryCategory" ToRole="BlogEntry" />
+          <NavigationProperty Name="BlogCategory" Relationship="VeritasBlogDBV3Model.FK_BlogEntryCategory_BlogCategory_BlogCategoryId" FromRole="BlogEntryCategory" ToRole="BlogCategory" />
+        </EntityType>
+        <EntityType Name="BlogEntryViewCount">
+          <Key>
+            <PropertyRef Name="BlogEntryViewCountId" />
+          </Key>
+          <Property Name="BlogEntryViewCountId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="Int32" Nullable="false" />
+          <Property Name="BlogEntryId" Type="Int64" Nullable="false" />
+          <Property Name="WebCount" Type="Int32" Nullable="false" />
+          <Property Name="WebLastUpdated" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogEntryViewCount_BlogConfig_BlogConfigId" FromRole="BlogEntryViewCount" ToRole="BlogConfig" />
+          <NavigationProperty Name="BlogEntry" Relationship="VeritasBlogDBV3Model.FK_BlogEntryViewCount_BlogEntry_BlogEntryId" FromRole="BlogEntryViewCount" ToRole="BlogEntry" />
+        </EntityType>
+        <EntityType Name="BlogFeedback">
+          <Key>
+            <PropertyRef Name="BlogFeedbackId" />
+          </Key>
+          <Property Name="BlogFeedbackId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="Int32" Nullable="false" />
+          <Property Name="BlogEntryId" Type="Int64" />
+          <Property Name="BlogFeedbackAuthorId" Type="Int64" Nullable="false" />
+          <Property Name="Body" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="FeedbackType" Type="Int32" Nullable="false" />
+          <Property Name="IpAddress" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="IsBlogAuthor" Type="Boolean" Nullable="false" />
+          <Property Name="NotifyAuthorOnFeedback" Type="Boolean" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="UserAgent" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogFeedback_BlogConfig_BlogConfigId" FromRole="BlogFeedback" ToRole="BlogConfig" />
+          <NavigationProperty Name="BlogEntry" Relationship="VeritasBlogDBV3Model.FK_BlogFeedback_BlogEntry_BlogEntryId" FromRole="BlogFeedback" ToRole="BlogEntry" />
+          <NavigationProperty Name="BlogFeedbackAuthor" Relationship="VeritasBlogDBV3Model.FK_BlogFeedback_BlogFeedbackAuthor_BlogFeedbackAuthorId" FromRole="BlogFeedback" ToRole="BlogFeedbackAuthor" />
+          <Property Type="Int64" Name="InReplyToFeedbackId" />
+        </EntityType>
+        <EntityType Name="BlogFeedbackAuthor">
+          <Key>
+            <PropertyRef Name="BlogFeedbackAuthorId" />
+          </Key>
+          <Property Name="BlogFeedbackAuthorId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="Url" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+          <Property Name="FeedbackTotal" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogFeedbackAuthor_BlogConfig_BlogConfigId" FromRole="BlogFeedbackAuthor" ToRole="BlogConfig" />
+          <NavigationProperty Name="BlogFeedbacks" Relationship="VeritasBlogDBV3Model.FK_BlogFeedback_BlogFeedbackAuthor_BlogFeedbackAuthorId" FromRole="BlogFeedbackAuthor" ToRole="BlogFeedback" />
+        </EntityType>
+        <EntityType Name="BlogLog">
+          <Key>
+            <PropertyRef Name="BlogLogId" />
+          </Key>
+          <Property Name="BlogLogId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="EventLevel" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Exception" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Logger" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
+          <Property Name="Message" Type="String" MaxLength="1024" Unicode="false" FixedLength="false" />
+          <Property Name="Url" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogLog_BlogConfig_BlogConfigId" FromRole="BlogLog" ToRole="BlogConfig" />
+        </EntityType>
+        <EntityType Name="BlogMedia">
+          <Key>
+            <PropertyRef Name="BlogMediaId" />
+          </Key>
+          <Property Name="BlogMediaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="Int32" Nullable="false" />
+          <Property Name="FileName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="FilePath" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="ServerPath" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreatedById" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogMedia_BlogConfig_BlogConfigId" FromRole="BlogMedia" ToRole="BlogConfig" />
+        </EntityType>
+        <EntityType Name="BlogMenuItem">
+          <Key>
+            <PropertyRef Name="BlogMenuItemId" />
+          </Key>
+          <Property Name="BlogMenuItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="Int32" Nullable="false" />
+          <Property Name="IsView" Type="Boolean" Nullable="false" />
+          <Property Name="LinkText" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="LinkUrl" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="MenuItemOrder" Type="Int32" Nullable="false" />
+          <Property Name="PageContent" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ViewName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="CreatorId" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastUpdatedById" Type="Int32" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogMenuItem_BlogConfig_BlogConfigId" FromRole="BlogMenuItem" ToRole="BlogConfig" />
+        </EntityType>
+        <EntityType Name="BlogPage">
+          <Key>
+            <PropertyRef Name="BlogPageId" />
+          </Key>
+          <Property Name="BlogPageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="Int32" Nullable="false" />
+          <Property Name="EncodedTitle" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="PageTitle" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Keywords" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="PageContent" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreatedById" Type="Int32" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastUpdatedById" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogPage_BlogConfig_BlogConfigId" FromRole="BlogPage" ToRole="BlogConfig" />
+          <NavigationProperty Name="BlogUser" Relationship="VeritasBlogDBV3Model.FK_BlogPage_BlogUser_CreatedById" FromRole="BlogPage" ToRole="BlogUser" />
+          <NavigationProperty Name="BlogUser1" Relationship="VeritasBlogDBV3Model.FK_BlogPage_BlogUser_LastUpdatedById" FromRole="BlogPage" ToRole="BlogUser" />
+        </EntityType>
+        <EntityType Name="BlogRole">
+          <Key>
+            <PropertyRef Name="BlogRoleId" />
+          </Key>
+          <Property Name="BlogRoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="Int32" Nullable="false" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogRole_BlogConfig_BlogConfigId" FromRole="BlogRole" ToRole="BlogConfig" />
+          <NavigationProperty Name="BlogUserRoles" Relationship="VeritasBlogDBV3Model.FK_BlogUserRole_BlogRole_BlogRoleId" FromRole="BlogRole" ToRole="BlogUserRole" />
+        </EntityType>
+        <EntityType Name="BlogUser">
+          <Key>
+            <PropertyRef Name="BlogUserId" />
+          </Key>
+          <Property Name="BlogUserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BlogConfigId" Type="Int32" Nullable="false" />
+          <Property Name="About" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="NotifyForFeedback" Type="Boolean" Nullable="false" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="EmailAddress" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogUser_BlogConfig_BlogConfigId" FromRole="BlogUser" ToRole="BlogConfig" />
+          <NavigationProperty Name="BlogEntries" Relationship="VeritasBlogDBV3Model.FK_BlogEntry_BlogUser_BlogAuthorId" FromRole="BlogUser" ToRole="BlogEntry" />
+          <NavigationProperty Name="BlogPages" Relationship="VeritasBlogDBV3Model.FK_BlogPage_BlogUser_CreatedById" FromRole="BlogUser" ToRole="BlogPage" />
+          <NavigationProperty Name="BlogPages1" Relationship="VeritasBlogDBV3Model.FK_BlogPage_BlogUser_LastUpdatedById" FromRole="BlogUser" ToRole="BlogPage" />
+          <NavigationProperty Name="BlogUserRoles" Relationship="VeritasBlogDBV3Model.FK_BlogUserRole_BlogUser_BlogUserId" FromRole="BlogUser" ToRole="BlogUserRole" />
+          <NavigationProperty Name="BlogCategories" Relationship="VeritasBlogDBV3Model.FK_BlogCategory_BlogUser_CreatedById" FromRole="BlogUser" ToRole="BlogCategory" />
+        </EntityType>
+        <EntityType Name="BlogUserRole">
+          <Key>
+            <PropertyRef Name="BlogUserRoleId" />
+          </Key>
+          <Property Name="BlogUserRoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BlogUserId" Type="Int32" Nullable="false" />
+          <Property Name="BlogRoleId" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="BlogRole" Relationship="VeritasBlogDBV3Model.FK_BlogUserRole_BlogRole_BlogRoleId" FromRole="BlogUserRole" ToRole="BlogRole" />
+          <NavigationProperty Name="BlogUser" Relationship="VeritasBlogDBV3Model.FK_BlogUserRole_BlogUser_BlogUserId" FromRole="BlogUserRole" ToRole="BlogUser" />
+        </EntityType>
+        <Association Name="FK_Blacklist_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.BlogConfig" Multiplicity="1" />
+          <End Role="Blacklist" Type="VeritasBlogDBV3Model.Blacklist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="Blacklist">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogEntry_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.BlogConfig" Multiplicity="1" />
+          <End Role="BlogEntry" Type="VeritasBlogDBV3Model.BlogEntry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogEntry">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogEntryViewCount_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.BlogConfig" Multiplicity="1" />
+          <End Role="BlogEntryViewCount" Type="VeritasBlogDBV3Model.BlogEntryViewCount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogEntryViewCount">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogFeedback_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.BlogConfig" Multiplicity="1" />
+          <End Role="BlogFeedback" Type="VeritasBlogDBV3Model.BlogFeedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogFeedback">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogFeedbackAuthor_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.BlogConfig" Multiplicity="1" />
+          <End Role="BlogFeedbackAuthor" Type="VeritasBlogDBV3Model.BlogFeedbackAuthor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogFeedbackAuthor">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogLog_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.BlogConfig" Multiplicity="1" />
+          <End Role="BlogLog" Type="VeritasBlogDBV3Model.BlogLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogLog">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogMedia_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.BlogConfig" Multiplicity="1" />
+          <End Role="BlogMedia" Type="VeritasBlogDBV3Model.BlogMedia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogMedia">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogMenuItem_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.BlogConfig" Multiplicity="1" />
+          <End Role="BlogMenuItem" Type="VeritasBlogDBV3Model.BlogMenuItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogMenuItem">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogPage_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.BlogConfig" Multiplicity="1" />
+          <End Role="BlogPage" Type="VeritasBlogDBV3Model.BlogPage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogPage">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogRole_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.BlogConfig" Multiplicity="1" />
+          <End Role="BlogRole" Type="VeritasBlogDBV3Model.BlogRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogRole">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogUser_BlogConfig_BlogConfigId">
+          <End Role="BlogConfig" Type="VeritasBlogDBV3Model.BlogConfig" Multiplicity="1" />
+          <End Role="BlogUser" Type="VeritasBlogDBV3Model.BlogUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogUser">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogEntry_BlogUser_BlogAuthorId">
+          <End Role="BlogUser" Type="VeritasBlogDBV3Model.BlogUser" Multiplicity="1" />
+          <End Role="BlogEntry" Type="VeritasBlogDBV3Model.BlogEntry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogUser">
+              <PropertyRef Name="BlogUserId" />
+            </Principal>
+            <Dependent Role="BlogEntry">
+              <PropertyRef Name="BlogAuthorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogEntryCategory_BlogEntry_BlogEntryId">
+          <End Role="BlogEntry" Type="VeritasBlogDBV3Model.BlogEntry" Multiplicity="1" />
+          <End Role="BlogEntryCategory" Type="VeritasBlogDBV3Model.BlogEntryCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogEntry">
+              <PropertyRef Name="BlogEntryId" />
+            </Principal>
+            <Dependent Role="BlogEntryCategory">
+              <PropertyRef Name="BlogEntryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogEntryViewCount_BlogEntry_BlogEntryId">
+          <End Role="BlogEntry" Type="VeritasBlogDBV3Model.BlogEntry" Multiplicity="1" />
+          <End Role="BlogEntryViewCount" Type="VeritasBlogDBV3Model.BlogEntryViewCount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogEntry">
+              <PropertyRef Name="BlogEntryId" />
+            </Principal>
+            <Dependent Role="BlogEntryViewCount">
+              <PropertyRef Name="BlogEntryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogFeedback_BlogEntry_BlogEntryId">
+          <End Role="BlogEntry" Type="VeritasBlogDBV3Model.BlogEntry" Multiplicity="0..1" />
+          <End Role="BlogFeedback" Type="VeritasBlogDBV3Model.BlogFeedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogEntry">
+              <PropertyRef Name="BlogEntryId" />
+            </Principal>
+            <Dependent Role="BlogFeedback">
+              <PropertyRef Name="BlogEntryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogFeedback_BlogFeedbackAuthor_BlogFeedbackAuthorId">
+          <End Role="BlogFeedbackAuthor" Type="VeritasBlogDBV3Model.BlogFeedbackAuthor" Multiplicity="1" />
+          <End Role="BlogFeedback" Type="VeritasBlogDBV3Model.BlogFeedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogFeedbackAuthor">
+              <PropertyRef Name="BlogFeedbackAuthorId" />
+            </Principal>
+            <Dependent Role="BlogFeedback">
+              <PropertyRef Name="BlogFeedbackAuthorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogPage_BlogUser_CreatedById">
+          <End Role="BlogUser" Type="VeritasBlogDBV3Model.BlogUser" Multiplicity="1" />
+          <End Role="BlogPage" Type="VeritasBlogDBV3Model.BlogPage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogUser">
+              <PropertyRef Name="BlogUserId" />
+            </Principal>
+            <Dependent Role="BlogPage">
+              <PropertyRef Name="CreatedById" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogPage_BlogUser_LastUpdatedById">
+          <End Role="BlogUser" Type="VeritasBlogDBV3Model.BlogUser" Multiplicity="1" />
+          <End Role="BlogPage" Type="VeritasBlogDBV3Model.BlogPage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogUser">
+              <PropertyRef Name="BlogUserId" />
+            </Principal>
+            <Dependent Role="BlogPage">
+              <PropertyRef Name="LastUpdatedById" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogUserRole_BlogRole_BlogRoleId">
+          <End Role="BlogRole" Type="VeritasBlogDBV3Model.BlogRole" Multiplicity="1" />
+          <End Role="BlogUserRole" Type="VeritasBlogDBV3Model.BlogUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogRole">
+              <PropertyRef Name="BlogRoleId" />
+            </Principal>
+            <Dependent Role="BlogUserRole">
+              <PropertyRef Name="BlogRoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogUserRole_BlogUser_BlogUserId">
+          <End Role="BlogUser" Type="VeritasBlogDBV3Model.BlogUser" Multiplicity="1" />
+          <End Role="BlogUserRole" Type="VeritasBlogDBV3Model.BlogUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogUser">
+              <PropertyRef Name="BlogUserId" />
+            </Principal>
+            <Dependent Role="BlogUserRole">
+              <PropertyRef Name="BlogUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="BlogCategory">
+          <Key>
+            <PropertyRef Name="BlogCategoryId" />
+          </Key>
+          <Property Type="Int32" Name="BlogCategoryId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="BlogConfigId" Nullable="false" />
+          <Property Type="String" Name="Description" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsActive" />
+          <Property Type="String" Name="Title" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+          <Property Type="Int32" Name="CreatedById" Nullable="false" />
+          <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogCategory_BlogConfig_BlogConfigId" FromRole="BlogCategory" ToRole="BlogConfig" />
+          <NavigationProperty Name="BlogUser" Relationship="VeritasBlogDBV3Model.FK_BlogCategory_BlogUser_CreatedById" FromRole="BlogCategory" ToRole="BlogUser" />
+          <NavigationProperty Name="BlogEntryCategories" Relationship="VeritasBlogDBV3Model.FK_BlogEntryCategory_BlogCategory_BlogCategoryId" FromRole="BlogCategory" ToRole="BlogEntryCategory" />
+          <Property Type="DateTime" Name="LastUpdateDate" Nullable="false" />
+          <Property Type="Int32" Name="LastUpdatedById" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_BlogCategory_BlogConfig_BlogConfigId">
+          <End Type="VeritasBlogDBV3Model.BlogConfig" Role="BlogConfig" Multiplicity="1" />
+          <End Type="VeritasBlogDBV3Model.BlogCategory" Role="BlogCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogConfig">
+              <PropertyRef Name="BlogConfigId" />
+            </Principal>
+            <Dependent Role="BlogCategory">
+              <PropertyRef Name="BlogConfigId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogCategory_BlogUser_CreatedById">
+          <End Type="VeritasBlogDBV3Model.BlogUser" Role="BlogUser" Multiplicity="1" />
+          <End Type="VeritasBlogDBV3Model.BlogCategory" Role="BlogCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogUser">
+              <PropertyRef Name="BlogUserId" />
+            </Principal>
+            <Dependent Role="BlogCategory">
+              <PropertyRef Name="CreatedById" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlogEntryCategory_BlogCategory_BlogCategoryId">
+          <End Type="VeritasBlogDBV3Model.BlogCategory" Role="BlogCategory" Multiplicity="1" />
+          <End Type="VeritasBlogDBV3Model.BlogEntryCategory" Role="BlogEntryCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlogCategory">
+              <PropertyRef Name="BlogCategoryId" />
+            </Principal>
+            <Dependent Role="BlogEntryCategory">
+              <PropertyRef Name="BlogCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VeritasBlogDBV3ModelStoreContainer" CdmEntityContainer="VeritasBlogDBV3Entities">
+          <EntitySetMapping Name="Blacklists"><EntityTypeMapping TypeName="VeritasBlogDBV3Model.Blacklist"><MappingFragment StoreEntitySet="Blacklist">
+            <ScalarProperty Name="BlacklistId" ColumnName="BlacklistId" />
+            <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+            <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BlogConfigs"><EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogConfig"><MappingFragment StoreEntitySet="BlogConfig">
+            <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+            <ScalarProperty Name="ConfigXml" ColumnName="ConfigXml" />
+            <ScalarProperty Name="Host" ColumnName="Host" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+            <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+            <ScalarProperty Name="LastUpdatedById" ColumnName="LastUpdatedById" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BlogEntries"><EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogEntry"><MappingFragment StoreEntitySet="BlogEntry">
+            <ScalarProperty Name="BlogEntryId" ColumnName="BlogEntryId" />
+            <ScalarProperty Name="BlogAuthorId" ColumnName="BlogAuthorId" />
+            <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+            <ScalarProperty Name="EntryName" ColumnName="EntryName" />
+            <ScalarProperty Name="FeedbackCount" ColumnName="FeedbackCount" />
+            <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+            <ScalarProperty Name="PostType" ColumnName="PostType" />
+            <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+            <ScalarProperty Name="Short" ColumnName="Short" />
+            <ScalarProperty Name="Text" ColumnName="Text" />
+            <ScalarProperty Name="Title" ColumnName="Title" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+            <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BlogEntryCategories"><EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogEntryCategory"><MappingFragment StoreEntitySet="BlogEntryCategory">
+            <ScalarProperty Name="BlogEntryCategoryId" ColumnName="BlogEntryCategoryId" />
+            <ScalarProperty Name="BlogEntryId" ColumnName="BlogEntryId" />
+            <ScalarProperty Name="BlogCategoryId" ColumnName="BlogCategoryId" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BlogEntryViewCounts"><EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogEntryViewCount"><MappingFragment StoreEntitySet="BlogEntryViewCount">
+            <ScalarProperty Name="BlogEntryViewCountId" ColumnName="BlogEntryViewCountId" />
+            <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+            <ScalarProperty Name="BlogEntryId" ColumnName="BlogEntryId" />
+            <ScalarProperty Name="WebCount" ColumnName="WebCount" />
+            <ScalarProperty Name="WebLastUpdated" ColumnName="WebLastUpdated" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BlogFeedbacks"><EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogFeedback"><MappingFragment StoreEntitySet="BlogFeedback">
+            <ScalarProperty Name="InReplyToFeedbackId" ColumnName="InReplyToFeedbackId" />
+                <ScalarProperty Name="BlogFeedbackId" ColumnName="BlogFeedbackId" />
+            <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+            <ScalarProperty Name="BlogEntryId" ColumnName="BlogEntryId" />
+            <ScalarProperty Name="BlogFeedbackAuthorId" ColumnName="BlogFeedbackAuthorId" />
+            <ScalarProperty Name="Body" ColumnName="Body" />
+            <ScalarProperty Name="FeedbackType" ColumnName="FeedbackType" />
+            <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+            <ScalarProperty Name="IsBlogAuthor" ColumnName="IsBlogAuthor" />
+            <ScalarProperty Name="NotifyAuthorOnFeedback" ColumnName="NotifyAuthorOnFeedback" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="Title" ColumnName="Title" />
+            <ScalarProperty Name="UserAgent" ColumnName="UserAgent" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+            <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BlogFeedbackAuthors"><EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogFeedbackAuthor"><MappingFragment StoreEntitySet="BlogFeedbackAuthor">
+            <ScalarProperty Name="BlogFeedbackAuthorId" ColumnName="BlogFeedbackAuthorId" />
+            <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="Url" ColumnName="Url" />
+            <ScalarProperty Name="FeedbackTotal" ColumnName="FeedbackTotal" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+            <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BlogLogs"><EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogLog"><MappingFragment StoreEntitySet="BlogLog">
+            <ScalarProperty Name="BlogLogId" ColumnName="BlogLogId" />
+            <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+            <ScalarProperty Name="EventLevel" ColumnName="EventLevel" />
+            <ScalarProperty Name="Exception" ColumnName="Exception" />
+            <ScalarProperty Name="Logger" ColumnName="Logger" />
+            <ScalarProperty Name="Message" ColumnName="Message" />
+            <ScalarProperty Name="Url" ColumnName="Url" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BlogMedias"><EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogMedia"><MappingFragment StoreEntitySet="BlogMedia">
+            <ScalarProperty Name="BlogMediaId" ColumnName="BlogMediaId" />
+            <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+            <ScalarProperty Name="FileName" ColumnName="FileName" />
+            <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+            <ScalarProperty Name="ServerPath" ColumnName="ServerPath" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+            <ScalarProperty Name="CreatedById" ColumnName="CreatedById" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BlogMenuItems"><EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogMenuItem"><MappingFragment StoreEntitySet="BlogMenuItem">
+            <ScalarProperty Name="BlogMenuItemId" ColumnName="BlogMenuItemId" />
+            <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+            <ScalarProperty Name="IsView" ColumnName="IsView" />
+            <ScalarProperty Name="LinkText" ColumnName="LinkText" />
+            <ScalarProperty Name="LinkUrl" ColumnName="LinkUrl" />
+            <ScalarProperty Name="MenuItemOrder" ColumnName="MenuItemOrder" />
+            <ScalarProperty Name="PageContent" ColumnName="PageContent" />
+            <ScalarProperty Name="ViewName" ColumnName="ViewName" />
+            <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+            <ScalarProperty Name="LastUpdatedById" ColumnName="LastUpdatedById" />
+            <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BlogPages"><EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogPage"><MappingFragment StoreEntitySet="BlogPage">
+            <ScalarProperty Name="BlogPageId" ColumnName="BlogPageId" />
+            <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+            <ScalarProperty Name="EncodedTitle" ColumnName="EncodedTitle" />
+            <ScalarProperty Name="PageTitle" ColumnName="PageTitle" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+            <ScalarProperty Name="PageContent" ColumnName="PageContent" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+            <ScalarProperty Name="CreatedById" ColumnName="CreatedById" />
+            <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+            <ScalarProperty Name="LastUpdatedById" ColumnName="LastUpdatedById" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BlogRoles"><EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogRole"><MappingFragment StoreEntitySet="BlogRole">
+            <ScalarProperty Name="BlogRoleId" ColumnName="BlogRoleId" />
+            <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+            <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BlogUsers"><EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogUser"><MappingFragment StoreEntitySet="BlogUser">
+            <ScalarProperty Name="BlogUserId" ColumnName="BlogUserId" />
+            <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+            <ScalarProperty Name="About" ColumnName="About" />
+            <ScalarProperty Name="NotifyForFeedback" ColumnName="NotifyForFeedback" />
+            <ScalarProperty Name="Username" ColumnName="Username" />
+            <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+            <ScalarProperty Name="Password" ColumnName="Password" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+            <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BlogUserRoles"><EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogUserRole"><MappingFragment StoreEntitySet="BlogUserRole">
+            <ScalarProperty Name="BlogUserRoleId" ColumnName="BlogUserRoleId" />
+            <ScalarProperty Name="BlogUserId" ColumnName="BlogUserId" />
+            <ScalarProperty Name="BlogRoleId" ColumnName="BlogRoleId" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BlogCategories">
+            <EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogCategory">
+              <MappingFragment StoreEntitySet="BlogCategory">
+                <ScalarProperty Name="LastUpdatedById" ColumnName="LastUpdatedById" />
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+                <ScalarProperty Name="CreatedById" ColumnName="CreatedById" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+                <ScalarProperty Name="BlogCategoryId" ColumnName="BlogCategoryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Veritas" ZoomLevel="63">
+        <EntityTypeShape EntityType="VeritasBlogDBV3Model.Blacklist" Width="1.5" PointX="14.875" PointY="22.625" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeritasBlogDBV3Model.BlogConfig" Width="1.5" PointX="0.75" PointY="21.875" Height="4.480205078124996" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeritasBlogDBV3Model.BlogEntry" Width="1.5" PointX="8" PointY="27.375" Height="4.480205078124996" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeritasBlogDBV3Model.BlogEntryCategory" Width="1.5" PointX="9.125" PointY="32.75" Height="2.172587890624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeritasBlogDBV3Model.BlogEntryViewCount" Width="1.5" PointX="9.625" PointY="23.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeritasBlogDBV3Model.BlogFeedback" Width="1.5" PointX="12.125" PointY="22.875" Height="4.2879036458333353" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeritasBlogDBV3Model.BlogFeedbackAuthor" Width="1.5" PointX="3" PointY="22.625" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeritasBlogDBV3Model.BlogLog" Width="1.5" PointX="3" PointY="26.375" Height="2.749492187499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeritasBlogDBV3Model.BlogMedia" Width="1.5" PointX="3" PointY="29.875" Height="2.5571907552083282" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeritasBlogDBV3Model.BlogMenuItem" Width="1.5" PointX="3" PointY="33.125" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeritasBlogDBV3Model.BlogPage" Width="1.5" PointX="5.75" PointY="31.625" Height="3.7109993489583388" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeritasBlogDBV3Model.BlogRole" Width="1.5" PointX="14.875" PointY="25.75" Height="2.172587890624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeritasBlogDBV3Model.BlogUser" Width="1.5" PointX="14" PointY="30.625" Height="3.9033007812500102" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeritasBlogDBV3Model.BlogUserRole" Width="1.5" PointX="11.25" PointY="29.625" Height="2.172587890624996" IsExpanded="true" />
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_Blacklist_BlogConfig_BlogConfigId" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="22.2499995" />
+          <ConnectorPoint PointX="14.166666666666666" PointY="22.2499995" />
+          <ConnectorPoint PointX="14.333333333333334" PointY="22.2499995" />
+          <ConnectorPoint PointX="15.625" PointY="22.2499995" />
+          <ConnectorPoint PointX="15.625" PointY="22.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogEntry_BlogConfig_BlogConfigId" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="26.355205078124996" />
+          <ConnectorPoint PointX="1.5" PointY="29.499746093749998" />
+          <ConnectorPoint PointX="1.6197929166666665" PointY="29.499746093749998" />
+          <ConnectorPoint PointX="1.786459583333333" PointY="29.499746093749998" />
+          <ConnectorPoint PointX="2.0260454166666668" PointY="29.499746093749998" />
+          <ConnectorPoint PointX="2.1927120833333338" PointY="29.499746093749998" />
+          <ConnectorPoint PointX="8" PointY="29.499746093749998" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogEntryViewCount_BlogConfig_BlogConfigId" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="25.872091471354167" />
+          <ConnectorPoint PointX="8.6666666666666661" PointY="25.872091471354167" />
+          <ConnectorPoint PointX="8.8333333333333339" PointY="25.872091471354167" />
+          <ConnectorPoint PointX="9.625" PointY="25.872091471354167" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogFeedback_BlogConfig_BlogConfigId" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="26.266297200520832" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="26.266297200520832" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="26.266297200520832" />
+          <ConnectorPoint PointX="8.6666666666666661" PointY="26.266297200520832" />
+          <ConnectorPoint PointX="8.8333333333333339" PointY="26.266297200520832" />
+          <ConnectorPoint PointX="12.125" PointY="26.266297200520832" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogFeedbackAuthor_BlogConfig_BlogConfigId" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="24.095896809895834" />
+          <ConnectorPoint PointX="3" PointY="24.095896809895834" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogLog_BlogConfig_BlogConfigId" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.9062525" PointY="26.355205078124996" />
+          <ConnectorPoint PointX="1.9062525" PointY="27.749746093749998" />
+          <ConnectorPoint PointX="2.0260454166666668" PointY="27.749746093749998" />
+          <ConnectorPoint PointX="2.1927120833333338" PointY="27.749746093749998" />
+          <ConnectorPoint PointX="3" PointY="27.749746093749998" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogMedia_BlogConfig_BlogConfigId" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.0937475" PointY="26.355205078124996" />
+          <ConnectorPoint PointX="1.0937475" PointY="31.153595377604162" />
+          <ConnectorPoint PointX="1.6197929166666665" PointY="31.153595377604162" />
+          <ConnectorPoint PointX="1.786459583333333" PointY="31.153595377604162" />
+          <ConnectorPoint PointX="2.0260454166666668" PointY="31.153595377604162" />
+          <ConnectorPoint PointX="2.1927120833333338" PointY="31.153595377604162" />
+          <ConnectorPoint PointX="3" PointY="31.153595377604162" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogMenuItem_BlogConfig_BlogConfigId" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.1093787500000003" PointY="26.355205078124996" />
+          <ConnectorPoint PointX="2.1093787500000003" PointY="34.884348958333334" />
+          <ConnectorPoint PointX="3" PointY="34.884348958333334" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogPage_BlogConfig_BlogConfigId" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.7031262499999997" PointY="26.355205078124996" />
+          <ConnectorPoint PointX="1.7031262499999997" PointY="32.778595377604162" />
+          <ConnectorPoint PointX="2.0260454166666668" PointY="32.778595377604162" />
+          <ConnectorPoint PointX="2.1927120833333338" PointY="32.778595377604162" />
+          <ConnectorPoint PointX="5.75" PointY="32.778595377604162" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogRole_BlogConfig_BlogConfigId" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.29687375" PointY="26.355205078124996" />
+          <ConnectorPoint PointX="1.29687375" PointY="26.836293945312498" />
+          <ConnectorPoint PointX="1.4166666666666667" PointY="26.836293945312498" />
+          <ConnectorPoint PointX="1.5833333333333333" PointY="26.836293945312498" />
+          <ConnectorPoint PointX="1.6197929166666665" PointY="26.836293945312498" />
+          <ConnectorPoint PointX="1.786459583333333" PointY="26.836293945312498" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="26.836293945312498" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="26.836293945312498" />
+          <ConnectorPoint PointX="2.0260454166666668" PointY="26.836293945312498" />
+          <ConnectorPoint PointX="2.1927120833333338" PointY="26.836293945312498" />
+          <ConnectorPoint PointX="2.75" PointY="26.836293945312498" />
+          <ConnectorPoint PointX="2.75" PointY="26.125" />
+          <ConnectorPoint PointX="8.6666666666666661" PointY="26.125" />
+          <ConnectorPoint PointX="8.8333333333333339" PointY="26.125" />
+          <ConnectorPoint PointX="9.375" PointY="26.125" />
+          <ConnectorPoint PointX="9.375" PointY="26.364889322916667" />
+          <ConnectorPoint PointX="11.875" PointY="26.364889322916667" />
+          <ConnectorPoint PointX="11.875" PointY="27.605205078125003" />
+          <ConnectorPoint PointX="13.135416666666666" PointY="27.605205078125003" />
+          <ConnectorPoint PointX="13.302083333333334" PointY="27.605205078125003" />
+          <ConnectorPoint PointX="14.166666666666666" PointY="27.605205078125003" />
+          <ConnectorPoint PointX="14.333333333333334" PointY="27.605205078125003" />
+          <ConnectorPoint PointX="14.5" PointY="27.605205078125003" />
+          <ConnectorPoint PointX="14.5" PointY="26.836293945312498" />
+          <ConnectorPoint PointX="14.875" PointY="26.836293945312498" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogUser_BlogConfig_BlogConfigId" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="22.03124725" />
+          <ConnectorPoint PointX="14.25" PointY="22.03124725" />
+          <ConnectorPoint PointX="14.25" PointY="30.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogEntry_BlogUser_BlogAuthorId" ManuallyRouted="false">
+          <ConnectorPoint PointX="14" PointY="32.343861589313548" />
+          <ConnectorPoint PointX="9.3958333333333339" PointY="32.343861589313548" />
+          <ConnectorPoint PointX="9.2291666666666661" PointY="32.343861589313548" />
+          <ConnectorPoint PointX="8.53125" PointY="32.343861589313548" />
+          <ConnectorPoint PointX="8.53125" PointY="31.855205078124996" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogEntryCategory_BlogEntry_BlogEntryId" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.3125" PointY="31.855205078124996" />
+          <ConnectorPoint PointX="9.3125" PointY="32.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogEntryViewCount_BlogEntry_BlogEntryId" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.75" PointY="27.375" />
+          <ConnectorPoint PointX="8.75" PointY="24.932444661458334" />
+          <ConnectorPoint PointX="9.625" PointY="24.932444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogFeedback_BlogEntry_BlogEntryId" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.5" PointY="28.5838525390625" />
+          <ConnectorPoint PointX="13.21875" PointY="28.5838525390625" />
+          <ConnectorPoint PointX="13.21875" PointY="27.355205078125003" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogFeedback_BlogFeedbackAuthor_BlogFeedbackAuthorId" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="23.28125" />
+          <ConnectorPoint PointX="12.125" PointY="23.28125" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogPage_BlogUser_CreatedById" ManuallyRouted="false">
+          <ConnectorPoint PointX="14" PointY="32.068283333719272" />
+          <ConnectorPoint PointX="9.3958333333333339" PointY="32.068283333719272" />
+          <ConnectorPoint PointX="9.2291666666666661" PointY="32.068283333719272" />
+          <ConnectorPoint PointX="8.6145833333333339" PointY="32.068283333719272" />
+          <ConnectorPoint PointX="8.4479166666666661" PointY="32.068283333719272" />
+          <ConnectorPoint PointX="7.25" PointY="32.068283333719272" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogPage_BlogUser_LastUpdatedById" ManuallyRouted="false">
+          <ConnectorPoint PointX="14" PointY="32.578180794656774" />
+          <ConnectorPoint PointX="9.3958333333333339" PointY="32.578180794656774" />
+          <ConnectorPoint PointX="9.2291666666666661" PointY="32.578180794656774" />
+          <ConnectorPoint PointX="7.25" PointY="32.578180794656774" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogUserRole_BlogRole_BlogRoleId" ManuallyRouted="false">
+          <ConnectorPoint PointX="15.96875" PointY="27.922587890624996" />
+          <ConnectorPoint PointX="15.96875" PointY="30.09375" />
+          <ConnectorPoint PointX="14.739583333333334" PointY="30.09375" />
+          <ConnectorPoint PointX="14.572916666666666" PointY="30.09375" />
+          <ConnectorPoint PointX="14.333333333333334" PointY="30.09375" />
+          <ConnectorPoint PointX="14.166666666666666" PointY="30.09375" />
+          <ConnectorPoint PointX="12.75" PointY="30.09375" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogUserRole_BlogUser_BlogUserId" ManuallyRouted="false">
+          <ConnectorPoint PointX="14" PointY="31.2112939453125" />
+          <ConnectorPoint PointX="12.75" PointY="31.2112939453125" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="VeritasBlogDBV3Model.BlogCategory" Width="1.5" PointX="17.25" PointY="26.25" Height="2.9417936197916674" />
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogCategory_BlogConfig_BlogConfigId" >
+          <ConnectorPoint PointX="2.25" PointY="22.43750225" />
+          <ConnectorPoint PointX="14.166666666666666" PointY="22.43750225" />
+          <ConnectorPoint PointX="14.333333333333334" PointY="22.43750225" />
+          <ConnectorPoint PointX="15.541666666666666" PointY="22.43750225" />
+          <ConnectorPoint PointX="15.708333333333334" PointY="22.43750225" />
+          <ConnectorPoint PointX="18" PointY="22.43750225" />
+          <ConnectorPoint PointX="18" PointY="26.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogCategory_BlogUser_CreatedById" >
+          <ConnectorPoint PointX="14.65625" PointY="30.625" />
+          <ConnectorPoint PointX="14.65625" PointY="28.7807421875" />
+          <ConnectorPoint PointX="15.885416666666666" PointY="28.7807421875" />
+          <ConnectorPoint PointX="16.052083333333332" PointY="28.7807421875" />
+          <ConnectorPoint PointX="17.25" PointY="28.7807421875" />
+        </AssociationConnector>
+        <AssociationConnector Association="VeritasBlogDBV3Model.FK_BlogEntryCategory_BlogCategory_BlogCategoryId" >
+          <ConnectorPoint PointX="18" PointY="29.191793619791667" />
+          <ConnectorPoint PointX="18" PointY="34.75669433593751" />
+          <ConnectorPoint PointX="10.625" PointY="34.75669433593751" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

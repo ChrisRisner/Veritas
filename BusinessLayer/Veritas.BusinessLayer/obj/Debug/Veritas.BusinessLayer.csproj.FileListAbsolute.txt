@@ -1,0 +1,11 @@
+C:\csharp\Veritas 3\BusinessLayer\Veritas.BusinessLayer\bin\Debug\Veritas.BusinessLayer.dll.config
+C:\csharp\Veritas 3\BusinessLayer\Veritas.BusinessLayer\bin\Debug\Veritas.BusinessLayer.dll
+C:\csharp\Veritas 3\BusinessLayer\Veritas.BusinessLayer\bin\Debug\Veritas.BusinessLayer.pdb
+C:\csharp\Veritas 3\BusinessLayer\Veritas.BusinessLayer\bin\Debug\CookComputing.XmlRpcV2.DLL
+C:\csharp\Veritas 3\BusinessLayer\Veritas.BusinessLayer\bin\Debug\Joel.Net.Akismet.dll
+C:\csharp\Veritas 3\BusinessLayer\Veritas.BusinessLayer\bin\Debug\Veritas.DataLayer.dll
+C:\csharp\Veritas 3\BusinessLayer\Veritas.BusinessLayer\bin\Debug\Veritas.DataLayer.pdb
+C:\csharp\Veritas 3\BusinessLayer\Veritas.BusinessLayer\bin\Debug\Joel.Net.Akismet.pdb
+C:\csharp\Veritas 3\BusinessLayer\Veritas.BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\csharp\Veritas 3\BusinessLayer\Veritas.BusinessLayer\obj\Debug\Veritas.BusinessLayer.dll
+C:\csharp\Veritas 3\BusinessLayer\Veritas.BusinessLayer\obj\Debug\Veritas.BusinessLayer.pdb

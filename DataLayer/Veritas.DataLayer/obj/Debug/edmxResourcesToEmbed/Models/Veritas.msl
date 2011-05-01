@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VeritasBlogDBV3ModelStoreContainer" CdmEntityContainer="VeritasBlogDBV3Entities">
+    <EntitySetMapping Name="Blacklists">
+      <EntityTypeMapping TypeName="VeritasBlogDBV3Model.Blacklist">
+        <MappingFragment StoreEntitySet="Blacklist">
+          <ScalarProperty Name="BlacklistId" ColumnName="BlacklistId" />
+          <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlogConfigs">
+      <EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogConfig">
+        <MappingFragment StoreEntitySet="BlogConfig">
+          <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+          <ScalarProperty Name="ConfigXml" ColumnName="ConfigXml" />
+          <ScalarProperty Name="Host" ColumnName="Host" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdatedById" ColumnName="LastUpdatedById" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlogEntries">
+      <EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogEntry">
+        <MappingFragment StoreEntitySet="BlogEntry">
+          <ScalarProperty Name="BlogEntryId" ColumnName="BlogEntryId" />
+          <ScalarProperty Name="BlogAuthorId" ColumnName="BlogAuthorId" />
+          <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+          <ScalarProperty Name="EntryName" ColumnName="EntryName" />
+          <ScalarProperty Name="FeedbackCount" ColumnName="FeedbackCount" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="PostType" ColumnName="PostType" />
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="Short" ColumnName="Short" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlogEntryCategories">
+      <EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogEntryCategory">
+        <MappingFragment StoreEntitySet="BlogEntryCategory">
+          <ScalarProperty Name="BlogEntryCategoryId" ColumnName="BlogEntryCategoryId" />
+          <ScalarProperty Name="BlogEntryId" ColumnName="BlogEntryId" />
+          <ScalarProperty Name="BlogCategoryId" ColumnName="BlogCategoryId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlogEntryViewCounts">
+      <EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogEntryViewCount">
+        <MappingFragment StoreEntitySet="BlogEntryViewCount">
+          <ScalarProperty Name="BlogEntryViewCountId" ColumnName="BlogEntryViewCountId" />
+          <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+          <ScalarProperty Name="BlogEntryId" ColumnName="BlogEntryId" />
+          <ScalarProperty Name="WebCount" ColumnName="WebCount" />
+          <ScalarProperty Name="WebLastUpdated" ColumnName="WebLastUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlogFeedbacks">
+      <EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogFeedback">
+        <MappingFragment StoreEntitySet="BlogFeedback">
+          <ScalarProperty Name="InReplyToFeedbackId" ColumnName="InReplyToFeedbackId" />
+          <ScalarProperty Name="BlogFeedbackId" ColumnName="BlogFeedbackId" />
+          <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+          <ScalarProperty Name="BlogEntryId" ColumnName="BlogEntryId" />
+          <ScalarProperty Name="BlogFeedbackAuthorId" ColumnName="BlogFeedbackAuthorId" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="FeedbackType" ColumnName="FeedbackType" />
+          <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+          <ScalarProperty Name="IsBlogAuthor" ColumnName="IsBlogAuthor" />
+          <ScalarProperty Name="NotifyAuthorOnFeedback" ColumnName="NotifyAuthorOnFeedback" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="UserAgent" ColumnName="UserAgent" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlogFeedbackAuthors">
+      <EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogFeedbackAuthor">
+        <MappingFragment StoreEntitySet="BlogFeedbackAuthor">
+          <ScalarProperty Name="BlogFeedbackAuthorId" ColumnName="BlogFeedbackAuthorId" />
+          <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="FeedbackTotal" ColumnName="FeedbackTotal" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlogLogs">
+      <EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogLog">
+        <MappingFragment StoreEntitySet="BlogLog">
+          <ScalarProperty Name="BlogLogId" ColumnName="BlogLogId" />
+          <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="EventLevel" ColumnName="EventLevel" />
+          <ScalarProperty Name="Exception" ColumnName="Exception" />
+          <ScalarProperty Name="Logger" ColumnName="Logger" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlogMedias">
+      <EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogMedia">
+        <MappingFragment StoreEntitySet="BlogMedia">
+          <ScalarProperty Name="BlogMediaId" ColumnName="BlogMediaId" />
+          <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="ServerPath" ColumnName="ServerPath" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedById" ColumnName="CreatedById" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlogMenuItems">
+      <EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogMenuItem">
+        <MappingFragment StoreEntitySet="BlogMenuItem">
+          <ScalarProperty Name="BlogMenuItemId" ColumnName="BlogMenuItemId" />
+          <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+          <ScalarProperty Name="IsView" ColumnName="IsView" />
+          <ScalarProperty Name="LinkText" ColumnName="LinkText" />
+          <ScalarProperty Name="LinkUrl" ColumnName="LinkUrl" />
+          <ScalarProperty Name="MenuItemOrder" ColumnName="MenuItemOrder" />
+          <ScalarProperty Name="PageContent" ColumnName="PageContent" />
+          <ScalarProperty Name="ViewName" ColumnName="ViewName" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastUpdatedById" ColumnName="LastUpdatedById" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlogPages">
+      <EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogPage">
+        <MappingFragment StoreEntitySet="BlogPage">
+          <ScalarProperty Name="BlogPageId" ColumnName="BlogPageId" />
+          <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+          <ScalarProperty Name="EncodedTitle" ColumnName="EncodedTitle" />
+          <ScalarProperty Name="PageTitle" ColumnName="PageTitle" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="PageContent" ColumnName="PageContent" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedById" ColumnName="CreatedById" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="LastUpdatedById" ColumnName="LastUpdatedById" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlogRoles">
+      <EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogRole">
+        <MappingFragment StoreEntitySet="BlogRole">
+          <ScalarProperty Name="BlogRoleId" ColumnName="BlogRoleId" />
+          <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlogUsers">
+      <EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogUser">
+        <MappingFragment StoreEntitySet="BlogUser">
+          <ScalarProperty Name="BlogUserId" ColumnName="BlogUserId" />
+          <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+          <ScalarProperty Name="About" ColumnName="About" />
+          <ScalarProperty Name="NotifyForFeedback" ColumnName="NotifyForFeedback" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlogUserRoles">
+      <EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogUserRole">
+        <MappingFragment StoreEntitySet="BlogUserRole">
+          <ScalarProperty Name="BlogUserRoleId" ColumnName="BlogUserRoleId" />
+          <ScalarProperty Name="BlogUserId" ColumnName="BlogUserId" />
+          <ScalarProperty Name="BlogRoleId" ColumnName="BlogRoleId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlogCategories">
+      <EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogCategory">
+        <MappingFragment StoreEntitySet="BlogCategory">
+          <ScalarProperty Name="LastUpdatedById" ColumnName="LastUpdatedById" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="CreatedById" ColumnName="CreatedById" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
+          <ScalarProperty Name="BlogCategoryId" ColumnName="BlogCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="eeb8a028-574a-437d-ba16-e28df44519d9" name="chris@OMEGA 2011-03-01 22:07:01" runUser="omega\chris" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="6fa36b88-2d58-4b83-8765-de14e7185a90">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="chris_OMEGA 2011-03-01 22_07_01">
+      <DeploymentItem filename="C:\csharp\Veritas 3\BusinessLayer\Veritas.BusinessLayer\bin\Debug\Veritas.BusinessLayer.dll" />
+      <DeploymentItem filename="C:\csharp\veritas 3\ThirdPartyAssembelies\Moq\Moq.dll" />
+      <DeploymentItem filename="C:\csharp\Veritas 3\DataLayer\Veritas.DataLayer\bin\Debug\Veritas.DataLayer.dll" />
+      <DeploymentItem filename="C:\csharp\Veritas 3\UI\Veritas.UI.Web\bin\Veritas.UI.Web.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-03-01T22:07:01.4429163-05:00" queuing="2011-03-01T22:07:01.5119202-05:00" start="2011-03-01T22:07:01.5439220-05:00" finish="2011-03-01T22:07:05.3791414-05:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="73" executed="73" passed="69" error="0" failed="4" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="DeleteBlogEntryTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="c8d5d54a-5747-e0ad-d7b0-76377ca3dca6">
+      <Execution id="adcab679-e506-4ff0-b4b3-3a49c8091388" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteBlogEntryTest" />
+    </UnitTest>
+    <UnitTest name="LogToDbTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="139ab3b5-06ed-b3a1-e294-00471518491c">
+      <Execution id="d8370a43-71d0-4ba6-b419-53ed9d4b41c0" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.LoggingHandlerTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogToDbTest" />
+    </UnitTest>
+    <UnitTest name="GetEntriesFromStartPointTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="c7fe2751-1051-530e-a619-c3e0302bb88e">
+      <Execution id="f17367e0-0283-45c5-99b3-57ee47837650" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetEntriesFromStartPointTest" />
+    </UnitTest>
+    <UnitTest name="DeleteBlogPageTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="2e41ee7b-fef3-3171-340b-af54e8e4e820">
+      <Execution id="a8b6be10-ca00-41e8-af83-146981443a11" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteBlogPageTest" />
+    </UnitTest>
+    <UnitTest name="DeleteBlogEntryViewCountTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="e7a4da5d-e505-77aa-de9b-b9803fda3f68">
+      <Execution id="4aed8613-f929-4ce6-b83d-b7a128e09ac0" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteBlogEntryViewCountTest" />
+    </UnitTest>
+    <UnitTest name="ForceNewInstanceTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="32df1724-5104-3e56-cb1c-e855f7d33c78">
+      <Execution id="7e37db8a-4d11-405c-8248-18c9aa2277df" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ForceNewInstanceTest" />
+    </UnitTest>
+    <UnitTest name="GetBlogFeedbackByFeedbackIdTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="1eb74fa0-cd49-400c-0d57-14a1a55376e2">
+      <Execution id="5104632f-20fa-4e46-8df8-45a0a2b8fcc8" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetBlogFeedbackByFeedbackIdTest" />
+    </UnitTest>
+    <UnitTest name="DeleteBlogLogTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="ea3d664f-a9b3-4272-66e4-7640a3a556af">
+      <Execution id="745d5803-bac8-4855-819b-439c8ab02774" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteBlogLogTest" />
+    </UnitTest>
+    <UnitTest name="DeleteBlacklistTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="71e36249-d1d9-c9c8-c5a2-21a17f6ce0ba">
+      <Execution id="b1865b9d-cc5d-474f-9e21-11ca0a4306ff" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteBlacklistTest" />
+    </UnitTest>
+    <UnitTest name="UrlHelperTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="ba02f043-5194-b9ef-24b3-5b63efb7cd79">
+      <Execution id="c42ef392-89b1-4f59-97fd-c0373f8098b7" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasFormTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UrlHelperTest" />
+    </UnitTest>
+    <UnitTest name="DeleteBlogConfigTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="7696afef-1fde-4dc8-80d8-b0c40bea3145">
+      <Execution id="97c68318-d16e-45c0-b7b5-f0a34888c1b9" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteBlogConfigTest" />
+    </UnitTest>
+    <UnitTest name="AddBlogLogTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="93859457-059e-f967-9d10-0d393b92ecbd">
+      <Execution id="83308050-0964-4281-83d0-2a2033e1c877" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddBlogLogTest" />
+    </UnitTest>
+    <UnitTest name="GetRecentEntriesTest1" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="fb1c259e-a5d3-4d6f-eb1f-88e915527312">
+      <Execution id="1e7ddab7-27e6-4f99-b96a-1bc062bfc829" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetRecentEntriesTest1" />
+    </UnitTest>
+    <UnitTest name="AddBlacklistTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="a8e19d6e-94f1-71b9-e146-21d07ada136b">
+      <Execution id="2fcbc5c3-08a1-4de0-80a0-f69734dde928" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddBlacklistTest" />
+    </UnitTest>
+    <UnitTest name="BuildXmlFromConfigTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="dfccb8e7-e1b4-274c-8f59-e2f6a417af14">
+      <Execution id="87970edf-b678-42f0-a9c8-d9055d626f61" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.BlogConfigTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="BuildXmlFromConfigTest" />
+    </UnitTest>
+    <UnitTest name="GetBlogUsersInRolesTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="a6e26627-243e-155a-eb01-98e2d1195dae">
+      <Execution id="e1ee6a7d-0746-4f53-b1bc-c690cb162609" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetBlogUsersInRolesTest" />
+    </UnitTest>
+    <UnitTest name="GetTotalEntriesByBlogConfigIDTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="94256328-6ce6-7f64-bf52-52d662d69141">
+      <Execution id="301174a6-0b4e-4f63-94d1-c586d0aae53f" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetTotalEntriesByBlogConfigIDTest" />
+    </UnitTest>
+    <UnitTest name="AddBlogEntryTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="3c04621e-74cb-9962-379a-2a39c7771507">
+      <Execution id="164dead7-1b1a-47d8-b3ed-780a51ce15d1" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddBlogEntryTest" />
+    </UnitTest>
+    <UnitTest name="GetInstanceTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="2393ba0f-b8d8-09f4-703d-82bed950d692">
+      <Execution id="91499dc9-6fd7-486b-9e09-a9182b25c9c5" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasFormTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetInstanceTest" />
+    </UnitTest>
+    <UnitTest name="DeleteBlogCategoryTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="b3108ca4-ea15-e67e-c0db-a65c954d8ee4">
+      <Execution id="7e8ecfec-33d1-4de0-9005-d2777321f51b" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteBlogCategoryTest" />
+    </UnitTest>
+    <UnitTest name="AddBlogUserTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="9dfd7cc0-85f3-ef1f-df8a-dfd2dfaed384">
+      <Execution id="795039cc-872f-4d38-9791-033815bdf5cb" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddBlogUserTest" />
+    </UnitTest>
+    <UnitTest name="DeleteBlogUserRoleTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="7f840e9f-2bcf-f981-20f2-b813f293bead">
+      <Execution id="e952d7c2-7f52-4818-a2e7-c89cf1b086e6" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteBlogUserRoleTest" />
+    </UnitTest>
+    <UnitTest name="GetCategoryTagsTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="1c19cc4a-22e0-ca4d-ad5c-b13ae32c220d">
+      <Execution id="9e7df73c-8d3d-4e0f-ab7d-e414c2fafc05" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetCategoryTagsTest" />
+    </UnitTest>
+    <UnitTest name="GetEntryByIDTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="64973faf-5d75-8380-9505-9cef889bfac8">
+      <Execution id="cb29d92d-408c-4747-8948-2c31bb1ec4cf" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetEntryByIDTest" />
+    </UnitTest>
+    <UnitTest name="LogToFileDetailsTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="3a823fd7-1fe1-4ff6-4b84-5f99c9fb80fe">
+      <Execution id="e615c383-0510-42d7-89d7-a1b370768776" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.LoggingHandlerTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogToFileDetailsTest" />
+    </UnitTest>
+    <UnitTest name="GetBlogFeedbackAuthorsTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="447be92f-5d52-346d-beb6-d91f0b0d0de7">
+      <Execution id="a3d93e46-5334-4279-801f-c712a89e6938" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetBlogFeedbackAuthorsTest" />
+    </UnitTest>
+    <UnitTest name="LogToDbExceptionTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="d36ead82-8c1b-369b-cd71-07dfae01f04a">
+      <Execution id="4c668652-f213-465a-828a-f0e888cba504" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.LoggingHandlerTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogToDbExceptionTest" />
+    </UnitTest>
+    <UnitTest name="DeleteBlogMenuItemTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="e6165e7d-f344-cfae-dc8d-31f21eb72b18">
+      <Execution id="c322c796-ec07-4f2e-a534-841f690b2b15" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteBlogMenuItemTest" />
+    </UnitTest>
+    <UnitTest name="AddBlogMenuItemTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="32ea4c9f-3078-f85d-0e69-a67efb28c540">
+      <Execution id="aa22eb59-201d-458f-9cb8-8ebd3de77232" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddBlogMenuItemTest" />
+    </UnitTest>
+    <UnitTest name="GetFeedbackForRSSTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="026b8766-739e-be5a-bbeb-7fe4653d0b92">
+      <Execution id="4493ff13-a4be-4768-b262-5886f715e68b" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetFeedbackForRSSTest" />
+    </UnitTest>
+    <UnitTest name="DeleteBlogFeedbackTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="1869c27a-e993-ce54-ae8d-43097acfe7b5">
+      <Execution id="2ea36ccb-8568-4b9e-8713-bf353fdd3cfd" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteBlogFeedbackTest" />
+    </UnitTest>
+    <UnitTest name="ChangePasswordTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="36229b7c-e11e-405f-d310-8a1627280a02">
+      <Execution id="728644e2-e039-4c9e-b585-406a1a56a8dd" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePasswordTest" />
+    </UnitTest>
+    <UnitTest name="UpdateEntryViewCountForWebTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="d23de06b-65d4-8455-c8d5-757ad66cadc4">
+      <Execution id="fce36ab8-7b84-402d-80eb-56ea08335a97" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateEntryViewCountForWebTest" />
+    </UnitTest>
+    <UnitTest name="GetAllBlogConfigsTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="61b09f33-a84d-6c47-2176-a62ceb3b834b">
+      <Execution id="af2bccf5-2581-4e1c-a655-b30e67176faa" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetAllBlogConfigsTest" />
+    </UnitTest>
+    <UnitTest name="IsUserAuthorTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="c3fd992c-7d73-9162-4bb1-c19b72ab56b4">
+      <Execution id="cc2e6d5b-5560-496e-b2ee-ac0fd49892e6" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IsUserAuthorTest" />
+    </UnitTest>
+    <UnitTest name="AddBlogRoleTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="8b7a3a0d-042c-87af-c45b-c0ad4d74a982">
+      <Execution id="c5fb8632-0c79-42c9-aa10-5f70db6ab5ac" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddBlogRoleTest" />
+    </UnitTest>
+    <UnitTest name="DeleteBlogFeedbackAuthorTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="37ace099-1128-37d4-2a91-a82f649644a6">
+      <Execution id="c98b077a-624e-4ad3-b4fe-2084c965409d" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteBlogFeedbackAuthorTest" />
+    </UnitTest>
+    <UnitTest name="DoesEntryTitleExistTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="c82f563e-2472-65c4-c0ec-829ca77722c8">
+      <Execution id="7e676b6f-1623-4978-8ce4-e0acfd1217fd" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DoesEntryTitleExistTest" />
+    </UnitTest>
+    <UnitTest name="AddBlogEntryCategoryTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="01987b87-3a3d-db43-9609-d6303ea08a6b">
+      <Execution id="90474c7d-071a-4eab-bcc4-16f00a7b0ba3" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddBlogEntryCategoryTest" />
+    </UnitTest>
+    <UnitTest name="GetRolesForUserTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="a26c9cbb-705c-d281-2c59-aa583852ac80">
+      <Execution id="83df28b3-0218-46fb-ab3a-f6c73526cf6e" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetRolesForUserTest" />
+    </UnitTest>
+    <UnitTest name="AddBlogCategoryTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="b0df2616-61bf-71de-a7bd-47ff2b15d236">
+      <Execution id="2fb41b17-22fb-496c-9a64-0643d9e22a6f" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddBlogCategoryTest" />
+    </UnitTest>
+    <UnitTest name="DeleteBlogEntryCategoryTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="a925c3a4-eed3-17c5-a249-f29a0ff63ed6">
+      <Execution id="34df6918-fc75-4976-9157-8fe8b3ddffd3" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteBlogEntryCategoryTest" />
+    </UnitTest>
+    <UnitTest name="AddBlogMediaTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="97be4ddb-9491-09af-23fc-591644993d18">
+      <Execution id="6b32f65e-9035-4555-a265-620f62fac6c4" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddBlogMediaTest" />
+    </UnitTest>
+    <UnitTest name="AddBlogFeedbackTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="b4e556fb-0ea0-19cc-b9f9-56dab34cad84">
+      <Execution id="463943e3-2f5f-46a4-987b-fc8bc4da3ff5" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddBlogFeedbackTest" />
+    </UnitTest>
+    <UnitTest name="SaveEntryCategoryAssociationTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="042b6979-c19a-ccbf-dc3a-0097b07257a8">
+      <Execution id="979244e6-1d84-41a0-a42c-3158c553165e" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SaveEntryCategoryAssociationTest" />
+    </UnitTest>
+    <UnitTest name="GetEntryByEntryNameAndBlogConfigIDTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="40112a03-71da-3b8f-6c9c-cbc7fe86d163">
+      <Execution id="e15bb309-81aa-45e2-80d6-bb0afb30de2d" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetEntryByEntryNameAndBlogConfigIDTest" />
+    </UnitTest>
+    <UnitTest name="AddBlogUserRoleTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="c20da52c-e354-0953-79b7-81d22629dba1">
+      <Execution id="714425db-261b-408f-b2fd-52127678809f" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddBlogUserRoleTest" />
+    </UnitTest>
+    <UnitTest name="GetInstanceTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="da025daa-9a08-5d83-0a31-8339d11dde9a">
+      <Execution id="383031dc-69ef-41c9-9e4a-b406abffa883" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetInstanceTest" />
+    </UnitTest>
+    <UnitTest name="DeleteBlogMediaTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="53becad3-33a7-00ee-0240-9413a3aa2dc9">
+      <Execution id="f417fef3-0093-4c55-b6d4-e769bedb8017" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteBlogMediaTest" />
+    </UnitTest>
+    <UnitTest name="DeleteRoleTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="0b5551a8-44fe-0086-cd48-840ba46daa4c">
+      <Execution id="3deca5c6-a1db-4a28-a94e-b240c5f4b5ea" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteRoleTest" />
+    </UnitTest>
+    <UnitTest name="GetRecentEntriesTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="86ae8cf4-3833-2fad-c57d-65e1cca1a97e">
+      <Execution id="568f5a9c-25c5-41cf-b46b-c889ee70acd8" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetRecentEntriesTest" />
+    </UnitTest>
+    <UnitTest name="LogToFileExceptionTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="e4773567-3b44-5087-89c9-4a1812d30763">
+      <Execution id="2c53275a-26f9-4e36-b797-35dce0e9a8aa" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.LoggingHandlerTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogToFileExceptionTest" />
+    </UnitTest>
+    <UnitTest name="GetEntriesForRSSTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="464b4773-3c3d-7907-26d3-b60de49d5985">
+      <Execution id="785fcb4e-f9cb-4f3f-b342-cbec9d289097" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetEntriesForRSSTest" />
+    </UnitTest>
+    <UnitTest name="HtmlHelperTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="337b107f-1e00-0d6b-e2d1-32688c0a2d69">
+      <Execution id="637879de-c13a-47f9-b448-d8ceec707230" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasFormTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HtmlHelperTest" />
+    </UnitTest>
+    <UnitTest name="GetBlacklistsForEmailAddressesTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="2e1a565c-54b6-6d27-d1fd-b82cf7050f9f">
+      <Execution id="f235d580-9703-456f-a826-b815a28f37bc" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetBlacklistsForEmailAddressesTest" />
+    </UnitTest>
+    <UnitTest name="GetBlogConfigByHostnameTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="3dfb5b00-6af1-8a3a-ef1c-5ceec79b8cef">
+      <Execution id="79bbd75f-961f-4642-8dfa-06211f713037" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetBlogConfigByHostnameTest" />
+    </UnitTest>
+    <UnitTest name="GetBlogCategoryByCategoryIdTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="9dd330af-5fac-7a94-8223-43d6eccab16e">
+      <Execution id="399087ce-c481-4875-b21c-674e1b92a83e" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetBlogCategoryByCategoryIdTest" />
+    </UnitTest>
+    <UnitTest name="AddBlogPageTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="50d2e327-01c8-4afe-af7a-33efde48d29a">
+      <Execution id="011adc4f-9e29-4dc0-874c-6da6ddc52c87" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddBlogPageTest" />
+    </UnitTest>
+    <UnitTest name="DeleteBlogUserTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="63d2c77d-2f2a-4f48-15e6-e83e7f4bcded">
+      <Execution id="ab273a34-9910-48f0-891a-d339e563e695" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteBlogUserTest" />
+    </UnitTest>
+    <UnitTest name="DoesCategoryExistTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="11bc5341-5162-cad2-945c-c25f636c9c39">
+      <Execution id="c8be5e48-89ab-478b-abac-e85e897eebce" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DoesCategoryExistTest" />
+    </UnitTest>
+    <UnitTest name="GetTotalEntriesByBlogConfigIdAndCategoryTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="0364fa97-23e8-9d43-8c56-804653725181">
+      <Execution id="a2d608cb-7dc8-4d44-9881-dbd94a338ac6" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetTotalEntriesByBlogConfigIdAndCategoryTest" />
+    </UnitTest>
+    <UnitTest name="GetEntriesForCategoryFromStartPointTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="9778e568-10cb-7dc9-3109-8e9ae94a0b38">
+      <Execution id="aad62711-7327-43e2-b777-58ac4f73bbea" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetEntriesForCategoryFromStartPointTest" />
+    </UnitTest>
+    <UnitTest name="LoadConfigFromXmlTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="4d878c16-385d-d610-2cbf-7652a010b362">
+      <Execution id="61a6c4a3-51dc-4139-a010-db4b3c762d2a" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.BlogConfigTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LoadConfigFromXmlTest" />
+    </UnitTest>
+    <UnitTest name="GetBlogRoleByRoleIdTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="4ee74a38-b2ca-4d6c-c0b4-9bfac1daa8c2">
+      <Execution id="e8f9ac4c-86fe-4ed7-8921-6d480b2f73a0" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetBlogRoleByRoleIdTest" />
+    </UnitTest>
+    <UnitTest name="GetBlogConfigByBlogConfigIdTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="50198a28-809b-3300-f57d-0d89ee5bc4e4">
+      <Execution id="60c25134-40d4-4847-8e34-dad29bbbd978" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetBlogConfigByBlogConfigIdTest" />
+    </UnitTest>
+    <UnitTest name="GetBlogConfigTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="11f1d2f1-9bd3-067f-5722-3beb4d7ed102">
+      <Execution id="304dd819-9e8c-44fa-a936-1d060ae9f23a" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.CacheHandlerTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetBlogConfigTest" />
+    </UnitTest>
+    <UnitTest name="AddBlogFeedbackAuthorTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="d4ec15b4-22c1-3ec0-3bec-7dcaca3dc698">
+      <Execution id="896fb1a8-ef10-44d6-913d-807eff7231aa" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddBlogFeedbackAuthorTest" />
+    </UnitTest>
+    <UnitTest name="GetEntryByEntryIDBlogConfigIDTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="55ae4fb6-83e5-44c9-a1b2-9e3e3be1625f">
+      <Execution id="510b6273-4051-4ac9-9f11-f87dc351cfa1" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetEntryByEntryIDBlogConfigIDTest" />
+    </UnitTest>
+    <UnitTest name="AddBlogEntryViewCountTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="d47eb6dc-d325-8764-e966-be911a123673">
+      <Execution id="608b0b78-8299-4926-94ac-92c97f44b7d7" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddBlogEntryViewCountTest" />
+    </UnitTest>
+    <UnitTest name="VeritasRepositoryConstructorTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="c40e72ea-ff25-e206-6801-077c4224a59f">
+      <DeploymentItems>
+        <DeploymentItem filename="Veritas.DataLayer.dll" />
+      </DeploymentItems>
+      <Execution id="42e7debe-76b5-471a-9da3-9f483942c590" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="VeritasRepositoryConstructorTest" />
+    </UnitTest>
+    <UnitTest name="AddBlogConfigTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="21b7a273-8964-49b4-1439-13e55128b365">
+      <Execution id="92d09fb9-3391-4ce9-8111-7ccfb731ccfc" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddBlogConfigTest" />
+    </UnitTest>
+    <UnitTest name="ValidateUserTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="20f7f4a8-afae-4576-30d3-e1fe95b35b4f">
+      <Execution id="38f4f9fc-733f-404e-9a68-54186cb9d880" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ValidateUserTest" />
+    </UnitTest>
+    <UnitTest name="GetBlogFeedbacksByBlogConfigIdTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="09fc2a4a-d918-660e-dcfd-d5c6c4c3fdda">
+      <Execution id="388e1bac-638d-4135-8032-764cc0bfe757" />
+      <TestMethod codeBase="C:/csharp/veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.VeritasRepositoryTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetBlogFeedbacksByBlogConfigIdTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="01987b87-3a3d-db43-9609-d6303ea08a6b" executionId="90474c7d-071a-4eab-bcc4-16f00a7b0ba3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="026b8766-739e-be5a-bbeb-7fe4653d0b92" executionId="4493ff13-a4be-4768-b262-5886f715e68b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0364fa97-23e8-9d43-8c56-804653725181" executionId="a2d608cb-7dc8-4d44-9881-dbd94a338ac6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="042b6979-c19a-ccbf-dc3a-0097b07257a8" executionId="979244e6-1d84-41a0-a42c-3158c553165e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="09fc2a4a-d918-660e-dcfd-d5c6c4c3fdda" executionId="388e1bac-638d-4135-8032-764cc0bfe757" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0b5551a8-44fe-0086-cd48-840ba46daa4c" executionId="3deca5c6-a1db-4a28-a94e-b240c5f4b5ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="11bc5341-5162-cad2-945c-c25f636c9c39" executionId="c8be5e48-89ab-478b-abac-e85e897eebce" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="11f1d2f1-9bd3-067f-5722-3beb4d7ed102" executionId="304dd819-9e8c-44fa-a936-1d060ae9f23a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="139ab3b5-06ed-b3a1-e294-00471518491c" executionId="d8370a43-71d0-4ba6-b419-53ed9d4b41c0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1869c27a-e993-ce54-ae8d-43097acfe7b5" executionId="2ea36ccb-8568-4b9e-8713-bf353fdd3cfd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1c19cc4a-22e0-ca4d-ad5c-b13ae32c220d" executionId="9e7df73c-8d3d-4e0f-ab7d-e414c2fafc05" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1eb74fa0-cd49-400c-0d57-14a1a55376e2" executionId="5104632f-20fa-4e46-8df8-45a0a2b8fcc8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="20f7f4a8-afae-4576-30d3-e1fe95b35b4f" executionId="38f4f9fc-733f-404e-9a68-54186cb9d880" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="21b7a273-8964-49b4-1439-13e55128b365" executionId="92d09fb9-3391-4ce9-8111-7ccfb731ccfc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2393ba0f-b8d8-09f4-703d-82bed950d692" executionId="91499dc9-6fd7-486b-9e09-a9182b25c9c5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2e1a565c-54b6-6d27-d1fd-b82cf7050f9f" executionId="f235d580-9703-456f-a826-b815a28f37bc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2e41ee7b-fef3-3171-340b-af54e8e4e820" executionId="a8b6be10-ca00-41e8-af83-146981443a11" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="32df1724-5104-3e56-cb1c-e855f7d33c78" executionId="7e37db8a-4d11-405c-8248-18c9aa2277df" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="32ea4c9f-3078-f85d-0e69-a67efb28c540" executionId="aa22eb59-201d-458f-9cb8-8ebd3de77232" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="337b107f-1e00-0d6b-e2d1-32688c0a2d69" executionId="637879de-c13a-47f9-b448-d8ceec707230" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="36229b7c-e11e-405f-d310-8a1627280a02" executionId="728644e2-e039-4c9e-b585-406a1a56a8dd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="37ace099-1128-37d4-2a91-a82f649644a6" executionId="c98b077a-624e-4ad3-b4fe-2084c965409d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3a823fd7-1fe1-4ff6-4b84-5f99c9fb80fe" executionId="e615c383-0510-42d7-89d7-a1b370768776" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3c04621e-74cb-9962-379a-2a39c7771507" executionId="164dead7-1b1a-47d8-b3ed-780a51ce15d1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3dfb5b00-6af1-8a3a-ef1c-5ceec79b8cef" executionId="79bbd75f-961f-4642-8dfa-06211f713037" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="40112a03-71da-3b8f-6c9c-cbc7fe86d163" executionId="e15bb309-81aa-45e2-80d6-bb0afb30de2d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="447be92f-5d52-346d-beb6-d91f0b0d0de7" executionId="a3d93e46-5334-4279-801f-c712a89e6938" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="464b4773-3c3d-7907-26d3-b60de49d5985" executionId="785fcb4e-f9cb-4f3f-b342-cbec9d289097" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4d878c16-385d-d610-2cbf-7652a010b362" executionId="61a6c4a3-51dc-4139-a010-db4b3c762d2a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4ee74a38-b2ca-4d6c-c0b4-9bfac1daa8c2" executionId="e8f9ac4c-86fe-4ed7-8921-6d480b2f73a0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="50198a28-809b-3300-f57d-0d89ee5bc4e4" executionId="60c25134-40d4-4847-8e34-dad29bbbd978" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="50d2e327-01c8-4afe-af7a-33efde48d29a" executionId="011adc4f-9e29-4dc0-874c-6da6ddc52c87" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="53becad3-33a7-00ee-0240-9413a3aa2dc9" executionId="f417fef3-0093-4c55-b6d4-e769bedb8017" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="55ae4fb6-83e5-44c9-a1b2-9e3e3be1625f" executionId="510b6273-4051-4ac9-9f11-f87dc351cfa1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="61b09f33-a84d-6c47-2176-a62ceb3b834b" executionId="af2bccf5-2581-4e1c-a655-b30e67176faa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="63d2c77d-2f2a-4f48-15e6-e83e7f4bcded" executionId="ab273a34-9910-48f0-891a-d339e563e695" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="64973faf-5d75-8380-9505-9cef889bfac8" executionId="cb29d92d-408c-4747-8948-2c31bb1ec4cf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="71e36249-d1d9-c9c8-c5a2-21a17f6ce0ba" executionId="b1865b9d-cc5d-474f-9e21-11ca0a4306ff" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7696afef-1fde-4dc8-80d8-b0c40bea3145" executionId="97c68318-d16e-45c0-b7b5-f0a34888c1b9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7f840e9f-2bcf-f981-20f2-b813f293bead" executionId="e952d7c2-7f52-4818-a2e7-c89cf1b086e6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="86ae8cf4-3833-2fad-c57d-65e1cca1a97e" executionId="568f5a9c-25c5-41cf-b46b-c889ee70acd8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8b7a3a0d-042c-87af-c45b-c0ad4d74a982" executionId="c5fb8632-0c79-42c9-aa10-5f70db6ab5ac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="93859457-059e-f967-9d10-0d393b92ecbd" executionId="83308050-0964-4281-83d0-2a2033e1c877" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="94256328-6ce6-7f64-bf52-52d662d69141" executionId="301174a6-0b4e-4f63-94d1-c586d0aae53f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9778e568-10cb-7dc9-3109-8e9ae94a0b38" executionId="aad62711-7327-43e2-b777-58ac4f73bbea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="97be4ddb-9491-09af-23fc-591644993d18" executionId="6b32f65e-9035-4555-a265-620f62fac6c4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9dd330af-5fac-7a94-8223-43d6eccab16e" executionId="399087ce-c481-4875-b21c-674e1b92a83e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9dfd7cc0-85f3-ef1f-df8a-dfd2dfaed384" executionId="795039cc-872f-4d38-9791-033815bdf5cb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a26c9cbb-705c-d281-2c59-aa583852ac80" executionId="83df28b3-0218-46fb-ab3a-f6c73526cf6e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a6e26627-243e-155a-eb01-98e2d1195dae" executionId="e1ee6a7d-0746-4f53-b1bc-c690cb162609" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a8e19d6e-94f1-71b9-e146-21d07ada136b" executionId="2fcbc5c3-08a1-4de0-80a0-f69734dde928" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a925c3a4-eed3-17c5-a249-f29a0ff63ed6" executionId="34df6918-fc75-4976-9157-8fe8b3ddffd3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b0df2616-61bf-71de-a7bd-47ff2b15d236" executionId="2fb41b17-22fb-496c-9a64-0643d9e22a6f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b3108ca4-ea15-e67e-c0db-a65c954d8ee4" executionId="7e8ecfec-33d1-4de0-9005-d2777321f51b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b4e556fb-0ea0-19cc-b9f9-56dab34cad84" executionId="463943e3-2f5f-46a4-987b-fc8bc4da3ff5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ba02f043-5194-b9ef-24b3-5b63efb7cd79" executionId="c42ef392-89b1-4f59-97fd-c0373f8098b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c20da52c-e354-0953-79b7-81d22629dba1" executionId="714425db-261b-408f-b2fd-52127678809f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c3fd992c-7d73-9162-4bb1-c19b72ab56b4" executionId="cc2e6d5b-5560-496e-b2ee-ac0fd49892e6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c40e72ea-ff25-e206-6801-077c4224a59f" executionId="42e7debe-76b5-471a-9da3-9f483942c590" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c7fe2751-1051-530e-a619-c3e0302bb88e" executionId="f17367e0-0283-45c5-99b3-57ee47837650" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c82f563e-2472-65c4-c0ec-829ca77722c8" executionId="7e676b6f-1623-4978-8ce4-e0acfd1217fd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c8d5d54a-5747-e0ad-d7b0-76377ca3dca6" executionId="adcab679-e506-4ff0-b4b3-3a49c8091388" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d23de06b-65d4-8455-c8d5-757ad66cadc4" executionId="fce36ab8-7b84-402d-80eb-56ea08335a97" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d36ead82-8c1b-369b-cd71-07dfae01f04a" executionId="4c668652-f213-465a-828a-f0e888cba504" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d47eb6dc-d325-8764-e966-be911a123673" executionId="608b0b78-8299-4926-94ac-92c97f44b7d7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d4ec15b4-22c1-3ec0-3bec-7dcaca3dc698" executionId="896fb1a8-ef10-44d6-913d-807eff7231aa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="da025daa-9a08-5d83-0a31-8339d11dde9a" executionId="383031dc-69ef-41c9-9e4a-b406abffa883" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dfccb8e7-e1b4-274c-8f59-e2f6a417af14" executionId="87970edf-b678-42f0-a9c8-d9055d626f61" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e4773567-3b44-5087-89c9-4a1812d30763" executionId="2c53275a-26f9-4e36-b797-35dce0e9a8aa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e6165e7d-f344-cfae-dc8d-31f21eb72b18" executionId="c322c796-ec07-4f2e-a534-841f690b2b15" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e7a4da5d-e505-77aa-de9b-b9803fda3f68" executionId="4aed8613-f929-4ce6-b83d-b7a128e09ac0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ea3d664f-a9b3-4272-66e4-7640a3a556af" executionId="745d5803-bac8-4855-819b-439c8ab02774" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fb1c259e-a5d3-4d6f-eb1f-88e915527312" executionId="1e7ddab7-27e6-4f99-b96a-1bc062bfc829" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="90474c7d-071a-4eab-bcc4-16f00a7b0ba3" testId="01987b87-3a3d-db43-9609-d6303ea08a6b" testName="AddBlogEntryCategoryTest" computerName="OMEGA" duration="00:00:00.4510107" startTime="2011-03-01T22:07:01.5859244-05:00" endTime="2011-03-01T22:07:02.2879646-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="90474c7d-071a-4eab-bcc4-16f00a7b0ba3">
+    </UnitTestResult>
+    <UnitTestResult executionId="4493ff13-a4be-4768-b262-5886f715e68b" testId="026b8766-739e-be5a-bbeb-7fe4653d0b92" testName="GetFeedbackForRSSTest" computerName="OMEGA" duration="00:00:00.0207617" startTime="2011-03-01T22:07:02.2929649-05:00" endTime="2011-03-01T22:07:02.3189664-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4493ff13-a4be-4768-b262-5886f715e68b">
+    </UnitTestResult>
+    <UnitTestResult executionId="a2d608cb-7dc8-4d44-9881-dbd94a338ac6" testId="0364fa97-23e8-9d43-8c56-804653725181" testName="GetTotalEntriesByBlogConfigIdAndCategoryTest" computerName="OMEGA" duration="00:00:00.0367533" startTime="2011-03-01T22:07:02.3229666-05:00" endTime="2011-03-01T22:07:02.3639690-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a2d608cb-7dc8-4d44-9881-dbd94a338ac6">
+    </UnitTestResult>
+    <UnitTestResult executionId="979244e6-1d84-41a0-a42c-3158c553165e" testId="042b6979-c19a-ccbf-dc3a-0097b07257a8" testName="SaveEntryCategoryAssociationTest" computerName="OMEGA" duration="00:00:00.0195738" startTime="2011-03-01T22:07:02.3679692-05:00" endTime="2011-03-01T22:07:02.3919706-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="979244e6-1d84-41a0-a42c-3158c553165e">
+    </UnitTestResult>
+    <UnitTestResult executionId="388e1bac-638d-4135-8032-764cc0bfe757" testId="09fc2a4a-d918-660e-dcfd-d5c6c4c3fdda" testName="GetBlogFeedbacksByBlogConfigIdTest" computerName="OMEGA" duration="00:00:00.0342637" startTime="2011-03-01T22:07:02.3959708-05:00" endTime="2011-03-01T22:07:02.4359731-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="388e1bac-638d-4135-8032-764cc0bfe757">
+    </UnitTestResult>
+    <UnitTestResult executionId="3deca5c6-a1db-4a28-a94e-b240c5f4b5ea" testId="0b5551a8-44fe-0086-cd48-840ba46daa4c" testName="DeleteRoleTest" computerName="OMEGA" duration="00:00:00.0317027" startTime="2011-03-01T22:07:02.4389732-05:00" endTime="2011-03-01T22:07:02.4809756-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3deca5c6-a1db-4a28-a94e-b240c5f4b5ea">
+    </UnitTestResult>
+    <UnitTestResult executionId="c8be5e48-89ab-478b-abac-e85e897eebce" testId="11bc5341-5162-cad2-945c-c25f636c9c39" testName="DoesCategoryExistTest" computerName="OMEGA" duration="00:00:00.0317532" startTime="2011-03-01T22:07:02.4869760-05:00" endTime="2011-03-01T22:07:02.5229780-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c8be5e48-89ab-478b-abac-e85e897eebce">
+    </UnitTestResult>
+    <UnitTestResult executionId="304dd819-9e8c-44fa-a936-1d060ae9f23a" testId="11f1d2f1-9bd3-067f-5722-3beb4d7ed102" testName="GetBlogConfigTest" computerName="OMEGA" duration="00:00:00.0686889" startTime="2011-03-01T22:07:02.5269783-05:00" endTime="2011-03-01T22:07:02.6019826-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="304dd819-9e8c-44fa-a936-1d060ae9f23a">
+    </UnitTestResult>
+    <UnitTestResult executionId="d8370a43-71d0-4ba6-b419-53ed9d4b41c0" testId="139ab3b5-06ed-b3a1-e294-00471518491c" testName="LogToDbTest" computerName="OMEGA" duration="00:00:00.0452733" startTime="2011-03-01T22:07:02.6089830-05:00" endTime="2011-03-01T22:07:02.6589858-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d8370a43-71d0-4ba6-b419-53ed9d4b41c0">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.IsNotNull failed. </Message>
+          <StackTrace>   at Veritas.Tests.LoggingHandlerTest.LogToDbTest() in C:\csharp\veritas 3\Tests\Veritas.Tests\LoggingHandlerTest.cs:line 82
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2ea36ccb-8568-4b9e-8713-bf353fdd3cfd" testId="1869c27a-e993-ce54-ae8d-43097acfe7b5" testName="DeleteBlogFeedbackTest" computerName="OMEGA" duration="00:00:00.0182520" startTime="2011-03-01T22:07:02.6629861-05:00" endTime="2011-03-01T22:07:02.6949879-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2ea36ccb-8568-4b9e-8713-bf353fdd3cfd">
+    </UnitTestResult>
+    <UnitTestResult executionId="9e7df73c-8d3d-4e0f-ab7d-e414c2fafc05" testId="1c19cc4a-22e0-ca4d-ad5c-b13ae32c220d" testName="GetCategoryTagsTest" computerName="OMEGA" duration="00:00:00.0247899" startTime="2011-03-01T22:07:02.6999882-05:00" endTime="2011-03-01T22:07:02.7289898-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9e7df73c-8d3d-4e0f-ab7d-e414c2fafc05">
+    </UnitTestResult>
+    <UnitTestResult executionId="5104632f-20fa-4e46-8df8-45a0a2b8fcc8" testId="1eb74fa0-cd49-400c-0d57-14a1a55376e2" testName="GetBlogFeedbackByFeedbackIdTest" computerName="OMEGA" duration="00:00:00.0142259" startTime="2011-03-01T22:07:02.7329901-05:00" endTime="2011-03-01T22:07:02.7559914-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5104632f-20fa-4e46-8df8-45a0a2b8fcc8">
+    </UnitTestResult>
+    <UnitTestResult executionId="38f4f9fc-733f-404e-9a68-54186cb9d880" testId="20f7f4a8-afae-4576-30d3-e1fe95b35b4f" testName="ValidateUserTest" computerName="OMEGA" duration="00:00:00.0308966" startTime="2011-03-01T22:07:02.7599916-05:00" endTime="2011-03-01T22:07:02.7949936-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="38f4f9fc-733f-404e-9a68-54186cb9d880">
+    </UnitTestResult>
+    <UnitTestResult executionId="92d09fb9-3391-4ce9-8111-7ccfb731ccfc" testId="21b7a273-8964-49b4-1439-13e55128b365" testName="AddBlogConfigTest" computerName="OMEGA" duration="00:00:00.0134285" startTime="2011-03-01T22:07:02.7979938-05:00" endTime="2011-03-01T22:07:02.8189950-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="92d09fb9-3391-4ce9-8111-7ccfb731ccfc">
+    </UnitTestResult>
+    <UnitTestResult executionId="91499dc9-6fd7-486b-9e09-a9182b25c9c5" testId="2393ba0f-b8d8-09f4-703d-82bed950d692" testName="GetInstanceTest" computerName="OMEGA" duration="00:00:00.3469288" startTime="2011-03-01T22:07:02.8219951-05:00" endTime="2011-03-01T22:07:03.1780155-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="91499dc9-6fd7-486b-9e09-a9182b25c9c5">
+    </UnitTestResult>
+    <UnitTestResult executionId="f235d580-9703-456f-a826-b815a28f37bc" testId="2e1a565c-54b6-6d27-d1fd-b82cf7050f9f" testName="GetBlacklistsForEmailAddressesTest" computerName="OMEGA" duration="00:00:00.0254223" startTime="2011-03-01T22:07:03.1820157-05:00" endTime="2011-03-01T22:07:03.2180178-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f235d580-9703-456f-a826-b815a28f37bc">
+    </UnitTestResult>
+    <UnitTestResult executionId="a8b6be10-ca00-41e8-af83-146981443a11" testId="2e41ee7b-fef3-3171-340b-af54e8e4e820" testName="DeleteBlogPageTest" computerName="OMEGA" duration="00:00:00.0327473" startTime="2011-03-01T22:07:03.2220180-05:00" endTime="2011-03-01T22:07:03.2600202-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a8b6be10-ca00-41e8-af83-146981443a11">
+    </UnitTestResult>
+    <UnitTestResult executionId="7e37db8a-4d11-405c-8248-18c9aa2277df" testId="32df1724-5104-3e56-cb1c-e855f7d33c78" testName="ForceNewInstanceTest" computerName="OMEGA" duration="00:00:00.0144932" startTime="2011-03-01T22:07:03.2640204-05:00" endTime="2011-03-01T22:07:03.2880218-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7e37db8a-4d11-405c-8248-18c9aa2277df">
+    </UnitTestResult>
+    <UnitTestResult executionId="aa22eb59-201d-458f-9cb8-8ebd3de77232" testId="32ea4c9f-3078-f85d-0e69-a67efb28c540" testName="AddBlogMenuItemTest" computerName="OMEGA" duration="00:00:00.0313845" startTime="2011-03-01T22:07:03.2900219-05:00" endTime="2011-03-01T22:07:03.3320243-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aa22eb59-201d-458f-9cb8-8ebd3de77232">
+    </UnitTestResult>
+    <UnitTestResult executionId="637879de-c13a-47f9-b448-d8ceec707230" testId="337b107f-1e00-0d6b-e2d1-32688c0a2d69" testName="HtmlHelperTest" computerName="OMEGA" duration="00:00:00.0024243" startTime="2011-03-01T22:07:03.3350245-05:00" endTime="2011-03-01T22:07:03.3470252-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="637879de-c13a-47f9-b448-d8ceec707230">
+    </UnitTestResult>
+    <UnitTestResult executionId="728644e2-e039-4c9e-b585-406a1a56a8dd" testId="36229b7c-e11e-405f-d310-8a1627280a02" testName="ChangePasswordTest" computerName="OMEGA" duration="00:00:00.0248589" startTime="2011-03-01T22:07:03.3550256-05:00" endTime="2011-03-01T22:07:03.3880275-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="728644e2-e039-4c9e-b585-406a1a56a8dd">
+    </UnitTestResult>
+    <UnitTestResult executionId="c98b077a-624e-4ad3-b4fe-2084c965409d" testId="37ace099-1128-37d4-2a91-a82f649644a6" testName="DeleteBlogFeedbackAuthorTest" computerName="OMEGA" duration="00:00:00.0317068" startTime="2011-03-01T22:07:03.3920278-05:00" endTime="2011-03-01T22:07:03.4280298-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c98b077a-624e-4ad3-b4fe-2084c965409d">
+    </UnitTestResult>
+    <UnitTestResult executionId="e615c383-0510-42d7-89d7-a1b370768776" testId="3a823fd7-1fe1-4ff6-4b84-5f99c9fb80fe" testName="LogToFileDetailsTest" computerName="OMEGA" duration="00:00:00.0268734" startTime="2011-03-01T22:07:03.4310300-05:00" endTime="2011-03-01T22:07:03.4710323-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e615c383-0510-42d7-89d7-a1b370768776">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Veritas.Tests.LoggingHandlerTest.LogToFileDetailsTest threw exception: 
+System.IO.FileNotFoundException: Could not find file 'C:\VeritasTestLogs\log.txt'.</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding)
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding)
+   at System.IO.File.ReadAllText(String path)
+   at Veritas.Tests.LoggingHandlerTest.LogToFileDetailsTest() in C:\csharp\veritas 3\Tests\Veritas.Tests\LoggingHandlerTest.cs:line 129
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="164dead7-1b1a-47d8-b3ed-780a51ce15d1" testId="3c04621e-74cb-9962-379a-2a39c7771507" testName="AddBlogEntryTest" computerName="OMEGA" duration="00:00:00.0337525" startTime="2011-03-01T22:07:03.4750325-05:00" endTime="2011-03-01T22:07:03.5180350-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="164dead7-1b1a-47d8-b3ed-780a51ce15d1">
+    </UnitTestResult>
+    <UnitTestResult executionId="79bbd75f-961f-4642-8dfa-06211f713037" testId="3dfb5b00-6af1-8a3a-ef1c-5ceec79b8cef" testName="GetBlogConfigByHostnameTest" computerName="OMEGA" duration="00:00:00.0163821" startTime="2011-03-01T22:07:03.5210351-05:00" endTime="2011-03-01T22:07:03.5420363-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="79bbd75f-961f-4642-8dfa-06211f713037">
+    </UnitTestResult>
+    <UnitTestResult executionId="e15bb309-81aa-45e2-80d6-bb0afb30de2d" testId="40112a03-71da-3b8f-6c9c-cbc7fe86d163" testName="GetEntryByEntryNameAndBlogConfigIDTest" computerName="OMEGA" duration="00:00:00.0184906" startTime="2011-03-01T22:07:03.5460366-05:00" endTime="2011-03-01T22:07:03.5690379-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e15bb309-81aa-45e2-80d6-bb0afb30de2d">
+    </UnitTestResult>
+    <UnitTestResult executionId="a3d93e46-5334-4279-801f-c712a89e6938" testId="447be92f-5d52-346d-beb6-d91f0b0d0de7" testName="GetBlogFeedbackAuthorsTest" computerName="OMEGA" duration="00:00:00.0166547" startTime="2011-03-01T22:07:03.5740382-05:00" endTime="2011-03-01T22:07:03.5950394-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a3d93e46-5334-4279-801f-c712a89e6938">
+    </UnitTestResult>
+    <UnitTestResult executionId="785fcb4e-f9cb-4f3f-b342-cbec9d289097" testId="464b4773-3c3d-7907-26d3-b60de49d5985" testName="GetEntriesForRSSTest" computerName="OMEGA" duration="00:00:00.0329970" startTime="2011-03-01T22:07:03.5990396-05:00" endTime="2011-03-01T22:07:03.6360417-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="785fcb4e-f9cb-4f3f-b342-cbec9d289097">
+    </UnitTestResult>
+    <UnitTestResult executionId="61a6c4a3-51dc-4139-a010-db4b3c762d2a" testId="4d878c16-385d-d610-2cbf-7652a010b362" testName="LoadConfigFromXmlTest" computerName="OMEGA" duration="00:00:00.0206275" startTime="2011-03-01T22:07:03.6490425-05:00" endTime="2011-03-01T22:07:03.6820443-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="61a6c4a3-51dc-4139-a010-db4b3c762d2a">
+    </UnitTestResult>
+    <UnitTestResult executionId="e8f9ac4c-86fe-4ed7-8921-6d480b2f73a0" testId="4ee74a38-b2ca-4d6c-c0b4-9bfac1daa8c2" testName="GetBlogRoleByRoleIdTest" computerName="OMEGA" duration="00:00:00.0172579" startTime="2011-03-01T22:07:03.6900448-05:00" endTime="2011-03-01T22:07:03.7120461-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e8f9ac4c-86fe-4ed7-8921-6d480b2f73a0">
+    </UnitTestResult>
+    <UnitTestResult executionId="60c25134-40d4-4847-8e34-dad29bbbd978" testId="50198a28-809b-3300-f57d-0d89ee5bc4e4" testName="GetBlogConfigByBlogConfigIdTest" computerName="OMEGA" duration="00:00:00.0260583" startTime="2011-03-01T22:07:03.7160463-05:00" endTime="2011-03-01T22:07:03.7490482-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="60c25134-40d4-4847-8e34-dad29bbbd978">
+    </UnitTestResult>
+    <UnitTestResult executionId="011adc4f-9e29-4dc0-874c-6da6ddc52c87" testId="50d2e327-01c8-4afe-af7a-33efde48d29a" testName="AddBlogPageTest" computerName="OMEGA" duration="00:00:00.0200099" startTime="2011-03-01T22:07:03.7530484-05:00" endTime="2011-03-01T22:07:03.7850502-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="011adc4f-9e29-4dc0-874c-6da6ddc52c87">
+    </UnitTestResult>
+    <UnitTestResult executionId="f417fef3-0093-4c55-b6d4-e769bedb8017" testId="53becad3-33a7-00ee-0240-9413a3aa2dc9" testName="DeleteBlogMediaTest" computerName="OMEGA" duration="00:00:00.0304663" startTime="2011-03-01T22:07:03.7920506-05:00" endTime="2011-03-01T22:07:03.8270526-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f417fef3-0093-4c55-b6d4-e769bedb8017">
+    </UnitTestResult>
+    <UnitTestResult executionId="510b6273-4051-4ac9-9f11-f87dc351cfa1" testId="55ae4fb6-83e5-44c9-a1b2-9e3e3be1625f" testName="GetEntryByEntryIDBlogConfigIDTest" computerName="OMEGA" duration="00:00:00.0177934" startTime="2011-03-01T22:07:03.8300528-05:00" endTime="2011-03-01T22:07:03.8540542-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="510b6273-4051-4ac9-9f11-f87dc351cfa1">
+    </UnitTestResult>
+    <UnitTestResult executionId="af2bccf5-2581-4e1c-a655-b30e67176faa" testId="61b09f33-a84d-6c47-2176-a62ceb3b834b" testName="GetAllBlogConfigsTest" computerName="OMEGA" duration="00:00:00.0141947" startTime="2011-03-01T22:07:03.8560543-05:00" endTime="2011-03-01T22:07:03.8780556-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="af2bccf5-2581-4e1c-a655-b30e67176faa">
+    </UnitTestResult>
+    <UnitTestResult executionId="ab273a34-9910-48f0-891a-d339e563e695" testId="63d2c77d-2f2a-4f48-15e6-e83e7f4bcded" testName="DeleteBlogUserTest" computerName="OMEGA" duration="00:00:00.0248913" startTime="2011-03-01T22:07:03.8820558-05:00" endTime="2011-03-01T22:07:03.9120575-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ab273a34-9910-48f0-891a-d339e563e695">
+    </UnitTestResult>
+    <UnitTestResult executionId="cb29d92d-408c-4747-8948-2c31bb1ec4cf" testId="64973faf-5d75-8380-9505-9cef889bfac8" testName="GetEntryByIDTest" computerName="OMEGA" duration="00:00:00.0633381" startTime="2011-03-01T22:07:03.9160577-05:00" endTime="2011-03-01T22:07:03.9850617-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cb29d92d-408c-4747-8948-2c31bb1ec4cf">
+    </UnitTestResult>
+    <UnitTestResult executionId="b1865b9d-cc5d-474f-9e21-11ca0a4306ff" testId="71e36249-d1d9-c9c8-c5a2-21a17f6ce0ba" testName="DeleteBlacklistTest" computerName="OMEGA" duration="00:00:00.0259281" startTime="2011-03-01T22:07:03.9880618-05:00" endTime="2011-03-01T22:07:04.0200637-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b1865b9d-cc5d-474f-9e21-11ca0a4306ff">
+    </UnitTestResult>
+    <UnitTestResult executionId="97c68318-d16e-45c0-b7b5-f0a34888c1b9" testId="7696afef-1fde-4dc8-80d8-b0c40bea3145" testName="DeleteBlogConfigTest" computerName="OMEGA" duration="00:00:00.0251455" startTime="2011-03-01T22:07:04.0240639-05:00" endTime="2011-03-01T22:07:04.0650662-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="97c68318-d16e-45c0-b7b5-f0a34888c1b9">
+    </UnitTestResult>
+    <UnitTestResult executionId="e952d7c2-7f52-4818-a2e7-c89cf1b086e6" testId="7f840e9f-2bcf-f981-20f2-b813f293bead" testName="DeleteBlogUserRoleTest" computerName="OMEGA" duration="00:00:00.0247020" startTime="2011-03-01T22:07:04.0730667-05:00" endTime="2011-03-01T22:07:04.1030684-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e952d7c2-7f52-4818-a2e7-c89cf1b086e6">
+    </UnitTestResult>
+    <UnitTestResult executionId="568f5a9c-25c5-41cf-b46b-c889ee70acd8" testId="86ae8cf4-3833-2fad-c57d-65e1cca1a97e" testName="GetRecentEntriesTest" computerName="OMEGA" duration="00:00:00.0179055" startTime="2011-03-01T22:07:04.1070687-05:00" endTime="2011-03-01T22:07:04.1290699-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="568f5a9c-25c5-41cf-b46b-c889ee70acd8">
+    </UnitTestResult>
+    <UnitTestResult executionId="c5fb8632-0c79-42c9-aa10-5f70db6ab5ac" testId="8b7a3a0d-042c-87af-c45b-c0ad4d74a982" testName="AddBlogRoleTest" computerName="OMEGA" duration="00:00:00.0141134" startTime="2011-03-01T22:07:04.1320701-05:00" endTime="2011-03-01T22:07:04.1560715-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c5fb8632-0c79-42c9-aa10-5f70db6ab5ac">
+    </UnitTestResult>
+    <UnitTestResult executionId="83308050-0964-4281-83d0-2a2033e1c877" testId="93859457-059e-f967-9d10-0d393b92ecbd" testName="AddBlogLogTest" computerName="OMEGA" duration="00:00:00.0143893" startTime="2011-03-01T22:07:04.1600717-05:00" endTime="2011-03-01T22:07:04.1810729-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="83308050-0964-4281-83d0-2a2033e1c877">
+    </UnitTestResult>
+    <UnitTestResult executionId="301174a6-0b4e-4f63-94d1-c586d0aae53f" testId="94256328-6ce6-7f64-bf52-52d662d69141" testName="GetTotalEntriesByBlogConfigIDTest" computerName="OMEGA" duration="00:00:00.0128947" startTime="2011-03-01T22:07:04.1850731-05:00" endTime="2011-03-01T22:07:04.2050743-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="301174a6-0b4e-4f63-94d1-c586d0aae53f">
+    </UnitTestResult>
+    <UnitTestResult executionId="aad62711-7327-43e2-b777-58ac4f73bbea" testId="9778e568-10cb-7dc9-3109-8e9ae94a0b38" testName="GetEntriesForCategoryFromStartPointTest" computerName="OMEGA" duration="00:00:00.0849839" startTime="2011-03-01T22:07:04.2100745-05:00" endTime="2011-03-01T22:07:04.2990796-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aad62711-7327-43e2-b777-58ac4f73bbea">
+    </UnitTestResult>
+    <UnitTestResult executionId="6b32f65e-9035-4555-a265-620f62fac6c4" testId="97be4ddb-9491-09af-23fc-591644993d18" testName="AddBlogMediaTest" computerName="OMEGA" duration="00:00:00.0325958" startTime="2011-03-01T22:07:04.3020798-05:00" endTime="2011-03-01T22:07:04.3500826-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b32f65e-9035-4555-a265-620f62fac6c4">
+    </UnitTestResult>
+    <UnitTestResult executionId="399087ce-c481-4875-b21c-674e1b92a83e" testId="9dd330af-5fac-7a94-8223-43d6eccab16e" testName="GetBlogCategoryByCategoryIdTest" computerName="OMEGA" duration="00:00:00.0239802" startTime="2011-03-01T22:07:04.3530827-05:00" endTime="2011-03-01T22:07:04.3890848-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="399087ce-c481-4875-b21c-674e1b92a83e">
+    </UnitTestResult>
+    <UnitTestResult executionId="795039cc-872f-4d38-9791-033815bdf5cb" testId="9dfd7cc0-85f3-ef1f-df8a-dfd2dfaed384" testName="AddBlogUserTest" computerName="OMEGA" duration="00:00:00.0140341" startTime="2011-03-01T22:07:04.3920850-05:00" endTime="2011-03-01T22:07:04.4110860-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="795039cc-872f-4d38-9791-033815bdf5cb">
+    </UnitTestResult>
+    <UnitTestResult executionId="83df28b3-0218-46fb-ab3a-f6c73526cf6e" testId="a26c9cbb-705c-d281-2c59-aa583852ac80" testName="GetRolesForUserTest" computerName="OMEGA" duration="00:00:00.1025950" startTime="2011-03-01T22:07:04.4160863-05:00" endTime="2011-03-01T22:07:04.5240925-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="83df28b3-0218-46fb-ab3a-f6c73526cf6e">
+    </UnitTestResult>
+    <UnitTestResult executionId="e1ee6a7d-0746-4f53-b1bc-c690cb162609" testId="a6e26627-243e-155a-eb01-98e2d1195dae" testName="GetBlogUsersInRolesTest" computerName="OMEGA" duration="00:00:00.0307435" startTime="2011-03-01T22:07:04.5290928-05:00" endTime="2011-03-01T22:07:04.5720952-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e1ee6a7d-0746-4f53-b1bc-c690cb162609">
+    </UnitTestResult>
+    <UnitTestResult executionId="2fcbc5c3-08a1-4de0-80a0-f69734dde928" testId="a8e19d6e-94f1-71b9-e146-21d07ada136b" testName="AddBlacklistTest" computerName="OMEGA" duration="00:00:00.0157119" startTime="2011-03-01T22:07:04.5760955-05:00" endTime="2011-03-01T22:07:04.5970967-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2fcbc5c3-08a1-4de0-80a0-f69734dde928">
+    </UnitTestResult>
+    <UnitTestResult executionId="34df6918-fc75-4976-9157-8fe8b3ddffd3" testId="a925c3a4-eed3-17c5-a249-f29a0ff63ed6" testName="DeleteBlogEntryCategoryTest" computerName="OMEGA" duration="00:00:00.0202156" startTime="2011-03-01T22:07:04.6010969-05:00" endTime="2011-03-01T22:07:04.6320987-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="34df6918-fc75-4976-9157-8fe8b3ddffd3">
+    </UnitTestResult>
+    <UnitTestResult executionId="2fb41b17-22fb-496c-9a64-0643d9e22a6f" testId="b0df2616-61bf-71de-a7bd-47ff2b15d236" testName="AddBlogCategoryTest" computerName="OMEGA" duration="00:00:00.0152171" startTime="2011-03-01T22:07:04.6390991-05:00" endTime="2011-03-01T22:07:04.6591002-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2fb41b17-22fb-496c-9a64-0643d9e22a6f">
+    </UnitTestResult>
+    <UnitTestResult executionId="7e8ecfec-33d1-4de0-9005-d2777321f51b" testId="b3108ca4-ea15-e67e-c0db-a65c954d8ee4" testName="DeleteBlogCategoryTest" computerName="OMEGA" duration="00:00:00.0178455" startTime="2011-03-01T22:07:04.6621004-05:00" endTime="2011-03-01T22:07:04.6861018-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7e8ecfec-33d1-4de0-9005-d2777321f51b">
+    </UnitTestResult>
+    <UnitTestResult executionId="463943e3-2f5f-46a4-987b-fc8bc4da3ff5" testId="b4e556fb-0ea0-19cc-b9f9-56dab34cad84" testName="AddBlogFeedbackTest" computerName="OMEGA" duration="00:00:00.0150935" startTime="2011-03-01T22:07:04.6901020-05:00" endTime="2011-03-01T22:07:04.7101031-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="463943e3-2f5f-46a4-987b-fc8bc4da3ff5">
+    </UnitTestResult>
+    <UnitTestResult executionId="c42ef392-89b1-4f59-97fd-c0373f8098b7" testId="ba02f043-5194-b9ef-24b3-5b63efb7cd79" testName="UrlHelperTest" computerName="OMEGA" duration="00:00:00.0004208" startTime="2011-03-01T22:07:04.7141034-05:00" endTime="2011-03-01T22:07:04.7191037-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c42ef392-89b1-4f59-97fd-c0373f8098b7">
+    </UnitTestResult>
+    <UnitTestResult executionId="714425db-261b-408f-b2fd-52127678809f" testId="c20da52c-e354-0953-79b7-81d22629dba1" testName="AddBlogUserRoleTest" computerName="OMEGA" duration="00:00:00.0170349" startTime="2011-03-01T22:07:04.7241039-05:00" endTime="2011-03-01T22:07:04.7451051-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="714425db-261b-408f-b2fd-52127678809f">
+    </UnitTestResult>
+    <UnitTestResult executionId="cc2e6d5b-5560-496e-b2ee-ac0fd49892e6" testId="c3fd992c-7d73-9162-4bb1-c19b72ab56b4" testName="IsUserAuthorTest" computerName="OMEGA" duration="00:00:00.0352488" startTime="2011-03-01T22:07:04.7491054-05:00" endTime="2011-03-01T22:07:04.7891077-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cc2e6d5b-5560-496e-b2ee-ac0fd49892e6">
+    </UnitTestResult>
+    <UnitTestResult executionId="42e7debe-76b5-471a-9da3-9f483942c590" testId="c40e72ea-ff25-e206-6801-077c4224a59f" testName="VeritasRepositoryConstructorTest" computerName="OMEGA" duration="00:00:00.0144731" startTime="2011-03-01T22:07:04.7921078-05:00" endTime="2011-03-01T22:07:04.8231096-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="42e7debe-76b5-471a-9da3-9f483942c590">
+    </UnitTestResult>
+    <UnitTestResult executionId="f17367e0-0283-45c5-99b3-57ee47837650" testId="c7fe2751-1051-530e-a619-c3e0302bb88e" testName="GetEntriesFromStartPointTest" computerName="OMEGA" duration="00:00:00.0189768" startTime="2011-03-01T22:07:04.8261098-05:00" endTime="2011-03-01T22:07:04.8551114-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f17367e0-0283-45c5-99b3-57ee47837650">
+    </UnitTestResult>
+    <UnitTestResult executionId="7e676b6f-1623-4978-8ce4-e0acfd1217fd" testId="c82f563e-2472-65c4-c0ec-829ca77722c8" testName="DoesEntryTitleExistTest" computerName="OMEGA" duration="00:00:00.0206004" startTime="2011-03-01T22:07:04.8591117-05:00" endTime="2011-03-01T22:07:04.8841131-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7e676b6f-1623-4978-8ce4-e0acfd1217fd">
+    </UnitTestResult>
+    <UnitTestResult executionId="adcab679-e506-4ff0-b4b3-3a49c8091388" testId="c8d5d54a-5747-e0ad-d7b0-76377ca3dca6" testName="DeleteBlogEntryTest" computerName="OMEGA" duration="00:00:00.0243325" startTime="2011-03-01T22:07:04.8881133-05:00" endTime="2011-03-01T22:07:04.9251154-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="adcab679-e506-4ff0-b4b3-3a49c8091388">
+    </UnitTestResult>
+    <UnitTestResult executionId="fce36ab8-7b84-402d-80eb-56ea08335a97" testId="d23de06b-65d4-8455-c8d5-757ad66cadc4" testName="UpdateEntryViewCountForWebTest" computerName="OMEGA" duration="00:00:00.0360795" startTime="2011-03-01T22:07:04.9291157-05:00" endTime="2011-03-01T22:07:04.9711181-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fce36ab8-7b84-402d-80eb-56ea08335a97">
+    </UnitTestResult>
+    <UnitTestResult executionId="4c668652-f213-465a-828a-f0e888cba504" testId="d36ead82-8c1b-369b-cd71-07dfae01f04a" testName="LogToDbExceptionTest" computerName="OMEGA" duration="00:00:00.0172086" startTime="2011-03-01T22:07:04.9731182-05:00" endTime="2011-03-01T22:07:04.9971196-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4c668652-f213-465a-828a-f0e888cba504">
+    </UnitTestResult>
+    <UnitTestResult executionId="608b0b78-8299-4926-94ac-92c97f44b7d7" testId="d47eb6dc-d325-8764-e966-be911a123673" testName="AddBlogEntryViewCountTest" computerName="OMEGA" duration="00:00:00.0150118" startTime="2011-03-01T22:07:04.9991197-05:00" endTime="2011-03-01T22:07:05.0391220-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="608b0b78-8299-4926-94ac-92c97f44b7d7">
+    </UnitTestResult>
+    <UnitTestResult executionId="896fb1a8-ef10-44d6-913d-807eff7231aa" testId="d4ec15b4-22c1-3ec0-3bec-7dcaca3dc698" testName="AddBlogFeedbackAuthorTest" computerName="OMEGA" duration="00:00:00.0145568" startTime="2011-03-01T22:07:05.0431222-05:00" endTime="2011-03-01T22:07:05.0621233-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="896fb1a8-ef10-44d6-913d-807eff7231aa">
+    </UnitTestResult>
+    <UnitTestResult executionId="383031dc-69ef-41c9-9e4a-b406abffa883" testId="da025daa-9a08-5d83-0a31-8339d11dde9a" testName="GetInstanceTest" computerName="OMEGA" duration="00:00:00.0104515" startTime="2011-03-01T22:07:05.0661235-05:00" endTime="2011-03-01T22:07:05.0831245-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="383031dc-69ef-41c9-9e4a-b406abffa883">
+    </UnitTestResult>
+    <UnitTestResult executionId="87970edf-b678-42f0-a9c8-d9055d626f61" testId="dfccb8e7-e1b4-274c-8f59-e2f6a417af14" testName="BuildXmlFromConfigTest" computerName="OMEGA" duration="00:00:00.0171109" startTime="2011-03-01T22:07:05.0871247-05:00" endTime="2011-03-01T22:07:05.1131262-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="87970edf-b678-42f0-a9c8-d9055d626f61">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;&lt;BlogConfig&gt;&lt;AkismetApiKey&gt;abc123&lt;/AkismetApiKey&gt;&lt;AllowComments&gt;false&lt;/AllowComments&gt;&lt;BlogAbout&gt;This is what it's all about!&lt;/BlogAbout&gt;&lt;BlogHeaderImage&gt;../../ImagePath.jpg&lt;/BlogHeaderImage&gt;&lt;BlogHeaderIsImage&gt;true&lt;/BlogHeaderIsImage&gt;&lt;BlogMarketingInfo&gt;&lt;ShowSideBarAds&gt;true&lt;/ShowSideBarAds&gt;&lt;ShowEntryAds&gt;true&lt;/ShowEntryAds&gt;&lt;AdScriptSideBar&gt;test&lt;/AdScriptSideBar&gt;&lt;AdScriptEntry&gt;test&lt;/AdScriptEntry&gt;&lt;/BlogMarketingInfo&gt;&lt;CopyrightText&gt;Copyright Test 2010&lt;/CopyrightText&gt;&lt;DaysUntilCommentsClose /&gt;&lt;EnableFeedbackAuthorNotifications&gt;true&lt;/EnableFeedbackAuthorNotifications&gt;&lt;EnableFeedbackRssFeed&gt;false&lt;/EnableFeedbackRssFeed&gt;&lt;FacebookUrl&gt;http://facebook/crap&lt;/FacebookUrl&gt;&lt;FeedburnerName&gt;AbiteOfDet&lt;/FeedburnerName&gt;&lt;FeedbackCount&gt;0&lt;/FeedbackCount&gt;&lt;FeedbackRequiresApproval&gt;true&lt;/FeedbackRequiresApproval&gt;&lt;IsActive&gt;true&lt;/IsActive&gt;&lt;GoogleApiKey&gt;abc123&lt;/GoogleApiKey&gt;&lt;HeaderScript&gt;&amp;amp;lt;script type=&amp;amp;quot;text/javascript&amp;amp;quot;&amp;amp;gt;Test!&amp;amp;lt;/script&lt;/HeaderScript&gt;&lt;Language&gt;en-US&lt;/Language&gt;&lt;LogEmailAddress&gt;emailLog@veritasblog.com&lt;/LogEmailAddress&gt;&lt;LogFilePath&gt;C:\VeritasTestLogs\log.txt&lt;/LogFilePath&gt;&lt;LogToDb&gt;true&lt;/LogToDb&gt;&lt;LogToEmail&gt;true&lt;/LogToEmail&gt;&lt;LogToFile&gt;false&lt;/LogToFile&gt;&lt;NotifyAdminsForFeedback&gt;true&lt;/NotifyAdminsForFeedback&gt;&lt;PostCount&gt;5&lt;/PostCount&gt;&lt;PostsPerPage&gt;3&lt;/PostsPerPage&gt;&lt;RssUrl&gt;http://feedburner.com/test&lt;/RssUrl&gt;&lt;ShowAuthorsAbout&gt;false&lt;/ShowAuthorsAbout&gt;&lt;ShowBlogAbout&gt;true&lt;/ShowBlogAbout&gt;&lt;ShowGravatars&gt;false&lt;/ShowGravatars&gt;&lt;Skin&gt;TEST&lt;/Skin&gt;&lt;SmtpPassword&gt;TEST&lt;/SmtpPassword&gt;&lt;SmtpPort&gt;23&lt;/SmtpPort&gt;&lt;SmtpServer&gt;google.com&lt;/SmtpServer&gt;&lt;SmtpUserName&gt;username&lt;/SmtpUserName&gt;&lt;SmtpUseSsl&gt;false&lt;/SmtpUseSsl&gt;&lt;SubTitle&gt;a subtitle&lt;/SubTitle&gt;&lt;TimeZone&gt;EASTERN&lt;/TimeZone&gt;&lt;Title&gt;THE TITLE&lt;/Title&gt;&lt;TwitterUrl&gt;http://twitter.com/abite&lt;/TwitterUrl&gt;&lt;WebStatsJavascript&gt;&amp;amp;lt;script type=&amp;amp;quot;text/javascript&amp;amp;quot;&amp;amp;gt;Web Stats Javascript!&amp;amp;lt;/script&lt;/WebStatsJavascript&gt;&lt;/BlogConfig&gt;&gt;. Actual:&lt;&lt;BlogConfig&gt;&lt;AkismetApiKey&gt;abc123&lt;/AkismetApiKey&gt;&lt;AllowComments&gt;false&lt;/AllowComments&gt;&lt;BlogAbout&gt;This is what it's all about!&lt;/BlogAbout&gt;&lt;BlogHeaderImage&gt;../../ImagePath.jpg&lt;/BlogHeaderImage&gt;&lt;BlogHeaderIsImage&gt;true&lt;/BlogHeaderIsImage&gt;&lt;BlogCommentInfo&gt;&lt;UseDefaultComments&gt;false&lt;/UseDefaultComments&gt;&lt;UseDisqusComments&gt;false&lt;/UseDisqusComments&gt;&lt;DisqusAccountName /&gt;&lt;/BlogCommentInfo&gt;&lt;BlogMarketingInfo&gt;&lt;ShowSideBarAds&gt;true&lt;/ShowSideBarAds&gt;&lt;ShowEntryAds&gt;true&lt;/ShowEntryAds&gt;&lt;AdScriptSideBar&gt;test&lt;/AdScriptSideBar&gt;&lt;AdScriptEntry&gt;test&lt;/AdScriptEntry&gt;&lt;/BlogMarketingInfo&gt;&lt;CopyrightText&gt;Copyright Test 2010&lt;/CopyrightText&gt;&lt;DaysUntilCommentsClose /&gt;&lt;EnableFeedbackAuthorNotifications&gt;true&lt;/EnableFeedbackAuthorNotifications&gt;&lt;EnableFeedbackRssFeed&gt;false&lt;/EnableFeedbackRssFeed&gt;&lt;FacebookUrl&gt;http://facebook/crap&lt;/FacebookUrl&gt;&lt;FeedburnerName&gt;AbiteOfDet&lt;/FeedburnerName&gt;&lt;FeedbackCount&gt;0&lt;/FeedbackCount&gt;&lt;FeedbackRequiresApproval&gt;true&lt;/FeedbackRequiresApproval&gt;&lt;IsActive&gt;true&lt;/IsActive&gt;&lt;GoogleApiKey&gt;abc123&lt;/GoogleApiKey&gt;&lt;HeaderScript&gt;&amp;amp;lt;script type=&amp;amp;quot;text/javascript&amp;amp;quot;&amp;amp;gt;Test!&amp;amp;lt;/script&lt;/HeaderScript&gt;&lt;Language&gt;en-US&lt;/Language&gt;&lt;LogEmailAddress&gt;emailLog@veritasblog.com&lt;/LogEmailAddress&gt;&lt;LogFilePath&gt;C:\VeritasTestLogs\log.txt&lt;/LogFilePath&gt;&lt;LogToDb&gt;true&lt;/LogToDb&gt;&lt;LogToEmail&gt;true&lt;/LogToEmail&gt;&lt;LogToFile&gt;false&lt;/LogToFile&gt;&lt;NotifyAdminsForFeedback&gt;true&lt;/NotifyAdminsForFeedback&gt;&lt;PostCount&gt;5&lt;/PostCount&gt;&lt;PostsPerPage&gt;3&lt;/PostsPerPage&gt;&lt;RssShowLimitedEntryInFeed&gt;false&lt;/RssShowLimitedEntryInFeed&gt;&lt;RssUrl&gt;http://feedburner.com/test&lt;/RssUrl&gt;&lt;ShowAuthorsAbout&gt;false&lt;/ShowAuthorsAbout&gt;&lt;ShowBlogAbout&gt;true&lt;/ShowBlogAbout&gt;&lt;ShowGravatars&gt;false&lt;/ShowGravatars&gt;&lt;Skin&gt;TEST&lt;/Skin&gt;&lt;SmtpPassword&gt;TEST&lt;/SmtpPassword&gt;&lt;SmtpPort&gt;23&lt;/SmtpPort&gt;&lt;SmtpServer&gt;google.com&lt;/SmtpServer&gt;&lt;SmtpUserName&gt;username&lt;/SmtpUserName&gt;&lt;SmtpUseSsl&gt;false&lt;/SmtpUseSsl&gt;&lt;SubTitle&gt;a subtitle&lt;/SubTitle&gt;&lt;TimeZone&gt;EASTERN&lt;/TimeZone&gt;&lt;Title&gt;THE TITLE&lt;/Title&gt;&lt;TwitterUrl&gt;http://twitter.com/abite&lt;/TwitterUrl&gt;&lt;WebStatsJavascript&gt;&amp;amp;lt;script type=&amp;amp;quot;text/javascript&amp;amp;quot;&amp;amp;gt;Web Stats Javascript!&amp;amp;lt;/script&lt;/WebStatsJavascript&gt;&lt;/BlogConfig&gt;&gt;. </Message>
+          <StackTrace>   at Veritas.Tests.BlogConfigTest.BuildXmlFromConfigTest() in C:\csharp\veritas 3\Tests\Veritas.Tests\BlogConfigTest.cs:line 182
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2c53275a-26f9-4e36-b797-35dce0e9a8aa" testId="e4773567-3b44-5087-89c9-4a1812d30763" testName="LogToFileExceptionTest" computerName="OMEGA" duration="00:00:00.0180516" startTime="2011-03-01T22:07:05.1231268-05:00" endTime="2011-03-01T22:07:05.1461281-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2c53275a-26f9-4e36-b797-35dce0e9a8aa">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Veritas.Tests.LoggingHandlerTest.LogToFileExceptionTest threw exception: 
+System.IO.FileNotFoundException: Could not find file 'C:\VeritasTestLogs\log.txt'.</Message>
+          <StackTrace>    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding)
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding)
+   at System.IO.File.ReadAllText(String path)
+   at Veritas.Tests.LoggingHandlerTest.LogToFileExceptionTest() in C:\csharp\veritas 3\Tests\Veritas.Tests\LoggingHandlerTest.cs:line 113
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c322c796-ec07-4f2e-a534-841f690b2b15" testId="e6165e7d-f344-cfae-dc8d-31f21eb72b18" testName="DeleteBlogMenuItemTest" computerName="OMEGA" duration="00:00:00.0171203" startTime="2011-03-01T22:07:05.1491283-05:00" endTime="2011-03-01T22:07:05.1791300-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c322c796-ec07-4f2e-a534-841f690b2b15">
+    </UnitTestResult>
+    <UnitTestResult executionId="4aed8613-f929-4ce6-b83d-b7a128e09ac0" testId="e7a4da5d-e505-77aa-de9b-b9803fda3f68" testName="DeleteBlogEntryViewCountTest" computerName="OMEGA" duration="00:00:00.0191878" startTime="2011-03-01T22:07:05.1831302-05:00" endTime="2011-03-01T22:07:05.2101317-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4aed8613-f929-4ce6-b83d-b7a128e09ac0">
+    </UnitTestResult>
+    <UnitTestResult executionId="745d5803-bac8-4855-819b-439c8ab02774" testId="ea3d664f-a9b3-4272-66e4-7640a3a556af" testName="DeleteBlogLogTest" computerName="OMEGA" duration="00:00:00.0150336" startTime="2011-03-01T22:07:05.2181322-05:00" endTime="2011-03-01T22:07:05.2381333-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="745d5803-bac8-4855-819b-439c8ab02774">
+    </UnitTestResult>
+    <UnitTestResult executionId="1e7ddab7-27e6-4f99-b96a-1bc062bfc829" testId="fb1c259e-a5d3-4d6f-eb1f-88e915527312" testName="GetRecentEntriesTest1" computerName="OMEGA" duration="00:00:00.0311451" startTime="2011-03-01T22:07:05.2411335-05:00" endTime="2011-03-01T22:07:05.2791357-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1e7ddab7-27e6-4f99-b96a-1bc062bfc829">
+    </UnitTestResult>
+  </Results>
+</TestRun>

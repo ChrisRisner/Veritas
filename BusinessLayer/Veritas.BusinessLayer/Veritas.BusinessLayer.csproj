@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A88E03EB-0C36-4FCA-B6EB-2B8A0B693E8C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Veritas.BusinessLayer</RootNamespace>
+    <AssemblyName>Veritas.BusinessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CookComputing.XmlRpcV2">
+      <HintPath>..\..\ThirdPartyAssembelies\CookComputing.XmlRpcV2.DLL</HintPath>
+    </Reference>
+    <Reference Include="Joel.Net.Akismet">
+      <HintPath>..\..\ThirdPartyAssembelies\Joel.Net.Akismet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authentication\AccountMembershipService.cs" />
+    <Compile Include="Authentication\FormsAuthenticationService.cs" />
+    <Compile Include="Authentication\IFormsAuthentication.cs" />
+    <Compile Include="Authentication\IMembershipService.cs" />
+    <Compile Include="Caching\CacheHandler.cs" />
+    <Compile Include="Email\EmailHandler.cs" />
+    <Compile Include="Email\OptOutHandler.cs" />
+    <Compile Include="EntryTitleLogic.cs" />
+    <Compile Include="Files\FileCreator.cs" />
+    <Compile Include="FixAliasedLinkHack.cs" />
+    <Compile Include="GravatarHandler.cs" />
+    <Compile Include="Logging\LoggingHandler.cs" />
+    <Compile Include="Media\HighSlideHandler.cs" />
+    <Compile Include="Media\MediaObjectStructs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\VeritasMembershipProvder.cs" />
+    <Compile Include="Providers\VeritasMembershipUser.cs" />
+    <Compile Include="Providers\VeritasRoleManager.cs" />
+    <Compile Include="Screens\Admin\Categories\CategoriesEditScreen.cs" />
+    <Compile Include="Screens\Admin\Categories\CategoriesIndexScreen.cs" />
+    <Compile Include="Screens\Admin\Entries\EntriesEditScreen.cs" />
+    <Compile Include="Screens\Admin\Entries\EntriesIndexScreen.cs" />
+    <Compile Include="Screens\Admin\FeedbackAuthors\FeedbackAuthorsDetailsScreen.cs" />
+    <Compile Include="Screens\Admin\FeedbackAuthors\FeedbackAuthorsIndexScreen.cs" />
+    <Compile Include="Screens\Admin\Feedbacks\FeedbacksEditScreen.cs" />
+    <Compile Include="Screens\Admin\Feedbacks\FeedbacksIndexScreen.cs" />
+    <Compile Include="Screens\Admin\LogOnScreen.cs" />
+    <Compile Include="Screens\Admin\IndexScreen.cs" />
+    <Compile Include="Screens\Admin\Logs\LogsIndexScreen.cs" />
+    <Compile Include="Screens\Admin\Pages\PagesEditScreen.cs" />
+    <Compile Include="Screens\Admin\Pages\PagesIndexScreen.cs" />
+    <Compile Include="Screens\Admin\Roles\RolesEditScreen.cs" />
+    <Compile Include="Screens\Admin\Roles\RolesIndexScreen.cs" />
+    <Compile Include="Screens\Admin\Settings\SettingsEditScreen.cs" />
+    <Compile Include="Screens\Admin\Settings\SettingsIndexScreen.cs" />
+    <Compile Include="Screens\Admin\Users\UsersEditScreen.cs" />
+    <Compile Include="Screens\Admin\Users\UsersIndexScreen.cs" />
+    <Compile Include="Screens\Blog\ArchiveScreen.cs" />
+    <Compile Include="Screens\Blog\CategoryScreen.cs" />
+    <Compile Include="Screens\ErrorScreen.cs" />
+    <Compile Include="Screens\Home\AboutScreen.cs" />
+    <Compile Include="Screens\Home\ContactScreen.cs" />
+    <Compile Include="Screens\Home\IndexScreen.cs" />
+    <Compile Include="Screens\Home\MessageScreen.cs" />
+    <Compile Include="Screens\Home\UploadScreen.cs" />
+    <Compile Include="Screens\Home\ViewContentScreen.cs" />
+    <Compile Include="Screens\ScreenBase.cs" />
+    <Compile Include="Screens\Shared\BlogEntryScreen.cs" />
+    <Compile Include="Session\SessionHandler.cs" />
+    <Compile Include="Spam\SpamHandler.cs" />
+    <Compile Include="Validation\EmailValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataLayer\Veritas.DataLayer\Veritas.DataLayer.csproj">
+      <Project>{B235A387-8CFB-40B7-9519-69B65AA6A729}</Project>
+      <Name>Veritas.DataLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <Compile Include="Screens\Admin\Uploads\UploadsIndexScreen.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Screens\Forum\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

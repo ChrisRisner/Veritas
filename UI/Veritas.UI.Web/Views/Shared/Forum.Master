@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" Inherits="Veritas.UI.Web.Views.VeritasViewMasterPage<Veritas.BusinessLayer.Screens.ScreenBase>" %>
+<%@ Import Namespace="Veritas.BusinessLayer" %>
+<%@ Import Namespace="Veritas.DataLayer.Models" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>    
+    <asp:ContentPlaceHolder ID="MetaContent" runat="server" />
+    <script type="text/javascript" src='https://www.google.com/jsapi?key=<%: Model.blogConfig.GoogleApiKey %>'></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>    
+    <script language="javascript" type="text/javascript" src="<%= Url.Content("~/Scripts/watermark/jquery.watermark.min.js") %>"></script>
+    <script language="javascript" type="text/javascript" src="<%= Url.Content("~/Scripts/highslide/highslide-with-gallery.min.js") %>"></script>
+    <script language="javascript" type="text/javascript" src="<%= Url.Content("~/Scripts/site.js") %>"></script>
+    <link rel="stylesheet" type="text/css" href="<%= Url.Content("~/Scripts/highslide/highslide.css") %>" />    
+    <link href="<%= Url.Content("~/Content/Themes/" + Model.blogConfig.Skin + ".css") %>" rel="Stylesheet" type="text/css" />
+    <%= Model.blogConfig.WebStatsJavascript %>
+    <%= Model.blogConfig.HeaderScript %>
+</head>
+<body>
+    <div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

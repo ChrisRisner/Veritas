@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veritas.Tests", "Tests\Veritas.Tests\Veritas.Tests.csproj", "{4CF14EAC-93E3-4243-8323-952C0D4B775D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3AA0E4D5-74B1-48CC-B44B-9D15A40AEBE7}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+		Veritas.vsmdi = Veritas.vsmdi
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veritas.BusinessLayer", "BusinessLayer\Veritas.BusinessLayer\Veritas.BusinessLayer.csproj", "{A88E03EB-0C36-4FCA-B6EB-2B8A0B693E8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veritas.DataLayer", "DataLayer\Veritas.DataLayer\Veritas.DataLayer.csproj", "{B235A387-8CFB-40B7-9519-69B65AA6A729}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veritas.UI.Web", "UI\Veritas.UI.Web\Veritas.UI.Web.csproj", "{1BDA4F0E-6FA1-4FF5-8EE3-0224409709FE}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Veritas.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CF14EAC-93E3-4243-8323-952C0D4B775D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CF14EAC-93E3-4243-8323-952C0D4B775D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CF14EAC-93E3-4243-8323-952C0D4B775D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CF14EAC-93E3-4243-8323-952C0D4B775D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A88E03EB-0C36-4FCA-B6EB-2B8A0B693E8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A88E03EB-0C36-4FCA-B6EB-2B8A0B693E8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A88E03EB-0C36-4FCA-B6EB-2B8A0B693E8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A88E03EB-0C36-4FCA-B6EB-2B8A0B693E8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B235A387-8CFB-40B7-9519-69B65AA6A729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B235A387-8CFB-40B7-9519-69B65AA6A729}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B235A387-8CFB-40B7-9519-69B65AA6A729}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B235A387-8CFB-40B7-9519-69B65AA6A729}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BDA4F0E-6FA1-4FF5-8EE3-0224409709FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BDA4F0E-6FA1-4FF5-8EE3-0224409709FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BDA4F0E-6FA1-4FF5-8EE3-0224409709FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BDA4F0E-6FA1-4FF5-8EE3-0224409709FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

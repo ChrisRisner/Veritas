@@ -1,0 +1,15 @@
+C:\csharp\Veritas 3\UI\Veritas.UI.Web\bin\Veritas.UI.Web.dll
+C:\csharp\Veritas 3\UI\Veritas.UI.Web\bin\Veritas.UI.Web.pdb
+C:\csharp\Veritas 3\UI\Veritas.UI.Web\bin\CookComputing.XmlRpcV2.DLL
+C:\csharp\Veritas 3\UI\Veritas.UI.Web\bin\Joel.Net.Akismet.dll
+C:\csharp\Veritas 3\UI\Veritas.UI.Web\bin\System.Web.Mvc.dll
+C:\csharp\Veritas 3\UI\Veritas.UI.Web\bin\System.Web.Routing.dll
+C:\csharp\Veritas 3\UI\Veritas.UI.Web\bin\Veritas.BusinessLayer.dll
+C:\csharp\Veritas 3\UI\Veritas.UI.Web\bin\Veritas.DataLayer.dll
+C:\csharp\Veritas 3\UI\Veritas.UI.Web\bin\Veritas.BusinessLayer.pdb
+C:\csharp\Veritas 3\UI\Veritas.UI.Web\bin\Veritas.DataLayer.pdb
+C:\csharp\Veritas 3\UI\Veritas.UI.Web\bin\Joel.Net.Akismet.pdb
+C:\csharp\Veritas 3\UI\Veritas.UI.Web\bin\System.Web.Mvc.xml
+C:\csharp\Veritas 3\UI\Veritas.UI.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\csharp\Veritas 3\UI\Veritas.UI.Web\obj\Debug\Veritas.UI.Web.dll
+C:\csharp\Veritas 3\UI\Veritas.UI.Web\obj\Debug\Veritas.UI.Web.pdb

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="b2d5eeec-1949-451c-af2d-f9ac175d1a4e" name="chris@OMEGA 2011-02-09 20:51:35" runUser="omega\chris" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="6fa36b88-2d58-4b83-8765-de14e7185a90">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="C:\csharp\Veritas 3\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="chris_OMEGA 2011-02-09 20_51_35">
+      <DeploymentItem filename="C:\csharp\Veritas 3\BusinessLayer\Veritas.BusinessLayer\bin\Debug\Veritas.BusinessLayer.dll" />
+      <DeploymentItem filename="C:\csharp\Veritas 3\DataLayer\Veritas.DataLayer\bin\Debug\Veritas.DataLayer.dll" />
+      <DeploymentItem filename="C:\csharp\Veritas 3\UI\Veritas.UI.Web\bin\Veritas.UI.Web.dll" />
+      <DeploymentItem filename="C:\csharp\Veritas 3\ThirdPartyAssembelies\Moq\Moq.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-02-09T20:51:35.8160665-05:00" queuing="2011-02-09T20:51:39.0712527-05:00" start="2011-02-09T20:51:39.2622636-05:00" finish="2011-02-09T20:52:35.8835022-05:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="OMEGA" outcome="Error" timestamp="2011-02-09T20:52:35.8815020-05:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="LoadConfigFromXmlTest" storage="c:\csharp\veritas 3\tests\veritas.tests\bin\debug\veritas.tests.dll" id="4d878c16-385d-d610-2cbf-7652a010b362">
+      <Execution id="e6f1f7bf-a49f-48d8-8c4b-2efa4e5d4c24" />
+      <TestMethod codeBase="C:/csharp/Veritas 3/Tests/Veritas.Tests/bin/Debug/Veritas.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Veritas.Tests.BlogConfigTest, Veritas.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LoadConfigFromXmlTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="4d878c16-385d-d610-2cbf-7652a010b362" executionId="e6f1f7bf-a49f-48d8-8c4b-2efa4e5d4c24" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="e6f1f7bf-a49f-48d8-8c4b-2efa4e5d4c24" testId="4d878c16-385d-d610-2cbf-7652a010b362" testName="LoadConfigFromXmlTest" computerName="OMEGA" duration="00:00:56.4972315" startTime="2011-02-09T20:51:39.3862707-05:00" endTime="2011-02-09T20:52:35.8835022-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e6f1f7bf-a49f-48d8-8c4b-2efa4e5d4c24">
+    </UnitTestResult>
+  </Results>
+</TestRun>

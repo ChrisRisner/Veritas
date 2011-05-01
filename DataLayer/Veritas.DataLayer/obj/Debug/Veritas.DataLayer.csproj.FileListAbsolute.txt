@@ -1,0 +1,6 @@
+C:\csharp\Veritas 3\DataLayer\Veritas.DataLayer\bin\Debug\Veritas.DataLayer.dll.config
+C:\csharp\Veritas 3\DataLayer\Veritas.DataLayer\bin\Debug\Veritas.DataLayer.dll
+C:\csharp\Veritas 3\DataLayer\Veritas.DataLayer\bin\Debug\Veritas.DataLayer.pdb
+C:\csharp\Veritas 3\DataLayer\Veritas.DataLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\csharp\Veritas 3\DataLayer\Veritas.DataLayer\obj\Debug\Veritas.DataLayer.dll
+C:\csharp\Veritas 3\DataLayer\Veritas.DataLayer\obj\Debug\Veritas.DataLayer.pdb
