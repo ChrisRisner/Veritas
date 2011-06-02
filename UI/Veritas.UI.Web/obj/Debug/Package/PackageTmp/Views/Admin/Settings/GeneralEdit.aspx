@@ -82,6 +82,16 @@
             </dl>
             <dl>
                 <dt>
+                    <label for="ShowGooglePlusOne">Show Google Plus One</label>
+                </dt>
+                <dd>
+                    <%=Html.CheckBox("newBlogConfig.ShowGooglePlusOne", Model.newBlogConfig.ShowGooglePlusOne, new {  @class="icheckbox" })%>    
+                    <label class="required"></label>    
+                    <%=Html.ValidationMessage("newBlogConfig.ShowGooglePlusOne", "*")%>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
                     <label for="ShowGravatars">Show Gravatars</label>
                 </dt>
                 <dd>

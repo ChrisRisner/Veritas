@@ -36,6 +36,11 @@
         width="125" height="16" alt="Bookmark and Share" style="border:0"/></a>
         <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=morlockprime"></script>
         <!-- AddThis Button END -->
+
+        <% if (Model.blogConfig.ShowGooglePlusOne) 
+           { %>
+            <g:plusone href="http://<%= Model.blogConfig.Host + VeritasForm.Content("~/" + Model.BlogEntry.EntryName) %>"></g:plusone>
+        <% } %>
     </div>
 
     <%--If we're using default comments or this is the only entry on the page, show the comments without directing to another page.--%>

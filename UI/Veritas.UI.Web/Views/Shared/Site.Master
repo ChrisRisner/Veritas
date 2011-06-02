@@ -24,8 +24,11 @@
     <script language="javascript" type="text/javascript" src="<%= Url.Content("~/Scripts/watermark/jquery.watermark.min.js") %>"></script>
     <script language="javascript" type="text/javascript" src="<%= Url.Content("~/Scripts/highslide/highslide-with-gallery.min.js") %>"></script>
     <script language="javascript" type="text/javascript" src="<%= Url.Content("~/Scripts/site.js") %>"></script>
+    <% if (Model.blogConfig.ShowGooglePlusOne) {%>
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <% } %>
     <link rel="stylesheet" type="text/css" href="<%= Url.Content("~/Scripts/highslide/highslide.css") %>" />        
-    <link href="<%= Url.Content("~/Content/Themes/" + Model.blogConfig.Skin + ".css") %>" rel="Stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/Content/Themes/" + Model.blogConfig.Skin + ".css") %>" rel="Stylesheet" type="text/css" />    
     <%= Model.blogConfig.WebStatsJavascript %>
     <%= Model.blogConfig.HeaderScript %>
 </head>

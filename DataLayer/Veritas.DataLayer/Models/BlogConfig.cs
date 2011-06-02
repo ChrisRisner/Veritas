@@ -47,6 +47,7 @@ namespace Veritas.DataLayer.Models
         public string SecurityQuestionAnswerThree { get; set; }
         public bool ShowAuthorsAbout { get; set; }
         public bool ShowBlogAbout { get; set; }
+        public bool ShowGooglePlusOne { get; set; }
         public bool ShowGravatars { get; set; }
         private string _skin;
         public string Skin
@@ -149,6 +150,8 @@ namespace Veritas.DataLayer.Models
                 this.ShowAuthorsAbout = Convert.ToBoolean(doc.DocumentElement["ShowAuthorsAbout"].InnerText);
             if (doc.DocumentElement["ShowBlogAbout"] != null)
                 this.ShowBlogAbout = Convert.ToBoolean(doc.DocumentElement["ShowBlogAbout"].InnerText);
+            if (doc.DocumentElement["ShowGooglePlusOne"] != null)
+                this.ShowGooglePlusOne = Convert.ToBoolean(doc.DocumentElement["ShowGooglePlusOne"].InnerText);
             if (doc.DocumentElement["ShowGravatars"] != null)
                 this.ShowGravatars = Convert.ToBoolean(doc.DocumentElement["ShowGravatars"].InnerText);
             if (doc.DocumentElement["Skin"] != null)
@@ -211,6 +214,7 @@ namespace Veritas.DataLayer.Models
                     new XElement("RssUrl", this.RssUrl),
                     new XElement("ShowAuthorsAbout", this.ShowAuthorsAbout),
                     new XElement("ShowBlogAbout", this.ShowBlogAbout),
+                    new XElement("ShowGooglePlusOne", this.ShowGooglePlusOne),
                     new XElement("ShowGravatars", this.ShowGravatars),
                     new XElement("Skin", this.Skin),
                     new XElement("SmtpPassword", this.SmtpPassword),

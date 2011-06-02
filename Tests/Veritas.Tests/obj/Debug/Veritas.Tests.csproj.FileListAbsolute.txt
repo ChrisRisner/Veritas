@@ -22,3 +22,27 @@ C:\csharp\Veritas 3\Tests\Veritas.Tests\bin\Debug\Veritas.UI.Web_Accessor.pdb
 C:\csharp\Veritas 3\Tests\Veritas.Tests\obj\Debug\ResolveAssemblyReference.cache
 C:\csharp\Veritas 3\Tests\Veritas.Tests\obj\Debug\Veritas.Tests.dll
 C:\csharp\Veritas 3\Tests\Veritas.Tests\obj\Debug\Veritas.Tests.pdb
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\Veritas.Tests.dll.config
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\Veritas.Tests.dll
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\Veritas.Tests.pdb
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\Moq.dll
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\Veritas.BusinessLayer.dll
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\Veritas.DataLayer.dll
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\Veritas.UI.Web.dll
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\Joel.Net.Akismet.dll
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\CookComputing.XmlRpcV2.dll
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\Veritas.BusinessLayer.pdb
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\Veritas.DataLayer.pdb
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\Veritas.UI.Web.pdb
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\Moq.pdb
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\Moq.xml
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\Joel.Net.Akismet.pdb
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\Veritas.DataLayer_Accessor.dll
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\Veritas.BusinessLayer_Accessor.dll
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\Veritas.UI.Web_Accessor.dll
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\Veritas.DataLayer_Accessor.pdb
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\Veritas.BusinessLayer_Accessor.pdb
+C:\Git\Veritas\Tests\Veritas.Tests\bin\Debug\Veritas.UI.Web_Accessor.pdb
+C:\Git\Veritas\Tests\Veritas.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Git\Veritas\Tests\Veritas.Tests\obj\Debug\Veritas.Tests.dll
+C:\Git\Veritas\Tests\Veritas.Tests\obj\Debug\Veritas.Tests.pdb
