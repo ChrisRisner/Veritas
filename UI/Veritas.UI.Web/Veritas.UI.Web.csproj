@@ -14,6 +14,7 @@
     <AssemblyName>Veritas.UI.Web</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -179,6 +180,7 @@
     <Content Include="Views\Admin\Index.aspx" />
     <Content Include="Views\Admin\LogOn.aspx" />
     <Content Include="Views\Admin\Logs\Index.aspx" />
+    <Content Include="Views\Admin\Pages\Edit.aspx" />
     <Content Include="Views\Admin\Users\Edit.aspx" />
     <Content Include="Views\Admin\Pages\Index.aspx" />
     <Content Include="Views\Admin\Roles\Index.aspx" />

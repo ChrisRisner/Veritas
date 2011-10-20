@@ -33,7 +33,11 @@ namespace Veritas.UI.Web.Controllers
             id = EntryTitleLogic.GetEntryNameFromTitle(id);
             ArchiveScreen screen = new ArchiveScreen(id);
             ViewData.Model = screen;
-
+            
+            //The id didn't produce a valid blog entry
+            if (screen.BlogEntryScreen.BlogEntry == null)
+                return  RedirectToAction("NotFound", "Error");
+            
             screen.UpdateEntryViewCount();
 
             return View();

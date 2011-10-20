@@ -6,6 +6,8 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>404</h2>
-
+    <div style="text-align:center">
+        <h2>404 - 404 - 404 - 404</h2>
+        <h5>We couldn't find what you were looking for.<br />The princess is in another castle.<br />Please go back and try again.</h5>
+    </div>
 </asp:Content>

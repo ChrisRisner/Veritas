@@ -64,10 +64,15 @@ namespace Veritas.UI.Web
                 "Category/{id}",                                          //Url with parameters
                 new { controller = "blog", action = "category", id = "" } //parameter defaults
                 );
+            //routes.MapRoute(
+            //    "Error",
+            //    "{*url}",
+            //    new { controller = "Home", action = "PageNotFound", id = "" }
+            //);
             routes.MapRoute(
                 "Error",
-                "{*url}",
-                new { controller = "Home", action = "PageNotFound", id = "" }
+                "Error/{action}/{id}",
+                new { controller = "Error", action = "Index", id = "" }
             );
         }
 

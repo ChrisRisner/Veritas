@@ -41,6 +41,15 @@ namespace Veritas.UI.Web.Controllers
             return View("SessionExpired");
         }
 
+
+        public ActionResult PageNoteFound()
+        {
+            ErrorScreen screen = new ErrorScreen();
+            ViewData.Model = screen;
+            Response.StatusCode = (int)HttpStatusCode.NotFound;
+            return View("404");
+        }
+
         /// <summary>
         /// Not found
         /// </summary>
