@@ -146,7 +146,7 @@
           <Property Name="Host" Type="nvarchar" Nullable="false" MaxLength="100" />
           <Property Name="CreateDate" Type="datetime" Nullable="false" />
           <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
-          <Property Name="LastUpdatedById" Type="int" Nullable="false" />
+          <Property Name="LastUpdatedById" Type="int" />
         </EntityType>
         <EntityType Name="BlogEntry">
           <Key>
@@ -291,7 +291,7 @@
           </Key>
           <Property Name="BlogUserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="BlogConfigId" Type="int" Nullable="false" />
-          <Property Name="About" Type="ntext" />
+          <Property Name="About" Type="nvarchar(max)" />
           <Property Name="NotifyForFeedback" Type="bit" Nullable="false" />
           <Property Name="Username" Type="varchar" Nullable="false" MaxLength="25" />
           <Property Name="EmailAddress" Type="varchar" Nullable="false" MaxLength="200" />
