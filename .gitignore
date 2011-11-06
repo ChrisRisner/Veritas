@@ -1,0 +1,5 @@
+UI/Veritas.UI.Web/bin/
+UI/Veritas.UI.Web/obj/
+Tests/Veritas.Tests/bin/
+BusinessLayer/Veritas.BusinessLayer/bin/
+DataLayer/Veritas.DataLayer/obj/
