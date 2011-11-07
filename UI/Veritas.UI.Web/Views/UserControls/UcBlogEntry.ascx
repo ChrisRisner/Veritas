@@ -11,7 +11,7 @@
     </h2>
 
     <h4>    
-        Posted on:  <%= Model.BlogEntry.PublishDate %> by <%= Model.BlogEntry.BlogUser.Username %>
+        Posted on:  <%= Model.BlogEntry.PublishDate %> by <%= VeritasForm.ActionLink(Model.BlogEntry.BlogUser.Username, "About", "Home", null, new { rel = "author" })%>
     </h4>
 
     <div class="entryBody">
