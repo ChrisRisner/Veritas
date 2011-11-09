@@ -9,16 +9,23 @@
             +"\" alt=\"Site Feed\" style=\"border-width:0px;\" /> RSS (blog)</a>"
         :
         "<a href=\"http://feeds.feedburner.com/"+ Model.blogConfig.FeedburnerName + "\"><img src=\"" +
-            VeritasForm.Content("~/Content/Media/feed.png") +"\" alt=\"Site Feed\" style=\"border-width:0px;\" /> RSS</a>"        
+            VeritasForm.Content("~/Content/Media/feed.png") +"\" alt=\"Site Feed\" style=\"border-width:0px;\" /> RSS</a>"                        
     %>
+    <br />
     <%--Blog Feedback Feed--%>
     <% if (Model.blogConfig.EnableFeedbackRssFeed)
         { %>                
-        <br /><a href="<%= VeritasForm.Content("~/Syndication/commentRss.aspx") %>">
+            <a href="<%= VeritasForm.Content("~/Syndication/commentRss.aspx") %>">
                 <img src="<%= VeritasForm.Content("~/Content/Media/feed.png") %>"
                  alt="RSS Feed" style="border-width:0px;" /> RSS (comment)</a>        
+            <br />
     <% } %> 
     <%--Social Networks--%>
+    <% if (!string.IsNullOrEmpty(Model.blogConfig.GooglePlusUrl))
+       { %>
+       <a href='<%= Model.blogConfig.GooglePlusUrl %>'><img src="../../Content/Media/google_plus_logo.png" /></a>
+       <br />
+    <% } %>
     <% if (!string.IsNullOrEmpty(Model.blogConfig.FacebookUrl))
        { %>
        <a href='<%= Model.blogConfig.FacebookUrl %>'><img src="../../Content/Media/facebook_logo.png" /></a>
@@ -28,11 +35,7 @@
        { %>
        <a href='<%= Model.blogConfig.TwitterUrl %>'><img src="../../Content/Media/twitter_logo.png" /></a>
        <br />
-    <% } %>
-</div>
-<%-- Tags --%>
-<div class="sideBarTags">
-    <% Html.RenderPartial("~/Views/UserControls/UcTagCloud.ascx"); %>            
+    <% } %>    
 </div>
 <%--Side bar ads--%>
 <div class="sideBarAds">
@@ -40,3 +43,8 @@
         <%= Model.blogConfig.BlogMarketingInfo.AdScriptSideBar %>        
     <% } %>
 </div>
+<%-- Tags --%>
+<div class="sideBarTags">
+    <% Html.RenderPartial("~/Views/UserControls/UcTagCloud.ascx"); %>            
+</div>
+

@@ -13,6 +13,12 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
+    <script type="text/javascript">
+        $(function () {
+            $('#username').focus();
+        });
+    </script>
+
     <%= Html.ValidationSummary("Login was unsuccessful. Please correct the errors and try again.") %>
 
     <% using (Html.BeginForm()) { %>

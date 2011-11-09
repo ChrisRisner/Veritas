@@ -45,6 +45,17 @@
 
             <dl>
                 <dt>
+                    <label for="GooglePlusUrl">Google Plus Url</label>
+                </dt>
+                <dd>
+                    <%=Html.TextBox("newBlogConfig.GooglePlusurl", Model.newBlogConfig.GooglePlusUrl, new { size = 70, @class = "itext" })%>    
+                    <label class="required"></label>
+                    <%=Html.ValidationMessage("newBlogConfig.GooglePlusUrl", "*")%>
+                </dd>
+            </dl>
+
+            <dl>
+                <dt>
                     <label for="RssUrl">RssUrl</label>
                 </dt>
                 <dd>

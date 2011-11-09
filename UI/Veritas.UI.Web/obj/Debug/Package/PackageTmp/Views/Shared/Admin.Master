@@ -52,6 +52,7 @@
                     <li id="liSiteOptions"><%= VeritasForm.ActionLink("Settings", "Settings/Index", "Admin")%></li>
                     <li id="liUserManagement"><%= VeritasForm.ActionLink("Users", "Users/Index", "Admin")%></li>
                     <li id="liRoles"><%= VeritasForm.ActionLink("Roles", "Roles/Index", "Admin")%></li>
+                    <li id="liResetCache"><%= VeritasForm.ActionLink("Reset Cache", "ResetCache", "Admin") %></li>
                 </ul>                
             </div>
         

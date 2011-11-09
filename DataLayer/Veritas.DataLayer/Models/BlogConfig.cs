@@ -27,6 +27,7 @@ namespace Veritas.DataLayer.Models
         public bool FeedbackRequiresApproval { get; set; }
         public bool IsActive { get; set; }
         public string GoogleApiKey { get; set; }
+        public string GooglePlusUrl { get; set; }
         public string HeaderScript { get; set; }
         public string Language { get; set; }
         public string LogEmailAddress { get; set; }
@@ -110,6 +111,8 @@ namespace Veritas.DataLayer.Models
                 this.IsActive = Convert.ToBoolean(doc.DocumentElement["IsActive"].InnerText);
             if (doc.DocumentElement["GoogleApiKey"] != null)
                 this.GoogleApiKey = HttpUtility.HtmlDecode(doc.DocumentElement["GoogleApiKey"].InnerText);
+            if (doc.DocumentElement["GooglePlusUrl"] != null)
+                this.GooglePlusUrl = doc.DocumentElement["GooglePlusUrl"].InnerText;
             if (doc.DocumentElement["HeaderScript"] != null)
                 this.HeaderScript = HttpUtility.HtmlDecode(doc.DocumentElement["HeaderScript"].InnerText);
             if (doc.DocumentElement["Language"] != null)
@@ -200,6 +203,7 @@ namespace Veritas.DataLayer.Models
                     new XElement("FeedbackRequiresApproval", this.FeedbackRequiresApproval),
                     new XElement("IsActive", this.IsActive),
                     new XElement("GoogleApiKey", HttpUtility.HtmlEncode(this.GoogleApiKey)),
+                    new XElement("GooglePlusUrl", this.GooglePlusUrl),
                     new XElement("HeaderScript",  HttpUtility.HtmlEncode(this.HeaderScript)),
                     new XElement("Language", this.Language),
                     new XElement("LogEmailAddress", this.LogEmailAddress),

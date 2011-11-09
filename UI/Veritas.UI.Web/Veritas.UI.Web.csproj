@@ -118,6 +118,7 @@
     <Content Include="Content\admin.css" />
     <Content Include="Content\media\facebook_logo.png" />
     <Content Include="Content\media\feed.png" />
+    <Content Include="Content\media\google_plus_logo.png" />
     <Content Include="Content\media\twitter_logo.png" />
     <Content Include="Content\Themes\chrisrisner.css" />
     <Content Include="Content\Themes\Default.css" />
