@@ -5,7 +5,7 @@
 </asp:Content>
 
 <asp:Content ID="MetaContent" ContentPlaceHolderID="MetaContent" runat="server">
-    <meta name="description" content="<%= Model.blogConfig.Title %> - Contact" />
+    <meta name="description" content="<%= Model.BlogEntryScreen.BlogEntry.Short %>" />
     <meta name="Keywords" content="<%= Model.BlogEntryScreen.BlogEntry.Keywords %>,Contact" />
 </asp:Content>
 
