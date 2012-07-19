@@ -42,12 +42,11 @@
 
 #adminLeftColumn
 {
-	/*border-bottom: 1px solid rgb(3, 112, 0);*/
-	/*border-top: 1px solid rgb(3, 112, 0);*/
-	/*padding: 0px 20px 0px 20px;*/
-	float: left;
+	/*float: left;*/
+    position:  absolute;
+    height:  100%;
+    overflow:  hidden;
 	width: 150px;
-	/*margin-left: -100%;*/
 	background: #FFFFFF;
 }
 
@@ -88,11 +87,11 @@ ul#adminLeftColumnSettings
 
 #adminRightColumn
 {
-	/*padding-left: 40px;*/
-	padding-left: 25px;
-	
+	/*padding-left: 25px;*/
+	/*float: left;*/
 	background: #FFFFFF;		
-	float: left;
+	position:  absolute;
+    left:  150px;
 	/**/
 }
 
