@@ -34,7 +34,7 @@ namespace Veritas.UI.Web.Views
                 return (VeritasForm)htmlHelper.ViewContext.HttpContext.Items[CACHE_KEY];
             VeritasForm form = new VeritasForm(htmlHelper, urlHelper);
             htmlHelper.ViewContext.HttpContext.Items.Add(CACHE_KEY, form);
-            return form;
+            return form;            
         }
        
         private VeritasForm(HtmlHelper htmlHelper, UrlHelper urlHelper)
