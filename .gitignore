@@ -3,3 +3,5 @@ UI/Veritas.UI.Web/obj
 Tests/Veritas.Tests/bin/
 BusinessLayer/Veritas.BusinessLayer/bin/
 DataLayer/Veritas.DataLayer/obj/
+Debug/
+Release/
