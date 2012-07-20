@@ -60,7 +60,7 @@
         class="r4"></b></b> 
         <div name="contentwrapper" id="contentwrapper">                  
             
-            <b style="background:#000;height:2px;display:block;width:700px;margin-left:30px;"></b>
+            <b style="background:#FFF;height:2px;display:block;width:700px;margin-left:30px;"></b>
             <div id="contentcolumn">                                                
                     <% Html.RenderPartial("~/Views/UserControls/UCTopbar.ascx"); %>                            
                 <div class="innertube">
@@ -70,7 +70,7 @@
             </div>
         </div>
         <div id="rightcolumn">
-            <b style="background:#000;height:2px;display:block;width:170px;"></b> 
+            <b style="background:#FFF;height:2px;display:block;width:170px;"></b> 
             <%--<b class="leftMenuBar"></b>--%>
             <div class="leftMenuBar"></div>
             <div class="innertube">

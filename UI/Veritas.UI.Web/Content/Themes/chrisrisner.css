@@ -32,9 +32,11 @@ body{
 	margin: 0;
 	padding:0;
 	line-height: 1.5em;
-	background-image: url(../../content/Media/bg-chrisrisner2.png);
+/*	background-image: url(../../content/Media/bg-chrisrisner2.png);*/
+	background-image: url(../../content/Media/background4.jpg);
 	background-repeat: repeat-x;
-	background-color: #5F5F5F;
+/*	background-color: #5F5F5F;*/
+background-color:  #FFF;
 	font-family: Helvetica;
 }
 
@@ -154,7 +156,7 @@ p#logo, h1#logo
 {
     font-weight: bold;
     font-size: 24px !important;
-    padding: 10px 0;
+    padding: 50px 0;
     padding-left: 140px;
     margin: 0;
     color: #FFF;
@@ -165,9 +167,9 @@ p#logo, h1#logo
 
 #logo a
 {
-    color: #7EBE08;
+    color: #000000;
     text-decoration: none;
-    font-size: 32px !important;
+    font-size: 56px !important;
     border-width: 0;
 }
 
@@ -184,7 +186,7 @@ p#logo, h1#logo
 
 #footer
 {
-    color: #999;
+    color: #000;
     padding: 5px 0 0 0;
     text-align: center;
     line-height: normal;
@@ -227,8 +229,8 @@ p#logo, h1#logo
 #footer{
 	clear: left;
 	width: 100%;
-	background: black;
-	color: #FFF;
+	background: white;
+	color: #000;
 	text-align: center;
 	padding: 4px 0;
 }
@@ -270,7 +272,7 @@ p#logo, h1#logo
 
 b#topMenuBottom
 {
-	background:#000;
+	background:#cccccc;
 	height:2px;
 	display:block;
 	width:650px;
@@ -281,7 +283,7 @@ b#topMenuBottom
 
 .leftMenuBar
 {
-	background:#000;
+	background:#cccccc;
 	height:100%;
 	display:block;
 	width:2px;
@@ -353,7 +355,7 @@ ul#topMenu li.selected a
 
 b#topMenuBottom
 {
-	background:#000;
+	background:#cccccc;
 	height:2px;
 	display:block;
 	width:650px;
