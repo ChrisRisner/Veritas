@@ -105,7 +105,7 @@ namespace Veritas.UI.Web.Controllers
             string webPath = screen.SaveFile(Request.Files[0]);
 
             MessageScreen messageScreen = new MessageScreen();
-            messageScreen.Message = "Upload successful, web path = " + webPath;
+            messageScreen.Message = "Upload successful, web path = <a href='" + webPath + "'>" + webPath + "</a>";
             ViewData.Model = messageScreen;
             return View("Message");
         }
