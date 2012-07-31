@@ -10,11 +10,13 @@ using Veritas.BusinessLayer.Caching;
 
 namespace Veritas.BusinessLayer.Screens.Admin.Entries
 {
-    [Bind(Exclude = "PostTypeSelectList")]
+    [Bind(Exclude = "PostTypeSelectList,PreviousEntryInSeriesSelectList,NextEntryInSeriesSelectList")]
     public class EntriesEditScreen : ScreenBase
     {
         public BlogEntry BlogEntry { get; set; }
         public SelectList PostTypeSelectList { get; set; }
+        public SelectList PreviousEntryInSeriesSelectList { get; set; }
+        public SelectList NextEntryInSeriesSelectList { get; set; }
         public string OriginalKeywords { get; set; }
         public int OriginalPostType { get; set; }
         public string OriginalShort { get; set; }
@@ -49,7 +51,20 @@ namespace Veritas.BusinessLayer.Screens.Admin.Entries
             postTypes.Add(0, "Draft");
             postTypes.Add(1, "Published");
 
-            this.PostTypeSelectList = new SelectList(postTypes, "key", "value", this.BlogEntry.PostType);            
+            this.PostTypeSelectList = new SelectList(postTypes, "key", "value", this.BlogEntry.PostType);
+            
+            //Load previous / next entry lists:
+            Dictionary<long?, string> entryTitlesAndIds = repo.GetBlogEntryTitlesAndIds(this.blogConfig.BlogConfigId);
+            entryTitlesAndIds.Add(0, "");
+            
+            if (this.BlogEntry.PreviousEntryInSeries != null)
+                this.PreviousEntryInSeriesSelectList = new SelectList(entryTitlesAndIds, "key", "value", this.BlogEntry.PreviousEntryInSeries);
+            else
+                this.PreviousEntryInSeriesSelectList = new SelectList(entryTitlesAndIds, "key", "value", 0);
+            if (this.BlogEntry.NextEntryInSeries != null)
+                this.NextEntryInSeriesSelectList = new SelectList(entryTitlesAndIds, "key", "value", this.BlogEntry.NextEntryInSeries);
+            else
+                this.NextEntryInSeriesSelectList = new SelectList(entryTitlesAndIds, "key", "value", 0);
         }
 
         public override bool IsValid
@@ -146,6 +161,11 @@ namespace Veritas.BusinessLayer.Screens.Admin.Entries
                     //then reset the cache so the next time blogconfig is used, it's repulled
                     CacheHandler.ResetCache();
                 }
+
+                if (this.BlogEntry.PreviousEntryInSeries == 0)
+                    this.BlogEntry.PreviousEntryInSeries = null;
+                if (this.BlogEntry.NextEntryInSeries == 0)
+                    this.BlogEntry.NextEntryInSeries = null;
 
             }
             else

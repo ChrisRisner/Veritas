@@ -278,6 +278,13 @@ namespace Veritas.DataLayer
             db.BlogEntries.DeleteObject(blogEntry);
         }
 
+        public Dictionary<long?, String> GetBlogEntryTitlesAndIds(int blogConfigId)
+        {
+            var entries = db.BlogEntries.Where(p => p.BlogConfigId == blogConfigId)
+                .ToDictionary(p => p.BlogEntryId as long?, p => p.Title);
+            return entries;
+        }
+
         #endregion
 
         #region BlogEntryCategory

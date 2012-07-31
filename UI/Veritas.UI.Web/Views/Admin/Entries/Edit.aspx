@@ -70,6 +70,46 @@
                     <%=Html.ValidationMessage("BlogEntry.Text", "*")%>
                 </dd>
             </dl>
+            <dl>
+                <dt>
+                    <label for="PreviousEntryInSeries">Previous Entry in Series</label>
+                </dt>
+                <dd>
+                    <%=Html.DropDownList("PreviousEntryInSeriesSelectList")%>
+                    <label class="required"></label>
+                    <%=Html.ValidationMessage("BlogEntry.PreviousEntryInSeries", "*")%>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="NextEntryInSeries">Next Entry in Series</label>
+                </dt>
+                <dd>
+                    <%=Html.DropDownList("NextEntryInSeriesSelectList")%>
+                    <label class="required"></label>
+                    <%=Html.ValidationMessage("BlogEntry.NextEntryInSeries", "*")%>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="PreviousEntryText">Previous Entry Text (blank will use default)</label>
+                </dt>
+                <dd>
+                    <%=Html.TextBox("BlogEntry.PreviousEntryText", Model.BlogEntry.PreviousEntryText, new { size="70", @class="itext" })%>    
+                    <label class="required"></label>
+                    <%=Html.ValidationMessage("BlogEntry.PreviousEntryText", "*")%>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="NextEntryText">Next Entry Text (blank will use default)</label>
+                </dt>
+                <dd>
+                    <%=Html.TextBox("BlogEntry.NextEntryText", Model.BlogEntry.NextEntryText, new { size="70", @class="itext" })%>    
+                    <label class="required"></label>
+                    <%=Html.ValidationMessage("BlogEntry.NextEntryText", "*")%>
+                </dd>
+            </dl>
             
             <% if (Model.BlogEntry.BlogEntryId > 0)
                { %>

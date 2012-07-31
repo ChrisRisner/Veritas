@@ -102,6 +102,26 @@
             </dl>
             <dl>
                 <dt>
+                    <label for="ShowNextPreviousAtTop">Show Next/Previous Links at Top</label>
+                </dt>
+                <dd>
+                    <%=Html.CheckBox("newBlogConfig.ShowNextPreviousAtTop", Model.newBlogConfig.ShowNextPreviousAtTop, new {  @class="icheckbox" })%>    
+                    <label class="required"></label>    
+                    <%=Html.ValidationMessage("newBlogConfig.ShowNextPreviousAtTop", "*")%>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="ShowNextPreviousAtBottom">Show Next/Previous Links at Bottom</label>
+                </dt>
+                <dd>
+                    <%=Html.CheckBox("newBlogConfig.ShowNextPreviousAtBottom", Model.newBlogConfig.ShowNextPreviousAtBottom, new {  @class="icheckbox" })%>    
+                    <label class="required"></label>    
+                    <%=Html.ValidationMessage("newBlogConfig.ShowNextPreviousAtBottom", "*")%>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
                     <label for="CopyrightText">Copyright Text</label>
                 </dt>
                 <dd>

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="VeritasBlogDBV3Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="VeritasBlogDBV3Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="VeritasBlogDBV3ModelStoreContainer">
           <EntitySet Name="Blacklist" EntityType="VeritasBlogDBV3Model.Store.Blacklist" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="BlogCategory" EntityType="VeritasBlogDBV3Model.Store.BlogCategory" store:Type="Tables" Schema="dbo" />
@@ -165,6 +165,10 @@
           <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="255" />
           <Property Name="CreateDate" Type="datetime" Nullable="false" />
           <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+          <Property Name="PreviousEntryInSeries" Type="bigint" />
+          <Property Name="NextEntryInSeries" Type="bigint" />
+          <Property Name="PreviousEntryText" Type="nvarchar" MaxLength="255" />
+          <Property Name="NextEntryText" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="BlogEntryCategory">
           <Key>
@@ -228,7 +232,7 @@
           <Property Name="EventLevel" Type="varchar" Nullable="false" MaxLength="20" />
           <Property Name="Exception" Type="ntext" />
           <Property Name="Logger" Type="varchar" Nullable="false" MaxLength="256" />
-          <Property Name="Message" Type="varchar" MaxLength="1024" />
+          <Property Name="Message" Type="varchar(max)" />
           <Property Name="Url" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="BlogMedia">
@@ -291,7 +295,7 @@
           </Key>
           <Property Name="BlogUserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="BlogConfigId" Type="int" Nullable="false" />
-          <Property Name="About" Type="nvarchar(max)" />
+          <Property Name="About" Type="ntext" />
           <Property Name="NotifyForFeedback" Type="bit" Nullable="false" />
           <Property Name="Username" Type="varchar" Nullable="false" MaxLength="25" />
           <Property Name="EmailAddress" Type="varchar" Nullable="false" MaxLength="200" />
@@ -704,7 +708,7 @@
           <Property Name="BlacklistId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="BlogConfigId" Type="Int32" Nullable="false" />
           <Property Name="EmailAddress" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_Blacklist_BlogConfig_BlogConfigId" FromRole="Blacklist" ToRole="BlogConfig" />
         </EntityType>
         <EntityType Name="BlogConfig">
@@ -714,9 +718,9 @@
           <Property Name="BlogConfigId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ConfigXml" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="Host" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
-          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" />
-          <Property Name="LastUpdatedById" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdatedById" Type="Int32" />
           <NavigationProperty Name="Blacklists" Relationship="VeritasBlogDBV3Model.FK_Blacklist_BlogConfig_BlogConfigId" FromRole="BlogConfig" ToRole="Blacklist" />
           <NavigationProperty Name="BlogEntries" Relationship="VeritasBlogDBV3Model.FK_BlogEntry_BlogConfig_BlogConfigId" FromRole="BlogConfig" ToRole="BlogEntry" />
           <NavigationProperty Name="BlogEntryViewCounts" Relationship="VeritasBlogDBV3Model.FK_BlogEntryViewCount_BlogConfig_BlogConfigId" FromRole="BlogConfig" ToRole="BlogEntryViewCount" />
@@ -741,17 +745,21 @@
           <Property Name="FeedbackCount" Type="Int32" Nullable="false" />
           <Property Name="Keywords" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
           <Property Name="PostType" Type="Int32" Nullable="false" />
-          <Property Name="PublishDate" Type="DateTime" Nullable="false" />
+          <Property Name="PublishDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Short" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
           <Property Name="Text" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="Title" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
-          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogEntry_BlogConfig_BlogConfigId" FromRole="BlogEntry" ToRole="BlogConfig" />
           <NavigationProperty Name="BlogUser" Relationship="VeritasBlogDBV3Model.FK_BlogEntry_BlogUser_BlogAuthorId" FromRole="BlogEntry" ToRole="BlogUser" />
           <NavigationProperty Name="BlogEntryCategories" Relationship="VeritasBlogDBV3Model.FK_BlogEntryCategory_BlogEntry_BlogEntryId" FromRole="BlogEntry" ToRole="BlogEntryCategory" />
           <NavigationProperty Name="BlogEntryViewCounts" Relationship="VeritasBlogDBV3Model.FK_BlogEntryViewCount_BlogEntry_BlogEntryId" FromRole="BlogEntry" ToRole="BlogEntryViewCount" />
           <NavigationProperty Name="BlogFeedbacks" Relationship="VeritasBlogDBV3Model.FK_BlogFeedback_BlogEntry_BlogEntryId" FromRole="BlogEntry" ToRole="BlogFeedback" />
+          <Property Type="Int64" Name="PreviousEntryInSeries" />
+          <Property Type="Int64" Name="NextEntryInSeries" />
+          <Property Type="String" Name="PreviousEntryText" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NextEntryText" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="BlogEntryCategory">
           <Key>
@@ -760,7 +768,7 @@
           <Property Name="BlogEntryCategoryId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="BlogEntryId" Type="Int64" Nullable="false" />
           <Property Name="BlogCategoryId" Type="Int32" Nullable="false" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="BlogEntry" Relationship="VeritasBlogDBV3Model.FK_BlogEntryCategory_BlogEntry_BlogEntryId" FromRole="BlogEntryCategory" ToRole="BlogEntry" />
           <NavigationProperty Name="BlogCategory" Relationship="VeritasBlogDBV3Model.FK_BlogEntryCategory_BlogCategory_BlogCategoryId" FromRole="BlogEntryCategory" ToRole="BlogCategory" />
         </EntityType>
@@ -772,7 +780,7 @@
           <Property Name="BlogConfigId" Type="Int32" Nullable="false" />
           <Property Name="BlogEntryId" Type="Int64" Nullable="false" />
           <Property Name="WebCount" Type="Int32" Nullable="false" />
-          <Property Name="WebLastUpdated" Type="DateTime" Nullable="false" />
+          <Property Name="WebLastUpdated" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogEntryViewCount_BlogConfig_BlogConfigId" FromRole="BlogEntryViewCount" ToRole="BlogConfig" />
           <NavigationProperty Name="BlogEntry" Relationship="VeritasBlogDBV3Model.FK_BlogEntryViewCount_BlogEntry_BlogEntryId" FromRole="BlogEntryViewCount" ToRole="BlogEntry" />
         </EntityType>
@@ -792,8 +800,8 @@
           <Property Name="Status" Type="Int32" Nullable="false" />
           <Property Name="Title" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
           <Property Name="UserAgent" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
-          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogFeedback_BlogConfig_BlogConfigId" FromRole="BlogFeedback" ToRole="BlogConfig" />
           <NavigationProperty Name="BlogEntry" Relationship="VeritasBlogDBV3Model.FK_BlogFeedback_BlogEntry_BlogEntryId" FromRole="BlogFeedback" ToRole="BlogEntry" />
           <NavigationProperty Name="BlogFeedbackAuthor" Relationship="VeritasBlogDBV3Model.FK_BlogFeedback_BlogFeedbackAuthor_BlogFeedbackAuthorId" FromRole="BlogFeedback" ToRole="BlogFeedbackAuthor" />
@@ -809,8 +817,8 @@
           <Property Name="Email" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
           <Property Name="Url" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
           <Property Name="FeedbackTotal" Type="Int32" Nullable="false" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
-          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogFeedbackAuthor_BlogConfig_BlogConfigId" FromRole="BlogFeedbackAuthor" ToRole="BlogConfig" />
           <NavigationProperty Name="BlogFeedbacks" Relationship="VeritasBlogDBV3Model.FK_BlogFeedback_BlogFeedbackAuthor_BlogFeedbackAuthorId" FromRole="BlogFeedbackAuthor" ToRole="BlogFeedback" />
         </EntityType>
@@ -820,11 +828,11 @@
           </Key>
           <Property Name="BlogLogId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="BlogConfigId" Type="Int32" Nullable="false" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="EventLevel" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
           <Property Name="Exception" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="Logger" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
-          <Property Name="Message" Type="String" MaxLength="1024" Unicode="false" FixedLength="false" />
+          <Property Name="Message" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
           <Property Name="Url" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogLog_BlogConfig_BlogConfigId" FromRole="BlogLog" ToRole="BlogConfig" />
         </EntityType>
@@ -837,8 +845,8 @@
           <Property Name="FileName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="FilePath" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
           <Property Name="ServerPath" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
-          <Property Name="CreatedById" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedById" Type="Int32" />
           <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogMedia_BlogConfig_BlogConfigId" FromRole="BlogMedia" ToRole="BlogConfig" />
         </EntityType>
         <EntityType Name="BlogMenuItem">
@@ -854,9 +862,9 @@
           <Property Name="PageContent" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="ViewName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="CreatorId" Type="Int32" Nullable="false" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="LastUpdatedById" Type="Int32" Nullable="false" />
-          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogMenuItem_BlogConfig_BlogConfigId" FromRole="BlogMenuItem" ToRole="BlogConfig" />
         </EntityType>
         <EntityType Name="BlogPage">
@@ -870,9 +878,9 @@
           <Property Name="Description" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
           <Property Name="Keywords" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
           <Property Name="PageContent" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="CreatedById" Type="Int32" Nullable="false" />
-          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="LastUpdatedById" Type="Int32" Nullable="false" />
           <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogPage_BlogConfig_BlogConfigId" FromRole="BlogPage" ToRole="BlogConfig" />
           <NavigationProperty Name="BlogUser" Relationship="VeritasBlogDBV3Model.FK_BlogPage_BlogUser_CreatedById" FromRole="BlogPage" ToRole="BlogUser" />
@@ -885,7 +893,7 @@
           <Property Name="BlogRoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="BlogConfigId" Type="Int32" Nullable="false" />
           <Property Name="RoleName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogRole_BlogConfig_BlogConfigId" FromRole="BlogRole" ToRole="BlogConfig" />
           <NavigationProperty Name="BlogUserRoles" Relationship="VeritasBlogDBV3Model.FK_BlogUserRole_BlogRole_BlogRoleId" FromRole="BlogRole" ToRole="BlogUserRole" />
         </EntityType>
@@ -900,8 +908,8 @@
           <Property Name="Username" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
           <Property Name="EmailAddress" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
           <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
-          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdateDate" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogUser_BlogConfig_BlogConfigId" FromRole="BlogUser" ToRole="BlogConfig" />
           <NavigationProperty Name="BlogEntries" Relationship="VeritasBlogDBV3Model.FK_BlogEntry_BlogUser_BlogAuthorId" FromRole="BlogUser" ToRole="BlogEntry" />
           <NavigationProperty Name="BlogPages" Relationship="VeritasBlogDBV3Model.FK_BlogPage_BlogUser_CreatedById" FromRole="BlogUser" ToRole="BlogPage" />
@@ -916,7 +924,7 @@
           <Property Name="BlogUserRoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="BlogUserId" Type="Int32" Nullable="false" />
           <Property Name="BlogRoleId" Type="Int32" Nullable="false" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="BlogRole" Relationship="VeritasBlogDBV3Model.FK_BlogUserRole_BlogRole_BlogRoleId" FromRole="BlogUserRole" ToRole="BlogRole" />
           <NavigationProperty Name="BlogUser" Relationship="VeritasBlogDBV3Model.FK_BlogUserRole_BlogUser_BlogUserId" FromRole="BlogUserRole" ToRole="BlogUser" />
         </EntityType>
@@ -1169,12 +1177,12 @@
           <Property Type="String" Name="Description" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Type="Boolean" Name="IsActive" />
           <Property Type="String" Name="Title" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="3" />
           <Property Type="Int32" Name="CreatedById" Nullable="false" />
           <NavigationProperty Name="BlogConfig" Relationship="VeritasBlogDBV3Model.FK_BlogCategory_BlogConfig_BlogConfigId" FromRole="BlogCategory" ToRole="BlogConfig" />
           <NavigationProperty Name="BlogUser" Relationship="VeritasBlogDBV3Model.FK_BlogCategory_BlogUser_CreatedById" FromRole="BlogCategory" ToRole="BlogUser" />
           <NavigationProperty Name="BlogEntryCategories" Relationship="VeritasBlogDBV3Model.FK_BlogEntryCategory_BlogCategory_BlogCategoryId" FromRole="BlogCategory" ToRole="BlogEntryCategory" />
-          <Property Type="DateTime" Name="LastUpdateDate" Nullable="false" />
+          <Property Type="DateTime" Name="LastUpdateDate" Nullable="false" Precision="3" />
           <Property Type="Int32" Name="LastUpdatedById" Nullable="false" />
         </EntityType>
         <Association Name="FK_BlogCategory_BlogConfig_BlogConfigId">
@@ -1234,7 +1242,11 @@
             <ScalarProperty Name="LastUpdatedById" ColumnName="LastUpdatedById" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="BlogEntries"><EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogEntry"><MappingFragment StoreEntitySet="BlogEntry">
-            <ScalarProperty Name="BlogEntryId" ColumnName="BlogEntryId" />
+            <ScalarProperty Name="NextEntryText" ColumnName="NextEntryText" />
+                <ScalarProperty Name="PreviousEntryText" ColumnName="PreviousEntryText" />
+                <ScalarProperty Name="NextEntryInSeries" ColumnName="NextEntryInSeries" />
+                <ScalarProperty Name="PreviousEntryInSeries" ColumnName="PreviousEntryInSeries" />
+                <ScalarProperty Name="BlogEntryId" ColumnName="BlogEntryId" />
             <ScalarProperty Name="BlogAuthorId" ColumnName="BlogAuthorId" />
             <ScalarProperty Name="BlogConfigId" ColumnName="BlogConfigId" />
             <ScalarProperty Name="EntryName" ColumnName="EntryName" />

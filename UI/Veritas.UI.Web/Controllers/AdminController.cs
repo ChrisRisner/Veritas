@@ -310,6 +310,8 @@ namespace Veritas.UI.Web.Controllers
                     EntriesEditScreen screen = new EntriesEditScreen(entryId.HasValue ? entryId.Value : 0);
                     TryUpdateModel(screen);
                     screen.BlogEntry.PostType = Convert.ToInt32(Request.Form["PostTypeSelectList"]);
+                    screen.BlogEntry.PreviousEntryInSeries = Convert.ToInt64(Request.Form["PreviousEntryInSeriesSelectList"]);
+                    screen.BlogEntry.NextEntryInSeries = Convert.ToInt64(Request.Form["NextEntryInSeriesSelectList"]);
 
                     screen.CheckAndUpdateEntryTitle();
 

@@ -50,6 +50,8 @@ namespace Veritas.DataLayer.Models
         public bool ShowBlogAbout { get; set; }
         public bool ShowGooglePlusOne { get; set; }
         public bool ShowGravatars { get; set; }
+        public bool ShowNextPreviousAtTop { get; set; }
+        public bool ShowNextPreviousAtBottom { get; set; }
         private string _skin;
         public string Skin
         {
@@ -157,6 +159,10 @@ namespace Veritas.DataLayer.Models
                 this.ShowGooglePlusOne = Convert.ToBoolean(doc.DocumentElement["ShowGooglePlusOne"].InnerText);
             if (doc.DocumentElement["ShowGravatars"] != null)
                 this.ShowGravatars = Convert.ToBoolean(doc.DocumentElement["ShowGravatars"].InnerText);
+            if (doc.DocumentElement["ShowNextPreviousAtTop"] != null)
+                this.ShowNextPreviousAtTop = Convert.ToBoolean(doc.DocumentElement["ShowNextPreviousAtTop"].InnerText);
+            if (doc.DocumentElement["ShowNextPreviousAtBottom"] != null)
+                this.ShowNextPreviousAtBottom = Convert.ToBoolean(doc.DocumentElement["ShowNextPreviousAtBottom"].InnerText);
             if (doc.DocumentElement["Skin"] != null)
                 this.Skin = doc.DocumentElement["Skin"].InnerText;
             if (doc.DocumentElement["SmtpPassword"] != null)
@@ -220,6 +226,8 @@ namespace Veritas.DataLayer.Models
                     new XElement("ShowBlogAbout", this.ShowBlogAbout),
                     new XElement("ShowGooglePlusOne", this.ShowGooglePlusOne),
                     new XElement("ShowGravatars", this.ShowGravatars),
+                    new XElement("ShowNextPreviousAtTop", this.ShowNextPreviousAtTop),
+                    new XElement("ShowNextPreviousAtBottom", this.ShowNextPreviousAtBottom),
                     new XElement("Skin", this.Skin),
                     new XElement("SmtpPassword", this.SmtpPassword),
                     new XElement("SmtpPort", this.SmtpPort),

@@ -507,6 +507,14 @@ namespace Veritas.Tests
             Assert.IsNull(dbBlogEntry2);
         }
 
+        [TestMethod()]
+        public void GetBlogEntryTitlesAndIdsTest()
+        {
+            var dbBlogEntries = repo.GetBlogEntryTitlesAndIds(TestBlogConfig.BlogConfigId);
+            Assert.IsNotNull(dbBlogEntries);
+            Assert.IsTrue(dbBlogEntries.Count > 0);
+        }
+
         /// <summary>
         ///A test for Delete
         ///</summary>

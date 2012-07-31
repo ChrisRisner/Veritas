@@ -8,12 +8,13 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.ComponentModel;
+using System.Data.EntityClient;
 using System.Data.Objects;
 using System.Data.Objects.DataClasses;
-using System.Data.EntityClient;
-using System.ComponentModel;
-using System.Xml.Serialization;
+using System.Linq;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
@@ -333,6 +334,7 @@ namespace Veritas.DataLayer.Models
         private ObjectSet<BlogCategory> _BlogCategories;
 
         #endregion
+
         #region AddTo Methods
     
         /// <summary>
@@ -456,11 +458,11 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
     }
-    
 
     #endregion
-    
+
     #region Entities
     
     /// <summary>
@@ -491,6 +493,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -593,6 +596,7 @@ namespace Veritas.DataLayer.Models
         partial void OnCreateDateChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -635,6 +639,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -671,6 +676,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -893,6 +899,7 @@ namespace Veritas.DataLayer.Models
         partial void OnLastUpdatedByIdChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -995,6 +1002,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1015,8 +1023,7 @@ namespace Veritas.DataLayer.Models
         /// <param name="host">Initial value of the Host property.</param>
         /// <param name="createDate">Initial value of the CreateDate property.</param>
         /// <param name="lastUpdateDate">Initial value of the LastUpdateDate property.</param>
-        /// <param name="lastUpdatedById">Initial value of the LastUpdatedById property.</param>
-        public static BlogConfig CreateBlogConfig(global::System.Int32 blogConfigId, global::System.String configXml, global::System.String host, global::System.DateTime createDate, global::System.DateTime lastUpdateDate, global::System.Int32 lastUpdatedById)
+        public static BlogConfig CreateBlogConfig(global::System.Int32 blogConfigId, global::System.String configXml, global::System.String host, global::System.DateTime createDate, global::System.DateTime lastUpdateDate)
         {
             BlogConfig blogConfig = new BlogConfig();
             blogConfig.BlogConfigId = blogConfigId;
@@ -1024,11 +1031,11 @@ namespace Veritas.DataLayer.Models
             blogConfig.Host = host;
             blogConfig.CreateDate = createDate;
             blogConfig.LastUpdateDate = lastUpdateDate;
-            blogConfig.LastUpdatedById = lastUpdatedById;
             return blogConfig;
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1157,9 +1164,9 @@ namespace Veritas.DataLayer.Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Int32 LastUpdatedById
+        public Nullable<global::System.Int32> LastUpdatedById
         {
             get
             {
@@ -1174,11 +1181,12 @@ namespace Veritas.DataLayer.Models
                 OnLastUpdatedByIdChanged();
             }
         }
-        private global::System.Int32 _LastUpdatedById;
-        partial void OnLastUpdatedByIdChanging(global::System.Int32 value);
+        private Nullable<global::System.Int32> _LastUpdatedById;
+        partial void OnLastUpdatedByIdChanging(Nullable<global::System.Int32> value);
         partial void OnLastUpdatedByIdChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1447,6 +1455,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1491,6 +1500,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1807,8 +1817,105 @@ namespace Veritas.DataLayer.Models
         private global::System.DateTime _LastUpdateDate;
         partial void OnLastUpdateDateChanging(global::System.DateTime value);
         partial void OnLastUpdateDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int64> PreviousEntryInSeries
+        {
+            get
+            {
+                return _PreviousEntryInSeries;
+            }
+            set
+            {
+                OnPreviousEntryInSeriesChanging(value);
+                ReportPropertyChanging("PreviousEntryInSeries");
+                _PreviousEntryInSeries = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PreviousEntryInSeries");
+                OnPreviousEntryInSeriesChanged();
+            }
+        }
+        private Nullable<global::System.Int64> _PreviousEntryInSeries;
+        partial void OnPreviousEntryInSeriesChanging(Nullable<global::System.Int64> value);
+        partial void OnPreviousEntryInSeriesChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int64> NextEntryInSeries
+        {
+            get
+            {
+                return _NextEntryInSeries;
+            }
+            set
+            {
+                OnNextEntryInSeriesChanging(value);
+                ReportPropertyChanging("NextEntryInSeries");
+                _NextEntryInSeries = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("NextEntryInSeries");
+                OnNextEntryInSeriesChanged();
+            }
+        }
+        private Nullable<global::System.Int64> _NextEntryInSeries;
+        partial void OnNextEntryInSeriesChanging(Nullable<global::System.Int64> value);
+        partial void OnNextEntryInSeriesChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PreviousEntryText
+        {
+            get
+            {
+                return _PreviousEntryText;
+            }
+            set
+            {
+                OnPreviousEntryTextChanging(value);
+                ReportPropertyChanging("PreviousEntryText");
+                _PreviousEntryText = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PreviousEntryText");
+                OnPreviousEntryTextChanged();
+            }
+        }
+        private global::System.String _PreviousEntryText;
+        partial void OnPreviousEntryTextChanging(global::System.String value);
+        partial void OnPreviousEntryTextChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String NextEntryText
+        {
+            get
+            {
+                return _NextEntryText;
+            }
+            set
+            {
+                OnNextEntryTextChanging(value);
+                ReportPropertyChanging("NextEntryText");
+                _NextEntryText = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("NextEntryText");
+                OnNextEntryTextChanged();
+            }
+        }
+        private global::System.String _NextEntryText;
+        partial void OnNextEntryTextChanging(global::System.String value);
+        partial void OnNextEntryTextChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1955,6 +2062,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1985,6 +2093,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2087,6 +2196,7 @@ namespace Veritas.DataLayer.Models
         partial void OnCreateDateChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2167,6 +2277,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2199,6 +2310,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2325,6 +2437,7 @@ namespace Veritas.DataLayer.Models
         partial void OnWebLastUpdatedChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2405,6 +2518,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2449,6 +2563,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2815,6 +2930,7 @@ namespace Veritas.DataLayer.Models
         partial void OnInReplyToFeedbackIdChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2933,6 +3049,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2969,6 +3086,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -3167,6 +3285,7 @@ namespace Veritas.DataLayer.Models
         partial void OnLastUpdateDateChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -3231,6 +3350,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -3263,6 +3383,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -3461,6 +3582,7 @@ namespace Veritas.DataLayer.Models
         partial void OnUrlChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -3503,6 +3625,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -3524,8 +3647,7 @@ namespace Veritas.DataLayer.Models
         /// <param name="filePath">Initial value of the FilePath property.</param>
         /// <param name="serverPath">Initial value of the ServerPath property.</param>
         /// <param name="createDate">Initial value of the CreateDate property.</param>
-        /// <param name="createdById">Initial value of the CreatedById property.</param>
-        public static BlogMedia CreateBlogMedia(global::System.Int32 blogMediaId, global::System.Int32 blogConfigId, global::System.String fileName, global::System.String filePath, global::System.String serverPath, global::System.DateTime createDate, global::System.Int32 createdById)
+        public static BlogMedia CreateBlogMedia(global::System.Int32 blogMediaId, global::System.Int32 blogConfigId, global::System.String fileName, global::System.String filePath, global::System.String serverPath, global::System.DateTime createDate)
         {
             BlogMedia blogMedia = new BlogMedia();
             blogMedia.BlogMediaId = blogMediaId;
@@ -3534,11 +3656,11 @@ namespace Veritas.DataLayer.Models
             blogMedia.FilePath = filePath;
             blogMedia.ServerPath = serverPath;
             blogMedia.CreateDate = createDate;
-            blogMedia.CreatedById = createdById;
             return blogMedia;
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -3691,9 +3813,9 @@ namespace Veritas.DataLayer.Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Int32 CreatedById
+        public Nullable<global::System.Int32> CreatedById
         {
             get
             {
@@ -3708,11 +3830,12 @@ namespace Veritas.DataLayer.Models
                 OnCreatedByIdChanged();
             }
         }
-        private global::System.Int32 _CreatedById;
-        partial void OnCreatedByIdChanging(global::System.Int32 value);
+        private Nullable<global::System.Int32> _CreatedById;
+        partial void OnCreatedByIdChanging(Nullable<global::System.Int32> value);
         partial void OnCreatedByIdChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -3755,6 +3878,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -3793,6 +3917,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -4087,6 +4212,7 @@ namespace Veritas.DataLayer.Models
         partial void OnLastUpdateDateChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -4129,6 +4255,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -4167,6 +4294,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -4437,6 +4565,7 @@ namespace Veritas.DataLayer.Models
         partial void OnLastUpdatedByIdChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -4555,6 +4684,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -4585,6 +4715,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -4687,6 +4818,7 @@ namespace Veritas.DataLayer.Models
         partial void OnCreateDateChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -4751,6 +4883,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -4789,6 +4922,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -5011,6 +5145,7 @@ namespace Veritas.DataLayer.Models
         partial void OnLastUpdateDateChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -5163,6 +5298,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -5193,6 +5329,7 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -5295,6 +5432,7 @@ namespace Veritas.DataLayer.Models
         partial void OnCreateDateChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -5375,8 +5513,10 @@ namespace Veritas.DataLayer.Models
         }
 
         #endregion
+
     }
 
     #endregion
+
     
 }

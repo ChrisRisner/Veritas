@@ -95,7 +95,7 @@ namespace Veritas.Tests
             {
                 BlogCategoryId = blogCategoryId,
                 BlogEntryId = blogEntryId,
-                CreateDate = DateTime.Now
+                CreateDate = DateTime.Now                
             };
             return blogEntryCategory;
         }
@@ -109,7 +109,8 @@ namespace Veritas.Tests
                 CreatedById = blogUserId,
                 Description = "Test", 
                 IsActive = true,
-                Title = "test"
+                Title = "test",
+                LastUpdateDate = DateTime.Now
             };
             return blogCategory;
         }
