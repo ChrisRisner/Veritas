@@ -47,6 +47,7 @@ namespace Veritas.BusinessLayer.Screens.Blog
             {
                 BlogEntry = repo.GetEntryByEntryNameAndBlogConfigId(this.blogConfig.BlogConfigId, entryName)
             };
+            this.BlogEntryScreen.CheckForPreviousAndNextInSeries();
         }
 
         public override bool IsValid

@@ -14,6 +14,24 @@
         Posted on:  <%= Model.BlogEntry.PublishDate %> by <%= VeritasForm.ActionLink(Model.BlogEntry.BlogUser.Username, "About", "Home", null, new { rel = "author" })%>
     </h4>
 
+    <% if (Model.OnlyItemOnPage && Model.blogConfig.ShowNextPreviousAtTop) { %>
+        <% if (Model.BlogEntry.PreviousEntryInSeries != null) {   %>
+            <div class="OlderEntries">
+            <%= "<a href=\"" + VeritasForm.Content("~/" + Model.PreviousEntryUrlName) 
+            + "\" title=\"" + Model.PreviousEntryUrlName + "\">" + Model.PreviousEntryLinkText 
+            + "</a>"%>        
+            </div>
+        <% } %>
+        <% if (Model.BlogEntry.NextEntryInSeries != null) {   %>
+            <div class="NewerEntries">
+            <%= "<a href=\"" + VeritasForm.Content("~/" + Model.NextEntryUrlName) 
+            + "\" title=\"" + Model.NextEntryUrlName + "\">" + Model.NextEntryLinkText 
+            + "</a>"%>
+            </div>
+            <br /><br />
+        <% } %>
+    <% } %>
+
     <div class="entryBody">
         <%= Model.BlogEntry.Text %>    
     </div>
@@ -22,6 +40,25 @@
         <%= Model.blogConfig.BlogMarketingInfo.AdScriptEntry %>        
     <% } %>
     </div>
+
+    <% if (Model.OnlyItemOnPage && Model.blogConfig.ShowNextPreviousAtBottom) { %>
+        <% if (Model.BlogEntry.PreviousEntryInSeries != null) {   %>
+            <div class="OlderEntries">
+            <%= "<a href=\"" + VeritasForm.Content("~/" + Model.PreviousEntryUrlName) 
+            + "\" title=\"" + Model.PreviousEntryUrlName + "\">" + Model.PreviousEntryLinkText 
+            + "</a>"%>        
+            </div>
+        <% } %>
+        <% if (Model.BlogEntry.NextEntryInSeries != null) {   %>
+            <div class="NewerEntries">
+            <%= "<a href=\"" + VeritasForm.Content("~/" + Model.NextEntryUrlName) 
+            + "\" title=\"" + Model.NextEntryUrlName + "\">" + Model.NextEntryLinkText 
+            + "</a>"%>
+            </div>
+            <br /><br />
+        <% } %>
+    <% } %>
+
     <div class="divCategories">
         <% if (Model.BlogEntry.BlogEntryCategories.Count > 0) { %>
             Categories: 

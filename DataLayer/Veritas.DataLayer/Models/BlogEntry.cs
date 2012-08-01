@@ -27,7 +27,7 @@ namespace Veritas.DataLayer.Models
                     return "Draft";
                 else if (this.PostType == (int)Veritas.DataLayer.PostType.Published)
                     return "Published";
-                return "unknown";
+                return "unknown";                
             }
         }
     }
