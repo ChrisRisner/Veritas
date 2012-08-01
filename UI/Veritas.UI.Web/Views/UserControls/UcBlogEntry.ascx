@@ -21,6 +21,9 @@
             + "\" title=\"" + Model.PreviousEntryUrlName + "\">" + Model.PreviousEntryLinkText 
             + "</a>"%>        
             </div>
+            <% if (Model.BlogEntry.NextEntryInSeries == null) { %>
+                <br /><br />
+            <% } %>
         <% } %>
         <% if (Model.BlogEntry.NextEntryInSeries != null) {   %>
             <div class="NewerEntries">
@@ -31,6 +34,7 @@
             <br /><br />
         <% } %>
     <% } %>
+    <div style="clear:  both"></div>
 
     <div class="entryBody">
         <%= Model.BlogEntry.Text %>    
@@ -48,6 +52,9 @@
             + "\" title=\"" + Model.PreviousEntryUrlName + "\">" + Model.PreviousEntryLinkText 
             + "</a>"%>        
             </div>
+        <% if (Model.BlogEntry.NextEntryInSeries == null) { %>
+            <br /><br />
+        <% } %>
         <% } %>
         <% if (Model.BlogEntry.NextEntryInSeries != null) {   %>
             <div class="NewerEntries">
@@ -58,6 +65,7 @@
             <br /><br />
         <% } %>
     <% } %>
+    <div style="clear:  both"></div>
 
     <div class="divCategories">
         <% if (Model.BlogEntry.BlogEntryCategories.Count > 0) { %>
