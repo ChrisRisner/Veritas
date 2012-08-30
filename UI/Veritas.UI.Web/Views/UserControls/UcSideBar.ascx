@@ -22,9 +22,10 @@
     <% } %> 
     <%--Social Networks--%>
     <% if (!string.IsNullOrEmpty(Model.blogConfig.GooglePlusUrl))
-       { %>
-       <a href='<%= Model.blogConfig.GooglePlusUrl %>'><img src="../../Content/Media/google_plus_logo.png" /></a>
-       <br />
+       { %>      
+        <a href="<%= Model.blogConfig.GooglePlusUrl %>?prsrc=3" rel="publisher" style="text-decoration:none;">
+        <img src="//ssl.gstatic.com/images/icons/gplus-32.png" alt="Google+" style="border:0;width:32px;height:32px;"/></a>
+        <br />
     <% } %>
     <% if (!string.IsNullOrEmpty(Model.blogConfig.FacebookUrl))
        { %>
