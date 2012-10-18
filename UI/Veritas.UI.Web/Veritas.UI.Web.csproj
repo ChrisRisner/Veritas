@@ -298,6 +298,7 @@
     <Content Include="prod.web.config">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Content\Themes\EightOne.ttf" />
     <None Include="Properties\PublishProfiles\Profile1.pubxml" />
     <None Include="Scripts\highslide\graphics\outlines\Outlines.psd" />
   </ItemGroup>

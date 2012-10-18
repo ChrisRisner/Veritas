@@ -146,7 +146,7 @@ namespace Veritas.UI.Web.Views
             StringBuilder sb = new StringBuilder();
             foreach (var category in categories)
             {
-                sb.Append(this.ActionLink(category.Title, "category", "home", new { id = category.Title }, null));
+                sb.Append("<a href=\"" + this.Content("/Category/" + category.Title) + "\" title=\"" + category.Title + "\">" + category.Title + "</a>");
                 //sb.Append("<a href=\"http://" + (
                 //    CacheAccessor.GetBlogConfig().Host) + "/category/" + category.Title + "\" title=\"" + category.Title + "\">" + category.Title + "</a>");
                 sb.Append(", ");

@@ -55,4 +55,4 @@ $.fn.equalHeight = function () {
 function ShowHideComments(id) {
     $('#divComments' + id).slideToggle(true);
     setTimeout('FixColumns()', 1000);
-}
+};
