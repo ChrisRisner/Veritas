@@ -20,6 +20,7 @@ namespace Veritas.DataLayer.Models
         public string CopyrightText { get; set; }
         public int? DaysUntilCommentsClose { get; set; }
         public string DefaultLogoUrl { get; set; }
+        public string DefaultTwitterAuthor { get; set; }
         public bool EnableFeedbackAuthorNotifications { get; set; }
         public bool EnableFeedbackRssFeed { get; set; }        
         public string FacebookUrl { get; set; }
@@ -97,6 +98,8 @@ namespace Veritas.DataLayer.Models
                 (this.BlogMarketingInfo = new BlogMarketingInfo()).LoadFromXml(doc.DocumentElement["BlogMarketingInfo"].OuterXml);
             if (doc.DocumentElement["DefaultLogoUrl"] != null)
                 this.DefaultLogoUrl = doc.DocumentElement["DefaultLogoUrl"].InnerText;
+            if (doc.DocumentElement["DefaultTwitterAuthor"] != null)
+                this.DefaultTwitterAuthor = doc.DocumentElement["DefaultTwitterAuthor"].InnerText;
             if (doc.DocumentElement["CopyrightText"] != null)
                 this.CopyrightText = doc.DocumentElement["CopyrightText"].InnerText;
             if (doc.DocumentElement["DaysUntilCommentsClose"] != null && !string.IsNullOrEmpty(doc.DocumentElement["DaysUntilCommentsClose"].InnerText))
@@ -208,6 +211,7 @@ namespace Veritas.DataLayer.Models
                     new XElement("CopyrightText", this.CopyrightText),
                     new XElement("DaysUntilCommentsClose", this.DaysUntilCommentsClose),
                     new XElement("DefaultLogoUrl", this.DefaultLogoUrl),
+                    new XElement("DefaultTwitterAuthor", this.DefaultTwitterAuthor),
                     new XElement("EnableFeedbackAuthorNotifications", this.EnableFeedbackAuthorNotifications),
                     new XElement("EnableFeedbackRssFeed", this.EnableFeedbackRssFeed),
                     new XElement("FacebookUrl", this.FacebookUrl),

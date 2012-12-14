@@ -78,6 +78,17 @@
 
             <dl>
                 <dt>
+                    <label for="DefaultTwitterAuthor">DefaultTwitterAuthor</label>
+                </dt>
+                <dd>
+                    <%=Html.TextBox("newBlogConfig.DefaultTwitterAuthor", Model.newBlogConfig.DefaultTwitterAuthor, new { size = 70, @class = "itext" })%>    
+                    <label class="required"></label>
+                    <%=Html.ValidationMessage("newBlogConfig.DefaultTwitterAuthor", "*")%>
+                </dd>
+            </dl>
+
+            <dl>
+                <dt>
                     <label for="RssShowLimitedEntryInFeed">Show Limited Entry in Feed</label>
                 </dt>
                 <dd>

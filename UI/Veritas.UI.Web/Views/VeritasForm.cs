@@ -196,5 +196,21 @@ namespace Veritas.UI.Web.Views
             return false;
         }
 
+        public string GetDefaultTwitterMetaInfo()
+        {
+            var blogConfig = CacheHandler.GetBlogConfig();
+            StringBuilder sb = new StringBuilder();
+            sb.Append("<meta name=\"twitter:card\" content=\"summary\" />");
+            sb.Append("<meta name=\"twitter:url\" content=\"http://" +  blogConfig.Host + "\"/>");
+            sb.Append("<meta name=\"twitter:title\" content=\"" + blogConfig.Title + "\" />");
+            if (!string.IsNullOrEmpty(blogConfig.DefaultTwitterAuthor))
+            {
+                sb.Append("<meta name=\"twitter:site\" content=\"@" + blogConfig.DefaultTwitterAuthor + "\"/>");
+                sb.Append("<meta name=\"twitter:creator\" content=\"@" + blogConfig.DefaultTwitterAuthor + "\"/>");
+            }
+            if (!string.IsNullOrEmpty(blogConfig.DefaultLogoUrl))
+                sb.Append("<meta name=\"twitter:image\" content=\"" + blogConfig.DefaultLogoUrl +"\" />");
+            return sb.ToString();
+        }
     }
 }

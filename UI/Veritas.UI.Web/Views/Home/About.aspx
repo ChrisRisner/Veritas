@@ -9,6 +9,9 @@
 <asp:Content ID="MetaContent" ContentPlaceHolderID="MetaContent" runat="server">
     <meta name="description" content="<%= Model.blogConfig.Title %> - About" />
     <meta name="Keywords" content="<%= Model.blogConfig.Title %>,About" />
+    <% if (Model.blogConfig.UseTwitterCards) { %>
+        <%= VeritasForm.GetDefaultTwitterMetaInfo() %>
+    <% } %>
 </asp:Content>
 
 <asp:Content ID="aboutContent" ContentPlaceHolderID="MainContent" runat="server">

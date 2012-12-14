@@ -124,5 +124,29 @@ namespace Veritas.BusinessLayer.Screens.Shared
 
         public string PreviousEntryUrlName { get; protected set; }
         public string NextEntryUrlName { get; protected set; }
+
+        public bool ShouldShowTwitterCardLogo
+        {
+            get
+            {
+                if (!string.IsNullOrEmpty(this.BlogEntry.LogoUrl))
+                    return true;
+                else if (!string.IsNullOrEmpty(this.blogConfig.DefaultLogoUrl))
+                    return true;
+                return false;
+            }
+        }
+
+        public string TwitterCardLogoUrl
+        {
+            get
+            {
+                if (!string.IsNullOrEmpty(this.BlogEntry.LogoUrl))
+                    return this.BlogEntry.LogoUrl;
+                else if (!string.IsNullOrEmpty(this.blogConfig.DefaultLogoUrl))
+                    return this.blogConfig.DefaultLogoUrl;
+                return "";
+            }
+        }
     }
 }

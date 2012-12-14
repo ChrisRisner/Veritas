@@ -7,6 +7,19 @@
 <asp:Content ID="MetaContent" ContentPlaceHolderID="MetaContent" runat="server">
     <meta name="description" content="<%= Model.BlogEntryScreen.BlogEntry.Short %>" />
     <meta name="Keywords" content="<%= Model.BlogEntryScreen.BlogEntry.Keywords %>,Contact" />
+    <% if (Model.blogConfig.UseTwitterCards) { %>
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="http://<%=  Model.blogConfig.Host + "/" + Model.BlogEntryScreen.BlogEntry.EntryName %>"/>
+        <meta name="twitter:title" content="<%= Model.BlogEntryScreen.BlogEntry.Title %>" />
+        <meta name="twitter:description" content="<%= Model.BlogEntryScreen.BlogEntry.Short %>" />
+        <% if (!string.IsNullOrEmpty(Model.blogConfig.DefaultTwitterAuthor)) { %>
+            <meta name="twitter:site" content="@<%= Model.BlogEntryScreen.blogConfig.DefaultTwitterAuthor %>"/>
+            <meta name="twitter:creator" content="@<%= Model.BlogEntryScreen.blogConfig.DefaultTwitterAuthor %>"/>
+        <% } %>
+        <% if (Model.BlogEntryScreen.ShouldShowTwitterCardLogo) { %>
+            <meta name="twitter:image" content="<%= Model.BlogEntryScreen.TwitterCardLogoUrl %>" />
+        <% } %>
+    <% } %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
