@@ -28,6 +28,7 @@
                     <td>Short</td>
                     <td>Post Type</td>
                     <td>Publish Date</td>
+                    <td>Logo Url</td>
                     <td>Entry Name</td>
                     <td>Created By</td>
                     <td>Create Date</td>
@@ -47,6 +48,7 @@
                         <td><%= item.Short %></td>
                         <td><%= item.PostTypeText %></td>
                         <td><%= item.PublishDate %></td>
+                        <td><%= item.LogoUrl %></td>
                         <td><%= item.EntryName %></td>
                         <td><%= item.BlogUser.Username %></td>
                         <td><%= item.CreateDate %></td>

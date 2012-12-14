@@ -1913,6 +1913,30 @@ namespace Veritas.DataLayer.Models
         private global::System.String _NextEntryText;
         partial void OnNextEntryTextChanging(global::System.String value);
         partial void OnNextEntryTextChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String LogoUrl
+        {
+            get
+            {
+                return _LogoUrl;
+            }
+            set
+            {
+                OnLogoUrlChanging(value);
+                ReportPropertyChanging("LogoUrl");
+                _LogoUrl = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("LogoUrl");
+                OnLogoUrlChanged();
+            }
+        }
+        private global::System.String _LogoUrl;
+        partial void OnLogoUrlChanging(global::System.String value);
+        partial void OnLogoUrlChanged();
 
         #endregion
 

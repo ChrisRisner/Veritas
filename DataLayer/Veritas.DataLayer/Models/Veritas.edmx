@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="VeritasBlogDBV3Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="VeritasBlogDBV3Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="VeritasBlogDBV3ModelStoreContainer">
           <EntitySet Name="Blacklist" EntityType="VeritasBlogDBV3Model.Store.Blacklist" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="BlogCategory" EntityType="VeritasBlogDBV3Model.Store.BlogCategory" store:Type="Tables" Schema="dbo" />
@@ -169,6 +169,7 @@
           <Property Name="NextEntryInSeries" Type="bigint" />
           <Property Name="PreviousEntryText" Type="nvarchar" MaxLength="255" />
           <Property Name="NextEntryText" Type="nvarchar" MaxLength="255" />
+          <Property Name="LogoUrl" Type="nvarchar" MaxLength="510" />
         </EntityType>
         <EntityType Name="BlogEntryCategory">
           <Key>
@@ -760,6 +761,7 @@
           <Property Type="Int64" Name="NextEntryInSeries" />
           <Property Type="String" Name="PreviousEntryText" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="NextEntryText" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LogoUrl" MaxLength="510" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="BlogEntryCategory">
           <Key>
@@ -1242,7 +1244,8 @@
             <ScalarProperty Name="LastUpdatedById" ColumnName="LastUpdatedById" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="BlogEntries"><EntityTypeMapping TypeName="VeritasBlogDBV3Model.BlogEntry"><MappingFragment StoreEntitySet="BlogEntry">
-            <ScalarProperty Name="NextEntryText" ColumnName="NextEntryText" />
+            <ScalarProperty Name="LogoUrl" ColumnName="LogoUrl" />
+                <ScalarProperty Name="NextEntryText" ColumnName="NextEntryText" />
                 <ScalarProperty Name="PreviousEntryText" ColumnName="PreviousEntryText" />
                 <ScalarProperty Name="NextEntryInSeries" ColumnName="NextEntryInSeries" />
                 <ScalarProperty Name="PreviousEntryInSeries" ColumnName="PreviousEntryInSeries" />

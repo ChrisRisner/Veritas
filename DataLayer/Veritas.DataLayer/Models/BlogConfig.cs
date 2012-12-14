@@ -19,6 +19,7 @@ namespace Veritas.DataLayer.Models
         public BlogMarketingInfo BlogMarketingInfo { get; set; }
         public string CopyrightText { get; set; }
         public int? DaysUntilCommentsClose { get; set; }
+        public string DefaultLogoUrl { get; set; }
         public bool EnableFeedbackAuthorNotifications { get; set; }
         public bool EnableFeedbackRssFeed { get; set; }        
         public string FacebookUrl { get; set; }
@@ -66,7 +67,8 @@ namespace Veritas.DataLayer.Models
         public string SubTitle { get; set; }
         public string TimeZone { get; set; }
         public string Title { get; set; }
-        public string TwitterUrl { get; set; }        
+        public string TwitterUrl { get; set; }
+        public bool UseTwitterCards { get; set; }
         public string WebStatsJavascript { get; set; }
 
         public BlogConfig()
@@ -93,6 +95,8 @@ namespace Veritas.DataLayer.Models
                 (this.BlogCommentInfo = new BlogCommentInfo()).LoadFromXml(doc.DocumentElement["BlogCommentInfo"].OuterXml);
             if (doc.DocumentElement["BlogMarketingInfo"] != null)
                 (this.BlogMarketingInfo = new BlogMarketingInfo()).LoadFromXml(doc.DocumentElement["BlogMarketingInfo"].OuterXml);
+            if (doc.DocumentElement["DefaultLogoUrl"] != null)
+                this.DefaultLogoUrl = doc.DocumentElement["DefaultLogoUrl"].InnerText;
             if (doc.DocumentElement["CopyrightText"] != null)
                 this.CopyrightText = doc.DocumentElement["CopyrightText"].InnerText;
             if (doc.DocumentElement["DaysUntilCommentsClose"] != null && !string.IsNullOrEmpty(doc.DocumentElement["DaysUntilCommentsClose"].InnerText))
@@ -183,6 +187,8 @@ namespace Veritas.DataLayer.Models
                 this.Title = doc.DocumentElement["Title"].InnerText;
             if (doc.DocumentElement["TwitterUrl"] != null)
                 this.TwitterUrl = doc.DocumentElement["TwitterUrl"].InnerText;
+            if (doc.DocumentElement["UseTwitterCards"] != null)
+                this.UseTwitterCards = Convert.ToBoolean(doc.DocumentElement["UseTwitterCards"].InnerText);
             if (doc.DocumentElement["WebStatsJavascript"] != null)
                 this.WebStatsJavascript = HttpUtility.HtmlDecode(doc.DocumentElement["WebStatsJavascript"].InnerText);
 
@@ -201,6 +207,7 @@ namespace Veritas.DataLayer.Models
                     new XElement("BlogMarketingInfo", this.BlogMarketingInfo.BuildXmlFromData().Elements()),
                     new XElement("CopyrightText", this.CopyrightText),
                     new XElement("DaysUntilCommentsClose", this.DaysUntilCommentsClose),
+                    new XElement("DefaultLogoUrl", this.DefaultLogoUrl),
                     new XElement("EnableFeedbackAuthorNotifications", this.EnableFeedbackAuthorNotifications),
                     new XElement("EnableFeedbackRssFeed", this.EnableFeedbackRssFeed),
                     new XElement("FacebookUrl", this.FacebookUrl),
@@ -238,6 +245,7 @@ namespace Veritas.DataLayer.Models
                     new XElement("TimeZone", this.TimeZone),
                     new XElement("Title", this.Title),
                     new XElement("TwitterUrl", this.TwitterUrl),
+                    new XElement("UseTwitterCards", this.UseTwitterCards),
                     new XElement("WebStatsJavascript", HttpUtility.HtmlEncode(this.WebStatsJavascript))
                     );
 

@@ -52,6 +52,16 @@
             </dl>
             <dl>
                 <dt>
+                    <label for="DefaultLogoUrl">Default Logo url</label>
+                </dt>
+                <dd>
+                    <%=Html.TextBox("newBlogConfig.DefaultLogoUrl", Model.newBlogConfig.DefaultLogoUrl, new { size=70, @class="itext" })%>    
+                    <label class="required"></label>
+                    <%=Html.ValidationMessage("newBlogConfig.DefaultLogoUrl", "*")%>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
                     <label for="IsActive">Is Active</label>
                 </dt>
                 <dd>
@@ -228,6 +238,16 @@
                     <%=Html.TextBox("newBlogConfig.TimeZone", Model.newBlogConfig.TimeZone, new { size=70, @class="itext" })%>    
                     <label class="required"></label>
                     <%=Html.ValidationMessage("newBlogConfig.TimeZone", "*")%>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="UseTwitterCards">Use Twitter Cards</label>
+                </dt>
+                <dd>
+                    <%=Html.CheckBox("newBlogConfig.UseTwitterCards", Model.newBlogConfig.UseTwitterCards, new {  @class="icheckbox" })%>    
+                    <label class="required"></label>    
+                    <%=Html.ValidationMessage("newBlogConfig.UseTwitterCards", "*")%>
                 </dd>
             </dl>
             <dl>

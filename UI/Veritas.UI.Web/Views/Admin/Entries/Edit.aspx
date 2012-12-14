@@ -110,6 +110,16 @@
                     <%=Html.ValidationMessage("BlogEntry.NextEntryText", "*")%>
                 </dd>
             </dl>
+            <dl>
+                <dt>
+                    <label for="LogoUrl">Logo URL</label>
+                </dt>
+                <dd>
+                    <%=Html.TextBox("BlogEntry.LogoUrl", Model.BlogEntry.LogoUrl, new { size="70", @class="itext" })%>    
+                    <label class="required"></label>
+                    <%=Html.ValidationMessage("BlogEntry.LogoUrl", "*")%>
+                </dd>
+            </dl>
             
             <% if (Model.BlogEntry.BlogEntryId > 0)
                { %>
