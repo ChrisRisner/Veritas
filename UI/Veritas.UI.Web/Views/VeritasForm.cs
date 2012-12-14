@@ -203,6 +203,7 @@ namespace Veritas.UI.Web.Views
             sb.Append("<meta name=\"twitter:card\" content=\"summary\" />");
             sb.Append("<meta name=\"twitter:url\" content=\"http://" +  blogConfig.Host + "\"/>");
             sb.Append("<meta name=\"twitter:title\" content=\"" + blogConfig.Title + "\" />");
+            sb.Append("<meta name=\"twitter:description\" content=\"" + blogConfig.Title + "\" />");
             if (!string.IsNullOrEmpty(blogConfig.DefaultTwitterAuthor))
             {
                 sb.Append("<meta name=\"twitter:site\" content=\"@" + blogConfig.DefaultTwitterAuthor + "\"/>");
