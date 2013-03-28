@@ -7,6 +7,7 @@ using Veritas.BusinessLayer.Screens.Home;
 using Veritas.BusinessLayer.Screens.Blog;
 using Veritas.UI.Web.Views;
 using Veritas.BusinessLayer;
+using Veritas.BusinessLayer.Logging;
 
 namespace Veritas.UI.Web.Controllers
 {
@@ -37,8 +38,16 @@ namespace Veritas.UI.Web.Controllers
             //The id didn't produce a valid blog entry
             if (screen.BlogEntryScreen.BlogEntry == null)
                 return  RedirectToAction("NotFound", "Error");
-            
-            screen.UpdateEntryViewCount();
+
+            try
+            {
+                screen.UpdateEntryViewCount();
+            }
+            catch (Exception ex)
+            {
+                LoggingHandler.Log(ex, "BlogController.UpdateEntryViewCount");
+            }
+
 
             return View();
         }

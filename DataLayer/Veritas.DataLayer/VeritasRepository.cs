@@ -75,6 +75,7 @@ namespace Veritas.DataLayer
         /// </summary>
         public void Save()
         {
+            db.CommandTimeout = 120;
             db.SaveChanges(System.Data.Objects.SaveOptions.AcceptAllChangesAfterSave);
         }
 

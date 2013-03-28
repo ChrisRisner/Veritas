@@ -27,6 +27,8 @@ namespace Veritas.BusinessLayer.Screens.Shared
 
         public void CheckForPreviousAndNextInSeries()
         {
+            if (this.BlogEntry == null)
+                return;
             if (this.BlogEntry.PreviousEntryInSeries.HasValue)
             {
                 this.PreviousEntryUrlName = repo.GetEntryById(this.BlogEntry.PreviousEntryInSeries.Value).EntryName;
