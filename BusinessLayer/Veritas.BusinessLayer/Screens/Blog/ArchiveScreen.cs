@@ -74,7 +74,7 @@ namespace Veritas.BusinessLayer.Screens.Blog
                 items.Add("FeedbackText", "You must enter a comment.");
             if (string.IsNullOrEmpty(this.EntryName))
                 items.Add("NA", "There is a problem with commenting.  Please contact the site owner.");
-            if (this.iEntryId < 1)
+            else if (this.iEntryId < 1)
                 items.Add("NA", "There is a problem with commenting.  Please contact the site owner.");
 
             return items;
