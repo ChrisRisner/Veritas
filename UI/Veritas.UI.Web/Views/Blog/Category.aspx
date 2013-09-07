@@ -23,7 +23,9 @@
                   <%= Model.blogConfig.Title %>
                 </span>
        <% } %>
-       <% Html.RenderPartial("~/Views/UserControls/UcBlogEntry.ascx", entryScreen); %>
+       <%--<% Html.RenderPartial("~/Views/UserControls/UcBlogEntry.ascx", entryScreen); %>--%>
+
+       <% Html.RenderPartial("~/Views/UserControls/UcBlogTitle.ascx", entryScreen); %>
        <% if (entryScreen.BlogEntry.IsMostRecentEntry)
           { %>
           </div>

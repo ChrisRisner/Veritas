@@ -36,8 +36,10 @@ namespace Veritas.BusinessLayer.Screens.Blog
             this.CategoryName = categoryName;
             this.BlogEntryScreens =
                 (from entry in
-                    repo.GetEntriesForCategoryFromStartPoint(this.blogConfig.BlogConfigId,
-                        this.blogConfig.PostsPerPage, numToStartAt, categoryName).ToArray()
+                    //repo.GetEntriesForCategoryFromStartPoint(this.blogConfig.BlogConfigId,
+                    //    this.blogConfig.PostsPerPage, numToStartAt, categoryName).ToArray()
+                     repo.GetEntriesForCategoryFromStartPoint(this.blogConfig.BlogConfigId,
+                            15, numToStartAt, categoryName).ToArray()
                  select new BlogEntryScreen
                  {
                      BlogEntry = entry,
@@ -72,8 +74,11 @@ namespace Veritas.BusinessLayer.Screens.Blog
             }
             else
             {
-                return "<a href=\"/Category/" + this.CategoryName + "?startat=" + (startAt + blogConfig.PostsPerPage) +
+                //return "<a href=\"/Category/" + this.CategoryName + "?startat=" + (startAt + blogConfig.PostsPerPage) +
+                //    "\"><< Older Posts</a>";
+                return "<a href=\"/Category/" + this.CategoryName + "?startat=" + (startAt + 15) +
                     "\"><< Older Posts</a>";
+
             }
         }
 
@@ -85,11 +90,13 @@ namespace Veritas.BusinessLayer.Screens.Blog
             if (startAt == 0)
                 return "";
 
-            startAt -= blogConfig.PostsPerPage;
+            //startAt -= blogConfig.PostsPerPage;
             if (startAt <= 0)
                 return "<a href=\"/Category/" + this.CategoryName +"\">Newer Posts >></a>";
             //Otherwise, build our link
-            return "<a href=\"/Category/" + this.CategoryName + "?startat=" + (startAt - blogConfig.PostsPerPage) +
+            //return "<a href=\"/Category/" + this.CategoryName + "?startat=" + (startAt - blogConfig.PostsPerPage) +
+             //   "\">Newer Posts >></a>";
+            return "<a href=\"/Category/" + this.CategoryName + "?startat=" + (startAt - 15) +
                 "\">Newer Posts >></a>";
         }
     }
